@@ -1,0 +1,156 @@
+/*-------------------------------------*\
+
+	SCOUTING OOST 1 WORDPRESS THEME
+
+	See style.css for the WP info.
+
+	- Floris Jansen, floris@fmjansen.nl
+
+	base.scss
+	+ Variables (colors and fonts)
+	+ Reset
+	+ Paragraph styles
+  + Buttons
+	+ Header
+  + Main
+	+ Footer
+	...
+
+\*-------------------------------------*/
+
+
+
+
+
+/*-------------------------------------*\
+	Variables (colors and fonts)
+\*-------------------------------------*/
+$font--heavy: 'Alegreya Sans', sans-serif;
+$font--light: 'Alegreya Sans', sans-serif;
+$background--light: #ffffff;
+$accent: #89C664;
+
+$social:
+	(instagram, #e1306c),
+	(facebook, #3b5998),
+	(twitter, #1da1f2);
+
+// Breakpoints
+$brk--phone: 768px;
+$brk--tablet: 992px;
+$brk--desktop: 1200px;
+$brk--large-desktop: 1920px;
+
+
+
+
+
+
+/*-------------------------------------*\
+	Reset
+\*-------------------------------------*/
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: $background--light;
+	font-family: $font--light;
+	font-size: 16px;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+	padding-top: 4em;
+
+	@media (min-width: $brk--tablet) {
+		font-size: 18px;
+	}
+
+	@media (min-width: $brk--desktop) {
+		font-size: 20px;
+	}
+}
+
+
+
+
+
+/*-------------------------------------*\
+	Paragraph styles
+\*-------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font--heavy;
+	font-weight: 700;
+}
+
+a {
+	color: $accent;
+}
+
+
+
+
+
+/*-------------------------------------*\
+	Buttons
+\*-------------------------------------*/
+@mixin button-background($color) {
+	background: $color;
+
+	&:hover {
+		background: darken($color, 10%);
+	}
+
+	&:focus {
+		background: darken($color, 15%);
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: .7em 1.2em;
+	margin: 5px 0;
+	border-radius: 3px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	font-size: 1em;
+	font-family: $font--heavy;
+	cursor: pointer;
+	@include button-background($accent);
+}
+
+
+
+
+
+/*-------------------------------------*\
+	Header
+\*-------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------*\
+	Main
+\*-------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------*\
+	Footer
+\*-------------------------------------*/
