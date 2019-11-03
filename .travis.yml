@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '11'
+- stable
 
 cache:
   directories:
@@ -12,5 +12,20 @@ before_script:
 
 script: gulp build
 
-# after_success:
-# - curl --ftp-create-dirs -T "{404.php,footer.php,front-page.php,functions.php,header.php,index.php,page.php,style.css,static,inc}" sftp://${SFTP_USER}:${SFTP_PASSWORD}@scoutingoost1.nl/subdomains/dev/wp-content/themes/scoutingoost1
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: rsync -r -e 'ssh -p 4444' --quiet --exclude 'src' --exclude 'deploy_rsa.enc' --exclude 'README.md' --exclude 'package.json' --exclude 'gulpfile.js' --exclude '.gitignore' --exclude 'node_modules' --exclude 'package-lock.json' $TRAVIS_BUILD_DIR/_site/
+    floris@fmjansen.com:/var/www/dev.scoutingoost1.nl/html/wp-content/scoutingoost1-theme/
+  on:
+    branch: master
+
+addons:
+  ssh_known_hosts: fmjansen.com:4444
+
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_beaf27b10b7f_key -iv $encrypted_beaf27b10b7f_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
