@@ -15,7 +15,7 @@ script: gulp build
 deploy:
 - provider: script
   skip_cleanup: true
-  script: rsync -r -e 'ssh -p 4444' --quiet --exclude 'src' --exclude 'deploy_rsa.enc' --exclude 'README.md' --exclude 'package.json' --exclude 'gulpfile.js' --exclude '.gitignore' --exclude 'node_modules' --exclude 'package-lock.json' $TRAVIS_BUILD_DIR/_site/
+  script: rsync -r -e 'ssh -p 4444' --quiet --exclude 'src' --exclude 'deploy_rsa.enc' --exclude 'README.md' --exclude 'package.json' --exclude 'gulpfile.js' --exclude '.gitignore' --exclude 'node_modules' --exclude 'package-lock.json' $TRAVIS_BUILD_DIR/
     floris@fmjansen.com:/var/www/dev.scoutingoost1.nl/html/wp-content/scoutingoost1-theme/
   on:
     branch: develop
