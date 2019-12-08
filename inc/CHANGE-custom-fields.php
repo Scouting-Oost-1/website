@@ -1,5 +1,5 @@
 <?php
 
 /*-------------------------------------*\
-	CHANGE POST TYPE ACF FIELDS
+  CHANGE POST TYPE ACF FIELDS
 \*-------------------------------------*/

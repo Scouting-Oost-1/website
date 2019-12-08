@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><?php wp_title( '|', true, 'right' ); ?></title>
 
@@ -13,15 +13,15 @@
     <?php $theme_info = wp_get_theme(); ?>
 
     <?php wp_enqueue_script( 'scripts',
-			get_template_directory_uri() . '/static/js/main.js',
-			array('jquery'), $theme_info->version, true ); ?>
+      get_template_directory_uri() . '/static/js/main.js',
+      array('jquery'), $theme_info->version, true ); ?>
 
     <?php wp_enqueue_style('fonts',
-			'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,800,800i&display=swap' ); ?>
+      'https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,800,800i&display=swap' ); ?>
 
-		<?php wp_enqueue_style('main',
-			get_template_directory_uri() . '/static/css/main.css',
-			array(), $theme_info->version ); ?>
+    <?php wp_enqueue_style('main',
+      get_template_directory_uri() . '/static/css/main.css',
+      array(), $theme_info->version ); ?>
 
     <meta name="ajaxurl" content="<?php echo admin_url( 'admin-ajax.php' ); ?>">
 
