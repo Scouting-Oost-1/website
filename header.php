@@ -36,16 +36,15 @@
 
       <a href="<?php echo get_site_url(); ?>">
         <picture>
-					<source type="image/svg+xml"
-            srcset="<?php echo image_url('logo-mark.svg'); ?>">
+          <source type="image/svg+xml"
+            srcset="<?php echo image_url('full-logo-black.svg'); ?>">
           <img alt="<?php bloginfo( 'name' ); ?>"
             title="<?php bloginfo( 'name' ); ?>"
             class="logo"
-            srcset="<?php echo image_url('logo.png'); ?> 1x,
-              <?php echo image_url('logo@2x.png'); ?> 2x"
-            src="<?php echo image_url('logo.png'); ?>">
+            srcset="<?php echo image_url('full-logo-black.png'); ?> 1x,
+              <?php echo image_url('full-logo-black@2x.png'); ?> 2x"
+            src="<?php echo image_url('full-logo-black.png'); ?>">
         </picture>
-        <?php bloginfo( 'name' ); ?>
       </a>
 
 

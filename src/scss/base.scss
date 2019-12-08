@@ -152,6 +152,19 @@ a {
   }
 }
 
+.logo {
+  width: 195px;
+  margin: 1em;
+  display: block;
+
+  @media (min-width: $brk--phone) {
+    width: 160px;
+  }
+
+  @media (min-width: $brk--desktop) {
+    width: 195px;
+  }
+}
 
 
 
