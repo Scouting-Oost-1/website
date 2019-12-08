@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-  <main class="front-page">
+  <main class="front-page" id="site-content">
 
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>

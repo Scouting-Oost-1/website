@@ -30,6 +30,8 @@
   </head>
   <body>
 
+    <a href="#site-content" class="skip">Ga naar de inhoud</a>
+
     <header class="site-header">
 
       <a href="<?php echo get_site_url(); ?>">
