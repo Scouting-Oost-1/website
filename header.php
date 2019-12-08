@@ -47,13 +47,13 @@
         </picture>
       </a>
 
+      <a href="#menu" class="js-menu-toggle menu-toggle">Menu</a>
 
-      <a href="#menu" class="js-menu-toggle">Menu</a>
-      <nav class="primary-menu" id="menu">
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary-menu',
-					'container' => false,
-					'menu_class' => 'primary-menu__list' ) ); ?>
+      <nav class="site-menu opened" id="menu">
+        <?php wp_nav_menu( array(
+          'theme_location' => 'primary',
+          'container' => false,
+          'menu_class' => 'site-menu__list' ) ); ?>
       </nav>
 
     </header>

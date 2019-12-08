@@ -2,24 +2,26 @@ jQuery(document).ready(onDocReady);
 
 function onDocReady () {
 
-	var $ = jQuery;
+  let $ = jQuery,
+    menu = $('.site-menu');
 
-	ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
+  ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
 
-	menuToggler();
+  menuToggler(menu);
+  menu.removeClass('opened');
 
 }
 
 
 
-function menuToggler () {
+function menuToggler (menu) {
 
-	var menuToggle = $('.js-menu-toggle'),
-		menu = $('.primary-menu');
+  var menuToggle = $('.js-menu-toggle');
 
-	menuToggle.click(function () {
-		menu.toggleClass('opened');
-		menuToggle.toggleClass('opened');
-	});
+  menuToggle.click(function (e) {
+    e.preventDefault();
+    menu.toggleClass('opened');
+    menuToggle.toggleClass('opened');
+  });
 
 }
