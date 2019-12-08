@@ -14,9 +14,7 @@ Thumbs.db
 
 # Node modules
 node_modules
+package-lock.json
 
 # Static folder
 static/
-
-# Docker Compose
-docker-compose.yml
