@@ -137,7 +137,7 @@ a {
 \*-------------------------------------*/
 .skip {
   position: absolute;
-  top: -2em;
+  top: -5em;
   display: block;
   background: white;
   border: 1px solid black;
@@ -152,14 +152,18 @@ a {
   }
 }
 
+$header-border: 1px solid transparentize(black, 0.8);
+
 .site-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: var(--page-bg, white);
+  border-bottom: $header-border;
 
-  @media (min-width: $brk--tablet) {
+  @media (min-width: $brk--phone) {
+    align-items: stretch;
     justify-content: flex-start;
   }
 }
@@ -210,9 +214,6 @@ a {
     border: none;
     flex-shrink: 1;
     width: auto;
-  }
-
-  @media (min-width: $brk--tablet) {
     margin-left: 1.5em;
   }
 
@@ -224,6 +225,9 @@ a {
     @media (min-width: $brk--phone) {
       display: flex;
       flex-flow: row;
+      align-items: stretch;
+      height: 100%;
+      margin-top: 0;
     }
   }
 }
@@ -250,15 +254,34 @@ a {
     right: 0;
     max-height: 0;
     overflow: hidden;
+    top: 89px;
+    transition: none;
+    left: 0;
+    padding-left: 216px;
+  }
+
+  @media (min-width: $brk--tablet) {
+    top: 93px;
+    padding-left: 223px;
   }
 
   @media (min-width: $brk--desktop) {
-    right: auto;
+    top: 109px;
+    padding-left: 265px;
   }
 }
 
 .menu-item {
   font-weight: normal;
+
+  &:hover,
+  &:focus-within {
+    .sub-menu {
+      max-height: 14em;
+      height: 13.6em;
+      border-bottom: $header-border;
+    }
+  }
 
   a {
     display: block;
@@ -269,6 +292,11 @@ a {
     &:hover {
       text-decoration: underline;
     }
+
+    @media (min-width: $brk--phone) {
+      padding: .75em 1em;
+      display: inline-block;
+    }
   }
 
   &-has-children {
@@ -277,19 +305,14 @@ a {
     margin-bottom: .5em;
 
     @media (min-width: $brk--phone) {
-      margin-bottom: 1em;
+      margin-bottom: 0;
+      position: static;
+      display: flex;
+      align-items: center;
     }
 
     & > a {
       display: block;
-      margin-top: .5em;
-    }
-
-    &:hover,
-    &:focus-within {
-      .sub-menu {
-        max-height: 14em;
-      }
     }
   }
 }
