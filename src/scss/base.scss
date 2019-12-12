@@ -278,8 +278,12 @@ $header-border: 1px solid transparentize(black, 0.8);
   &:focus-within {
     .sub-menu {
       max-height: 14em;
-      height: 13.6em;
-      border-bottom: $header-border;
+
+      @media (min-width: $brk--phone) {
+        height: 16.1em;
+        max-height: none;
+        border-bottom: $header-border;
+      }
     }
   }
 
