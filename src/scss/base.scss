@@ -431,7 +431,85 @@ $header-border: 1px solid transparentize(black, 0.8);
 /*-------------------------------------*\
   Main
 \*-------------------------------------*/
+.page-thumb {
+  margin-top: -$header-h--phone;
+  background: var(--page-bg, $accent);
+  padding-top: $header-h--phone;
+  text-align: center;
 
+  @media (min-width: $brk--phone) {
+    margin-top: -$header-h--tablet;
+    background-repeat: repeat;
+    background-size: 266px;
+    background-blend-mode: soft-light;
+    background-image: url(../img/pattern-white.png);
+    background-image: url(../img/pattern-white.svg);
+  }
+
+  @media (min-width: $brk--tablet) {
+    margin-top: -$header-h--desktop;
+  }
+
+  @media (min-width: $brk--desktop) {
+    margin-top: -$header-h--large-desktop;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    margin-bottom: -4.25em;
+
+    @media (min-width: $brk--phone) {
+      max-height: 65vh;
+      margin: 2em 0 -5.75em;
+    }
+
+    @media (min-width: $brk--tablet) {
+      margin: 3em 0 -7.25em;
+    }
+  }
+}
+
+.activity {
+  &--page {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8vw;
+  }
+
+  &__title {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: $brk--tablet) {
+    &__content {
+      order: 2;
+      flex-shrink: 1;
+    }
+    &__date-time-place {
+      margin-right: 2.5vw;
+      padding-right: 2.5vw;
+      border-right: $header-border;
+      text-align: right;
+      order: 1;
+      width: 11em;
+    }
+  }
+}
+
+.meta-head {
+  text-shadow: none;
+  margin-bottom: 0;
+  font-size: 1em;
+  color: var(--page-bg, $accent);
+}
+
+.meta-content {
+  margin-top: 0;
+}
 
 
 
