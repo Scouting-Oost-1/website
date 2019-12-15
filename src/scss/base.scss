@@ -346,6 +346,10 @@ $header-border: 1px solid transparentize(black, 0.8);
 
     & > a {
       display: block;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
