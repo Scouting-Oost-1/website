@@ -88,6 +88,28 @@ h5,
 h6 {
   font-family: $font--heavy;
   font-weight: 700;
+  text-shadow: .075em .075em var(--page-bg, $accent);
+  max-width: 32rem;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: .075em .075em var(--page-bg, $accent);
+}
+
+p {
+  max-width: 32em;
+}
+
+blockquote {
+  max-width: 30em;
+  margin-left: 2em;
+}
+
+ul,
+ol {
+  max-width: 32em;
+  box-sizing: border-box;
 }
 
 a {
@@ -221,6 +243,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     list-style: none;
     padding: 0;
     margin-bottom: 0;
+    max-width: none;
 
     @media (min-width: $brk--phone) {
       display: flex;
@@ -238,6 +261,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   transition: max-height 250ms ease-out,
     width 100ms ease-out;
   max-height: 0;
+  max-width: none;
 
   @media (max-width: ($brk--phone - 1)) {
     overflow: hidden;
