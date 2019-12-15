@@ -123,31 +123,39 @@ a {
 /*-------------------------------------*\
   Buttons
 \*-------------------------------------*/
-@mixin button-background($color) {
-  background: $color;
-
-  &:hover {
-    background: darken($color, 10%);
-  }
-
-  &:focus {
-    background: darken($color, 15%);
-  }
-}
-
 .button {
   display: inline-block;
   padding: .7em 1.2em;
-  margin: 5px 0;
-  border-radius: 3px;
+  margin: .4em .3em;
+  border-radius: .3em;
   color: white;
   text-decoration: none;
   text-align: center;
   border: none;
   font-size: 1em;
   font-family: $font--heavy;
+  font-weight: bold;
   cursor: pointer;
-  @include button-background($accent);
+  background: var(--page-bg, $accent);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 .1em .2em transparentize(black, .6);
+    transform: translateY(-.1em);
+  }
+
+  &:active {
+    box-shadow: 0 .05em .1em transparentize(black, .6);
+    transform: translateY(-.05em);
+  }
+
+  &--light {
+    background: white;
+    color: var(--page-bg, $accent);
+    border: .1em solid var(--page-bg, $accent);
+    padding: .6em 1.1em;
+  }
+}
 
 
 
