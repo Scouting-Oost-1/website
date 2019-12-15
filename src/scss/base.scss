@@ -233,8 +233,14 @@ $header-border: 1px solid transparentize(black, 0.8);
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: var(--page-bg, white);
+  position: relative;
+  z-index: 2;
   border-bottom: $header-border;
+
+  &:hover,
+  &:focus-within {
+    background: white;
+  }
 
   @media (min-width: $brk--phone) {
     align-items: stretch;
@@ -325,7 +331,7 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   @media (min-width: $brk--phone) {
     position: absolute;
-    background: var(--page-bg, white);
+    background: white;
     min-width: 100%;
     right: 0;
     max-height: 0;
