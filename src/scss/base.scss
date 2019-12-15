@@ -148,6 +148,39 @@ a {
   font-family: $font--heavy;
   cursor: pointer;
   @include button-background($accent);
+
+
+
+
+
+/*-------------------------------------*\
+  Referral blocks
+\*-------------------------------------*/
+.referral {
+  padding: .8em;
+  border: 2px dotted var(--page-bg, $accent);
+  border-radius: .3em;
+  color: black;
+  display: block;
+
+  &--heavy {
+    background: var(--page-bg, $accent);
+    border-style: solid;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--arrowed::after {
+    content: "→";
+    float: right;
+  }
+
+  &__icon {
+    margin-right: .3em;
+  }
 }
 
 
