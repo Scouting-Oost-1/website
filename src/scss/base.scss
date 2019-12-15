@@ -41,6 +41,11 @@ $brk--tablet: 992px;
 $brk--desktop: 1200px;
 $brk--large-desktop: 1920px;
 
+$header-h--phone: 101px;
+$header-h--tablet: 89px;
+$header-h--desktop: 93px;
+$header-h--large-desktop: 109px;
+
 
 
 
@@ -337,19 +342,19 @@ $header-border: 1px solid transparentize(black, 0.8);
     right: 0;
     max-height: 0;
     overflow: hidden;
-    top: 89px;
+    top: $header-h--tablet;
     transition: none;
     left: 0;
     padding-left: 216px;
   }
 
   @media (min-width: $brk--tablet) {
-    top: 93px;
+    top: $header-h--desktop;
     padding-left: 223px;
   }
 
   @media (min-width: $brk--desktop) {
-    top: 109px;
+    top: $header-h--large-desktop;
     padding-left: 265px;
   }
 }
