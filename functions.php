@@ -10,8 +10,8 @@
 
 
   /* INCLUDES */
-  include( 'inc/CHANGE-post-type.php' );
-  include( 'inc/CHANGE-custom-fields.php' );
+  include( 'inc/activity-post-type.php' );
+  include( 'inc/activity-custom-fields.php' );
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );
