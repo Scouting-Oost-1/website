@@ -93,12 +93,23 @@ h6 {
 }
 
 h1 {
+  text-align: center;
+  max-width: none;
   font-size: 3em;
-  text-shadow: .075em .075em var(--page-bg, $accent);
+  text-shadow: .065em .065em var(--page-bg, $accent);
+
+  @media (min-width: $brk--phone) {
+    font-size: 4em;
+  }
+
+  @media (min-width: $brk--tablet) {
+    font-size: 5em;
+  }
 }
 
 p {
   max-width: 32em;
+  line-height: 1.4;
 }
 
 blockquote {
