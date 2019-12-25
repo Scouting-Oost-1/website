@@ -432,19 +432,12 @@ $header-border: 1px solid transparentize(black, 0.8);
 /*-------------------------------------*\
   Main
 \*-------------------------------------*/
-.page-thumb {
+.include-header {
   margin-top: -$header-h--phone;
-  background: var(--page-bg, $accent);
   padding-top: $header-h--phone;
-  text-align: center;
 
   @media (min-width: $brk--phone) {
     margin-top: -$header-h--tablet;
-    background-repeat: repeat;
-    background-size: 266px;
-    background-blend-mode: soft-light;
-    background-image: url(../img/pattern-white.png);
-    background-image: url(../img/pattern-white.svg);
   }
 
   @media (min-width: $brk--tablet) {
@@ -453,6 +446,20 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   @media (min-width: $brk--desktop) {
     margin-top: -$header-h--large-desktop;
+  }
+}
+
+.page-thumb {
+  @extend .include-header;
+  background: var(--page-bg, $accent);
+  text-align: center;
+
+  @media (min-width: $brk--phone) {
+    background-repeat: repeat;
+    background-size: 266px;
+    background-blend-mode: soft-light;
+    background-image: url(../img/pattern-white.png);
+    background-image: url(../img/pattern-white.svg);
   }
 
   &__img {
@@ -480,9 +487,70 @@ $header-border: 1px solid transparentize(black, 0.8);
     padding: 0 8vw;
   }
 
+  &--small {
+    margin: 10vw 5vw;
+    padding: 5vw;
+    background: white;
+
+    &__title {
+      font-size: 2em;
+      margin: 1rem 0;
+
+      @media (min-width: $brk--phone) {
+        font-size: 2.5em;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    &__date {
+      font-weight: bold;
+      margin-bottom: 0;
+      font-size: 1.2em;
+    }
+
+
+    @media (min-width: $brk--phone) {
+      display: flex;
+      flex-flow: row;
+    }
+
+    &:nth-of-type(2n) .activity__thumb {
+      order: 3;
+      box-shadow: 1em -1em 0 $accent;
+
+      @media (min-width: $brk--phone) {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  &__thumb {
+    box-shadow: -1em -1em 0 $accent;
+    max-width: 100%;
+    height: auto;
+
+    @media (min-width: $brk--phone) {
+      margin-right: 4vw;
+      max-width: none;
+      flex-grow: 1;
+    }
+  }
+
+  &__text {
+    order: 2;
+  }
+
   &__title {
     width: 100%;
     flex-shrink: 0;
+  }
+
+  &__button {
+    margin: 0;
   }
 
   @media (min-width: $brk--tablet) {
@@ -499,6 +567,22 @@ $header-border: 1px solid transparentize(black, 0.8);
       width: 11em;
     }
   }
+}
+
+.archive-title {
+  @extend .include-header;
+  background: url(../img/pattern-full-color.png);
+  background: url(../img/pattern-full-color.svg);
+  background-size: 266px;
+
+  &__head {
+    transform: translateY(.5em);
+    margin: .5em 1em 0;
+  }
+}
+
+.activities--page {
+  border-top: $header-border;
 }
 
 .meta-head {
