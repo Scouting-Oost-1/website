@@ -118,3 +118,25 @@
       $wp_admin_bar->remove_menu('comments');
   }
   add_action( 'wp_before_admin_bar_render', 'so1_admin_bar_render' );
+
+
+
+
+
+  function sort_activities( $query ) {
+  	// do not modify queries in the admin
+  	if( is_admin() ) return $query;
+
+  	// only modify queries for 'event' post type
+  	if( isset($query->query_vars['post_type'])
+     && $query->query_vars['post_type'] == 'activity' ) {
+  		$query->set('orderby', 'meta_value');
+  		$query->set('meta_key', 'date_upcoming');
+  		$query->set('order', 'ASC');
+  	}
+
+  	// return
+  	return $query;
+  }
+
+  add_action('pre_get_posts', 'sort_activities');
