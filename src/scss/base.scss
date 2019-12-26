@@ -623,12 +623,21 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   &__head {
     transform: translateY(.5em);
-    margin: .5em 1em 0;
+    margin: .5em 1rem 0;
   }
 }
 
 .activities--page {
   border-top: $header-border;
+
+  &__referral {
+    margin: 3em 10vw 0;
+
+    @media (min-width: $brk--phone) {
+      margin-bottom: -6vw;
+      margin-top: 5em;
+    }
+  }
 }
 
 .meta-head {
