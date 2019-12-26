@@ -12,6 +12,8 @@
   /* INCLUDES */
   include( 'inc/activity-post-type.php' );
   include( 'inc/activity-custom-fields.php' );
+  include( 'inc/publication-post-type.php' );
+  include( 'inc/publication-custom-fields.php' );
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );
@@ -140,3 +142,23 @@
   }
 
   add_action('pre_get_posts', 'sort_activities');
+
+
+
+
+
+  function show_publications( $query ) {
+  	// do not modify queries in the admin
+  	if( is_admin() ) return $query;
+  	// only modify queries for 'event' post type
+  	if( is_category() && $query->is_main_query() ) {
+  		$query->set('post_type', array(
+        'post',
+        'publication'
+      ));
+  	}
+  	// return
+  	return $query;
+  }
+
+  add_action('pre_get_posts', 'show_publications');
