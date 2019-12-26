@@ -596,6 +596,66 @@ $header-border: 1px solid transparentize(black, 0.8);
   margin-top: 0;
 }
 
+.lopendvuurtje-archive {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: $header-border;
+  padding: 0 5vw;
+
+  &__description {
+    width: 80vw;
+    margin: 7.5vw 5vw 2.5vw;
+    flex-shrink: 0;
+
+    @media (min-width: $brk--phone) {
+      column-count: 2;
+      column-gap: 2em;
+
+      p { margin: 0; }
+    }
+  }
+}
+
+.lopendvuurtje {
+  margin: 5vw 2vw;
+  background: white;
+  transition: transform 100ms ease-out;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  &__edition {
+    font-size: 2em;
+    text-align: center;
+    margin-top: -.75em;
+    color: black;
+    margin-bottom: 0;
+    max-width: none;
+    position: relative;
+    transition: transform 100ms ease-out;
+  }
+
+  &__cover {
+    transition: all 100ms ease-out;
+  }
+
+  &:hover,
+  &:focus-within {
+    .lopendvuurtje__cover {
+      box-shadow: .5em .5em 0 var(--page-bg, $accent);
+      transform: translate(-.5em, -.5em);
+    }
+
+    .lopendvuurtje__edition {
+      transform: translate(0, .7em);
+    }
+  }
+}
+
 
 
 
