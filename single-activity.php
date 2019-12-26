@@ -5,7 +5,7 @@
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
   <?php if ( has_post_thumbnail() ) : ?>
-    <header class="page-thumb">
+    <header class="page-thumb page-thumb--green">
       <?php the_post_thumbnail('post-thumbnail',
         array( 'class' => 'page-thumb__img')
       ); ?>

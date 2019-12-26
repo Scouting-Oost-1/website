@@ -28,12 +28,22 @@
 $font--heavy: 'Alegreya Sans', sans-serif;
 $font--light: 'Alegreya Sans', sans-serif;
 $background--light: #ffffff;
-$accent: #89C664;
+$accent: #82c14a;
 
 $social:
   (instagram, #e1306c),
   (facebook, #3b5998),
   (twitter, #1da1f2);
+
+$colors:
+  (pink, #e469a8),
+  (purple, #7e69af),
+  (blue, #344da1),
+  (green, #82c14a),
+  (yellow, #fdb940),
+  (orange, #f9a14f),
+  (red, #f05554),
+  (cyan, #38bfbf);
 
 // Breakpoints
 $brk--phone: 768px;
@@ -449,17 +459,32 @@ $header-border: 1px solid transparentize(black, 0.8);
   }
 }
 
+@each $palette_name, $color in $colors {
+  .#{$palette_name} {
+    --page-bg: #{$color};
+  }
+}
+
 .page-thumb {
   @extend .include-header;
-  background: var(--page-bg, $accent);
+  --page-bg: #{$accent};
+  background: var(--page-bg, white);
   text-align: center;
+  background-blend-mode: soft-light;
 
   @media (min-width: $brk--phone) {
     background-repeat: repeat;
     background-size: 266px;
-    background-blend-mode: soft-light;
-    background-image: url(../img/pattern-white.png);
-    background-image: url(../img/pattern-white.svg);
+    background-image: url(../img/pattern-full-color.png);
+    background-image: url(../img/pattern-full-color.svg);
+  }
+
+  @each $palette_name, $color in $colors {
+    &--#{$palette_name} {
+      --page-bg: #{$color};
+      background-image: url(../img/pattern-white.png);
+      background-image: url(../img/pattern-white.svg);
+    }
   }
 
   &__img {
