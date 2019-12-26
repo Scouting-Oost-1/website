@@ -484,10 +484,9 @@ $header-border: 1px solid transparentize(black, 0.8);
 
 .page-thumb {
   @extend .include-header;
-  --page-bg: #{$accent};
+  --page-bg: white;
   background: var(--page-bg, white);
   text-align: center;
-  background-blend-mode: soft-light;
 
   @media (min-width: $brk--phone) {
     background-repeat: repeat;
@@ -499,6 +498,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   @each $palette_name, $color in $colors {
     &--#{$palette_name} {
       --page-bg: #{$color};
+      background-blend-mode: soft-light;
       background-image: url(../img/pattern-white.png);
       background-image: url(../img/pattern-white.svg);
     }
@@ -519,6 +519,12 @@ $header-border: 1px solid transparentize(black, 0.8);
     @media (min-width: $brk--tablet) {
       margin: 3em 0 -6.5em;
     }
+  }
+
+  &__spacer {
+    @extend .page-thumb__img;
+    height: 5em;
+    border-bottom: $header-border;
   }
 }
 

@@ -4,13 +4,15 @@
 <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
-  <?php if ( has_post_thumbnail() ) : ?>
-    <header class="page-thumb page-thumb--<?php the_field('palette_color') ?>">
+  <header class="page-thumb page-thumb--<?php the_field('palette_color') ?>">
+    <?php if ( has_post_thumbnail() ) : ?>
       <?php the_post_thumbnail('post-thumbnail',
         array( 'class' => 'page-thumb__img')
       ); ?>
-    </header>
-  <?php endif; ?>
+    <?php else: ?>
+      <div class="page-thumb__spacer"></div>
+    <?php endif; ?>
+  </header>
 
   <main class="page <?php the_field('palette_color') ?>" id="site-content">
 
