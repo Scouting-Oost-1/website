@@ -33,12 +33,17 @@
         $location_upcoming = get_field('location_upcoming');
 
         $upcoming = false;
-        if($date_upcoming) $upcoming = "<strong>$date_upcoming</strong>";
-        if($time_upcoming) $upcoming .= ", " . $time_upcoming;
+        if($date_upcoming) $upcoming = "<strong>$date_upcoming</strong><br>";
+        if($time_upcoming) $upcoming .= "🕰 " . $time_upcoming;
         if($date_upcoming_end || $time_upcoming_end) $upcoming .= " – ";
         if($date_upcoming_end) $upcoming .= $date_upcoming_end;
-        if($time_upcoming_end) $upcoming .= ", " . $time_upcoming_end;
-        if($location_upcoming) $upcoming .= ". " . $location_upcoming . ".";
+        if($date_upcoming_end && $time_upcoming_end) $upcoming .= ", ";
+        if($time_upcoming_end) $upcoming .= $time_upcoming_end;
+        if(!$upcoming && $location_upcoming) {
+          echo "<p class=\"meta-content\">📍 $location_upcoming</p>";
+        } elseif($location_upcoming) {
+          $upcoming .= "<br>📍 " . $location_upcoming;
+        }
 
         if($upcoming):
       ?>
@@ -58,7 +63,7 @@
         $last = false;
         if($date_last) $last = "<strong>$date_last</strong>";
         if($date_last_end) $last .= " – " . $date_last_end;
-        if($location_last) $last .= ". " . $location_last . ".";
+        if($location_last) $last .= "<br>📍 " . $location_last;
 
         if($last):
       ?>
