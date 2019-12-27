@@ -77,18 +77,6 @@
 
 
 
-    <section class="upcoming--front">
-      <h1>Binnenkort</h1>
-
-      <h2>De eerstvolgende activiteit</h2>
-
-      <h2>Zomerkamp</h2>
-
-      <h2>Volledige agenda</h2>
-    </section>
-
-
-
     <section class="members--front">
       <h1>Jeugdleden</h1>
       <div class="speltakken--front">
@@ -133,6 +121,7 @@
 
       <a href="#" class="button">Huur onze gebouwen</a>
       <a href="#" class="button">Steun Scouting Oost 1</a>
+      <a href="#" class="button">Bekijk de agenda</a>
       <a href="#" class="button">Neem contact op</a>
     </section>
 
