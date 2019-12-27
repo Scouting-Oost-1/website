@@ -79,6 +79,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   word-wrap: break-word;
   --page-bg: #{$accent};
+  min-height: 100vh;
 
   @media (min-width: $brk--tablet) {
     font-size: 18px;
@@ -724,3 +725,49 @@ $header-border: 1px solid transparentize(black, 0.8);
 /*-------------------------------------*\
   Footer
 \*-------------------------------------*/
+.site-footer {
+  padding: 5vw;
+  display: flex;
+  flex-flow: column;
+  font-size: 1rem;
+  background: #eee;
+  border-top: .3em solid var(--page-bg, #{$accent});
+  box-shadow: 0 50vh 0 50vh #eee;
+
+  @media (min-width: $brk--phone) {
+    padding: 2.5vw;
+    flex-flow: row wrap;
+    margin-top: 5vw;
+  }
+
+  &__col {
+    padding: 5vw;
+    border: $header-border;
+    border-width: 1px 0 0;
+
+    &:first-of-type {
+      border-top-width: 0;
+    }
+
+    @media (min-width: $brk--phone) {
+      padding: 0 1.5em;
+      width: 12em;
+      flex-grow: 1;
+      border-right-width: 1px;
+      border-top-width: 0;
+
+      &:last-of-type {
+        border-right-width: 0;
+      }
+    }
+  }
+
+  &__address {
+    margin: 1em 0;
+    font-style: normal;
+  }
+
+  p {
+    margin: .5em 0;
+  }
+}
