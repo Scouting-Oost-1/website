@@ -8,15 +8,40 @@
 
 
 
-    <section class="top--front">
-      <h1>[activiteit]</h1>
-      <p>[korte beschrijving]</p>
-      - Open Dag & eerste draaimomenten
-      - Grote Clubactie
-      - Sinterklaas
-      - Poffertjes
-      - Zomerkamp
-      - Anders: Gebouw
+    <?php
+      $activity = get_field('activity');
+      $activity_ID = $activity->ID;
+    ?>
+    <section class="activity--front page-thumb page-thumb--green"
+      style="--alt-img: url(<?php echo get_the_post_thumbnail_url($activity_ID); ?>);">
+      <p class="activity--front__date">
+        <?php
+          $activity_begin = get_field('date_upcoming', $activity_ID);
+          $activity_end = get_field('date_upcoming_end', $activity_ID);
+          if (strtotime($activity_begin) > strtotime('today')) {
+            echo "Op $activity_begin hebben we:";
+          } elseif (strtotime($activity_end) >= strtotime('today')) {
+            echo "Vandaag:";
+          } else {
+            echo "Op $activity_end hadden we:";
+          }
+        ?>
+      </p>
+      <h1 class="activity--front__title">
+        <?php echo $activity->post_title; ?>
+      </h1>
+      <p class="activity--front__excerpt">
+        <?php echo $activity->post_excerpt; ?>
+        <a href="<?php the_permalink($activity_ID); ?>"
+          class="button activity--front__button">
+          Meer over <?php echo $activity->post_title; ?>
+        </a>
+      </p>
+      <?php
+        echo get_the_post_thumbnail(
+          $activity_ID,
+          'post-thumbnail',
+          array( 'class' => 'activity--front__img')); ?>
     </section>
 
 
