@@ -157,7 +157,7 @@ ol {
 }
 
 a {
-  color: $accent;
+  color: #344da1;
 }
 
 
@@ -525,7 +525,10 @@ $header-border: 1px solid transparentize(black, 0.8);
   &__spacer {
     @extend .page-thumb__img;
     height: 5em;
-    border-bottom: $header-border;
+
+    @media (min-width: $brk--phone) {
+      border-bottom: $header-border;
+    }
   }
 }
 
@@ -647,6 +650,7 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   &__title {
     width: 100%;
+    width: calc(100% - 2rem);
     flex-shrink: 0;
   }
 
