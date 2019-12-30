@@ -14,6 +14,7 @@
   include( 'inc/activity-custom-fields.php' );
   include( 'inc/publication-post-type.php' );
   include( 'inc/publication-custom-fields.php' );
+  include( 'inc/page-custom-fields.php' );
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );
