@@ -4,9 +4,9 @@
   PUBLICATION POST TYPE
 \*-------------------------------------*/
 
-add_action( 'init', 'Preate_publication_post_type' );
+add_action( 'init', 'create_publication_post_type' );
 
-function Preate_publication_post_type() {
+function create_publication_post_type() {
   $args = array(
     'description' => 'Publication Post Type',
     'show_ui' => true,
@@ -36,7 +36,7 @@ function Preate_publication_post_type() {
     'taxonomies' => array( 'category' ),
     'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' )
   );
-  register_post_type( 'publication' , $args );
+  register_post_type( 'publicaties' , $args );
 }
 
 function publication_activate() {

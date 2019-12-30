@@ -35,7 +35,7 @@ function create_activity_post_type() {
     'rewrite' => true,
     'supports' => array( 'editor', 'revisions', 'thumbnail', 'title', 'excerpt' )
   );
-  register_post_type( 'activity' , $args );
+  register_post_type( 'activiteiten' , $args );
 }
 
 function activity_activate() {
