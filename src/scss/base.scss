@@ -25,8 +25,7 @@
 /*-------------------------------------*\
   Variables (colors and fonts)
 \*-------------------------------------*/
-$font--heavy: 'Alegreya Sans', sans-serif;
-$font--light: 'Alegreya Sans', sans-serif;
+$font: 'Alegreya Sans', sans-serif;
 $background--light: #ffffff;
 $accent: #82c14a;
 
@@ -72,7 +71,7 @@ html {
 body {
   margin: 0;
   background: $background--light;
-  font-family: $font--light;
+  font-family: $font;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -102,7 +101,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font--heavy;
+  font-family: $font;
   font-weight: 700;
   text-shadow: .075em .075em var(--page-bg, $accent);
   max-width: 32rem;
@@ -177,7 +176,7 @@ a {
   text-align: center;
   border: none;
   font-size: 1em;
-  font-family: $font--heavy;
+  font-family: $font;
   font-weight: bold;
   cursor: pointer;
   background: var(--page-bg, $accent);
