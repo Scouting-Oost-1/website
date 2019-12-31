@@ -31,8 +31,14 @@
       </div>
 
       <div class="site-footer__col">
-        <p><a href="#">Ledenadministratie</a> (inschrijven, gegevens wijzigen, uitschrijven)</p>
-        <p><a href="#">Steun Scouting Oost 1</a></p>
+        <p>
+          <a href="<?php get_permalink( get_page_by_path( 'ledenadministratie' ) )?>">Ledenadministratie</a>
+          (inschrijven, gegevens wijzigen, uitschrijven)
+        </p>
+        <p>
+          <a href="<?php get_permalink( get_page_by_path( 'steunen' ) )?>">
+            Steun Scouting Oost 1</a>
+        </p>
       </div>
     </footer>
 
