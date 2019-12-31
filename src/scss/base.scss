@@ -774,6 +774,224 @@ $header-border: 1px solid transparentize(black, 0.8);
 
 
 /*-------------------------------------*\
+  Administration
+\*-------------------------------------*/
+fieldset {
+  border-style: solid;
+  border-color: #{nth(nth($colors, 5),2)};
+  border-radius: .5em;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em auto;
+  max-width: 44rem;
+
+  .button {
+    margin: 1rem;
+    color: black;
+  }
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 2px .5em;
+}
+
+.form-element {
+  --input-color: #aaa;
+  display: block;
+  padding: .5em;
+  border: 2px solid var(--input-color);
+  border-radius: .5em;
+  margin: 1em;
+}
+
+.text-label {
+  @extend .form-element;
+  font-weight: bold;
+  color: var(--input-color);
+  font-size: 1rem;
+  flex-grow: 1;
+
+  @media (min-width: $brk--phone) {
+    width: 18em;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: .5em;
+    padding-top: 1.75em;
+    margin: -.5em;
+    margin-top: -1.75em;
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  select {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:focus-within {
+    --input-color: #{nth(nth($colors, 3),2)};
+  }
+}
+
+input,
+select,
+textarea {
+  font-size: 1em;
+  font-family: $font;
+}
+
+.options {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+  --input-color: #aaa;
+
+  &--inlined {
+    @media (min-width: $brk--phone) {
+      flex-flow: row wrap;
+      align-items: stretch;
+      width: auto;
+    }
+  }
+
+  &__opt {
+    @extend .form-element;
+    margin: 0;
+    border-radius: 0;
+    padding: .9em .9em .9em .5em;
+    font-size: 1.2rem;
+    border: 2px solid var(--input-color);
+    --input-color: inherit;
+    border-bottom-width: 0;
+
+    &:first-child {
+      border-radius: .5em .5em 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 .5em .5em;
+      border-bottom-width: 2px;
+    }
+
+    &--inline {
+      @media (min-width: $brk--phone) {
+        border-bottom-width: 2px;
+        border-right-width: 0;
+
+        &:first-child {
+          border-radius: .5em 0 0 .5em;
+        }
+
+        &:last-child {
+          border-radius: 0 .5em .5em 0;
+          border-right-width: 2px;
+        }
+      }
+    }
+  }
+}
+
+.term-check {
+  @extend .form-element;
+  padding: .9em .5em;
+  flex-grow: 1;
+}
+
+.terms {
+  margin: 0 1em;
+}
+
+.valid {
+  --input-color: #{$accent};
+}
+
+.invalid {
+  --input-color: #{nth(nth($colors, 7),2)};
+}
+
+.readonly {
+  --input-color: #ccc;
+  background: #f0f0f0;
+}
+
+.checked {
+  font-weight: bold;
+}
+
+.no-display {
+  display: none;
+}
+
+.form-prob {
+  margin: 1em;
+  border: 2px dotted #{nth(nth($colors, 7),2)};
+  padding: .9em;
+  border-radius: .5em;
+  max-width: none;
+
+  &--floating {
+    position: fixed;
+    bottom: 0;
+    background: #{nth(nth($colors, 7),2)};
+    border-color: white;
+    color: white;
+    max-width: 44rem;
+  }
+}
+
+.form-success {
+  @extend .form-prob;
+  border-color: $accent;
+  max-width: 44rem;
+  margin: 0 auto 3em;
+}
+
+.comments {
+  @extend .form-prob;
+  border-color: #aaa;
+  max-width: 44rem;
+  margin: auto;
+}
+
+.form-overview {
+  &__table {
+    margin: 1rem;
+    border-spacing: 0;
+
+    td {
+      padding: .5em 1.5em .5em .5em;
+
+      &:last-child {
+        font-weight: bold;
+      }
+    }
+
+    tr:nth-of-type(2n) {
+      background: #eee;
+    }
+  }
+}
+
+.loading {
+  opacity: .5;
+  pointer-events: none;
+}
+
+
+
+
+
+/*-------------------------------------*\
   Footer
 \*-------------------------------------*/
 .site-footer {

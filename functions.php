@@ -6,7 +6,8 @@
    * - Image url function
    * - Register menus
    * - Security edits
-   * - Removing emoji */
+   * - Removing emoji
+   * - AJAX address API */
 
 
   /* INCLUDES */
@@ -15,6 +16,7 @@
   include( 'inc/publication-post-type.php' );
   include( 'inc/publication-custom-fields.php' );
   include( 'inc/page-custom-fields.php' );
+  include( 'inc/administration-handling.php' );
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );
@@ -163,3 +165,30 @@
   }
 
   add_action('pre_get_posts', 'show_publications');
+
+
+
+
+
+  add_action('wp_ajax_nopriv_address', 'address');
+  add_action('wp_ajax_address', 'address');
+
+  function address() {
+    $curl = curl_init();
+    $url = "http://json.api-postcode.nl";
+    $data = array(
+      'postcode' => $_GET['postcode'],
+      'number' => $_GET['number']
+    );
+    $url = sprintf("%s?%s", $url, http_build_query($data));
+    $postal_code_api_key = "b756b264-f8ba-4082-b76c-a29e832f9bdd";
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+      'token: ' . $postal_code_api_key
+    ));
+    $result = curl_exec($curl);
+    curl_close($curl);
+    echo $result;
+    exit();
+  }

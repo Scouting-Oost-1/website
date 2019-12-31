@@ -1,1 +1,9 @@
 # Scouting Oost 1 - Wordpress theme
+
+Define these:
+
+```
+define('ADMINISTRATION_EMAIL', "");
+define('EMERGENCY_CONTACT', "");
+define('CHAIR', "");
+```
