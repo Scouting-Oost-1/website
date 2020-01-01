@@ -134,7 +134,7 @@
 
   	// only modify queries for 'event' post type
   	if( isset($query->query_vars['post_type'])
-     && $query->query_vars['post_type'] == 'activity' ) {
+     && $query->query_vars['post_type'] == 'activiteiten' ) {
   		$query->set('orderby', 'meta_value');
   		$query->set('meta_key', 'date_upcoming');
   		$query->set('order', 'ASC');
@@ -157,7 +157,7 @@
   	if( is_category() && $query->is_main_query() ) {
   		$query->set('post_type', array(
         'post',
-        'publication'
+        'publicaties'
       ));
   	}
   	// return
