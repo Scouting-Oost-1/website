@@ -12,33 +12,47 @@
               src="<?php echo image_url('full-logo-black.png'); ?>">
           </picture>
         </a>
-      </div>
 
-      <div class="site-footer__col">
         <address class="site-footer__address">
           <strong>Scouting Oost 1</strong><br>
           Kruislaan 224-226b<br>
           1098 SL Amsterdam<br>
           <a href="mailto:info@scoutingoost1.nl">info@scoutingoost1.nl</a><br>
-          <a href="https://www.facebook.com/scoutingoost1/">facebook.com/scoutingoost1</a>
+          <a href="https://www.facebook.com/scoutingoost1/">facebook.com/scoutingoost1</a><br>
+          KVK 34330075
         </address>
       </div>
 
       <div class="site-footer__col">
-        <p>KVK 34330075</p>
-        <p><a href="https://www.scouting.nl/privacy">Privacyverklaring Scouting Nederland</a></p>
-        <p><a href="https://www.scouting.nl/downloads/huishoudelijk-reglement-scouting-nederland">Huishoudelijk reglement Scouting Nederland</a></p>
-      </div>
-
-      <div class="site-footer__col">
-        <p>
-          <a href="<?php get_permalink( get_page_by_path( 'ledenadministratie' ) )?>">Ledenadministratie</a>
-          (inschrijven, gegevens wijzigen, uitschrijven)
-        </p>
-        <p>
-          <a href="<?php get_permalink( get_page_by_path( 'steunen' ) )?>">
-            Steun Scouting Oost 1</a>
-        </p>
+        <h2 class="site-footer__head">Direct naar...</h2>
+        <ul class="site-footer__links">
+          <li>
+            <a href="https://www.scouting.nl/privacy">Privacyverklaring Scouting Nederland</a>
+          </li>
+          <li>
+            <a href="https://www.scouting.nl/downloads/huishoudelijk-reglement-scouting-nederland">Huishoudelijk reglement Scouting Nederland</a>
+          </li>
+          <li>
+            Ledenadministratie
+            <?php $administration_link = get_permalink(
+              get_page_by_title( 'Ledenadministratie' ) ); ?>
+            <ul>
+              <li>
+                <a href="<?php echo $administration_link; ?>?Actie=Aanmelden">
+                  Word lid</a>
+              <li>
+                <a href="<?php echo $administration_link; ?>?Actie=Wijzigen">
+                  Uitschrijven</a>
+              <li>
+                <a href="<?php echo $administration_link; ?>?Actie=Afmelden">
+                  Gegevens wijzigen</a>
+            </ul>
+          </li>
+          <li>
+            <a href="<?php get_permalink( get_page_by_path( 'steunen' ) ); ?>">
+              Steun Scouting Oost 1</a>
+          </li>
+        </ul>
       </div>
     </footer>
 
