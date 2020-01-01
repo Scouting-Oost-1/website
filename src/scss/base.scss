@@ -836,6 +836,153 @@ hr {
 
 
 /*-------------------------------------*\
+  Front page
+\*-------------------------------------*/
+.past {
+  padding: 5vw;
+  display: flex;
+  flex-flow: column;
+  align-items: baseline;
+
+  @media (min-width: $brk--phone) {
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    &__part {
+      margin: 1em;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    flex-shrink: 0;
+    margin: .5em 0 0;
+  }
+
+  .wp-post-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__item {
+    background: white;
+    border: 2px solid $accent;
+    overflow: hidden;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    box-shadow: 1em 1em 0 transparentize($accent, .5);
+    display: inline-block;
+  }
+
+  &__post-title {
+    margin: .75rem 1rem 1rem;
+    text-shadow: none;
+    color: black;
+
+    a { color: black; }
+  }
+}
+
+.front-members {
+  --page-bg: #{nth(nth($colors, 5),2)};
+  @extend .pattern;
+  overflow: hidden;
+
+  &__cont {
+    display: flex;
+    flex-flow: column;
+    margin: -3.5rem 5vw 5vw;
+    padding: 8vw 5vw 5vw;
+    background: white;
+    justify-content: center;
+
+    @media (min-width: $brk--phone) {
+      flex-flow: row;
+      margin-top: -5em;
+    }
+
+    @media (min-width: $brk--tablet) {
+      margin-top: -6em;
+    }
+  }
+
+  &__speltakken {
+    background: white;
+    padding: .5em 0;
+
+    td,
+    th {
+      padding: .25em .75em;
+      text-align: left;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-flow: column;
+
+    .button { color: black; }
+
+    @media (min-width: $brk--phone) {
+      margin-left: 2em;
+    }
+  }
+}
+
+.front-end {
+  --page-bg: #{nth(nth($colors, 2),2)};
+  padding: 5vw 5vw;
+  @extend .pattern;
+
+  @media (min-width: $brk--phone) {
+    margin-bottom: -5vw;
+  }
+
+  &__cont {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 5vw;
+    background: white;
+
+    @media (min-width: $brk--phone) {
+      flex-flow: row;
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  &__text {
+    flex-grow: 2;
+
+    @media (min-width: $brk--phone) {
+      margin-right: 2em;
+      width: 15em;
+    }
+  }
+}
+
+.continue {
+  text-align: center;
+  display: block;
+  flex-grow: 1;
+
+  @media (min-width: $brk--phone) {
+    width: 10em;
+  }
+
+  .button { display: block; }
+}
+
+
+
+
+
+/*-------------------------------------*\
   Administration
 \*-------------------------------------*/
 fieldset {
