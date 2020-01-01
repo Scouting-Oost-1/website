@@ -754,6 +754,8 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   &__cover {
     transition: all 100ms ease-out;
+    max-width: 100%;
+    height: auto;
   }
 
   &:hover,
