@@ -978,6 +978,23 @@ hr {
   .button { display: block; }
 }
 
+.wp-block-table {
+  margin: 0;
+
+  table {
+    border-spacing: 0;
+  }
+
+  tr:nth-child(even) {
+    background: #eee;
+  }
+
+  td {
+    min-width: 8em;
+    border-spacing: .4em;
+  }
+}
+
 
 
 
