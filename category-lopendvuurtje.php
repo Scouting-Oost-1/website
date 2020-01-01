@@ -10,7 +10,6 @@
 
   <main class="lopendvuurtje-archive" id="site-content">
 
-    <?php // TODO: add description ?>
     <div class="lopendvuurtje-archive__description">
       <p>Het Lopend Vuurtje, het clubblad van Scouting Oost 1, wordt gemaakt voor en door leden van onze vereniging. De inhoud bestaat met name uit stukken over allerlei (aankomende en afgelopen) activiteiten. Denk daarbij aan leuke draaiavonden van de verschillende speltakken, weekenden weg, acties, enzovoort. Ook wordt er altijd ruimte gemaakt voor andere rubrieken, zoals een goed recept of een griezelverhaal. Heb je een leuk idee voor één van de volgende edities? Mail dan de redactie via <a href="mailto:lopendvuurtje@scoutingoost1.nl">lopendvuurtje@scoutingoost1.nl</a>.</p>
     </div>
