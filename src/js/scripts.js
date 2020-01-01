@@ -34,6 +34,10 @@ function onDocReady () {
   ibanField.focusout(requireSepa);
   administrationForm.submit(submitAdministration);
 
+  if (pickAction) {
+    chooseActionButton.click();
+  }
+
 }
 
 

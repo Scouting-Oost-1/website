@@ -7,6 +7,9 @@
 $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
 ?>
+<script type="text/javascript">
+  var pickAction = <?php echo ($_GET['Actie']) ? 'true' : 'false'; ?>;
+</script>
 
 <form class="administration" method="post"
   name="<?php echo $ad_form; ?>-administration"
@@ -20,15 +23,18 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
     <div class="options">
       <label class="options__opt">
-        <input type="radio" name="Actie" value="Aanmelden" required>
+        <input type="radio" name="Actie" value="Aanmelden" required
+        <?php if($_GET['Actie'] === 'Aanmelden') echo 'checked'; ?>>
         Lid worden
       </label>
       <label class="options__opt">
-        <input type="radio" name="Actie" value="Wijzigen" required>
+        <input type="radio" name="Actie" value="Wijzigen" required
+        <?php if($_GET['Actie'] === 'Wijzigen') echo 'checked'; ?>>
         Gegevens aanpassen
       </label>
       <label class="options__opt">
-        <input type="radio" name="Actie" value="Afmelden" required>
+        <input type="radio" name="Actie" value="Afmelden" required
+        <?php if($_GET['Actie'] === 'Afmelden') echo 'checked'; ?>>
         Lidmaatschap opzeggen
       </label>
     </div>
