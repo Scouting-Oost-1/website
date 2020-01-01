@@ -497,10 +497,8 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   @each $palette_name, $color in $colors {
     &--#{$palette_name} {
+      @extend .pattern;
       --page-bg: #{$color};
-      background-blend-mode: soft-light;
-      background-image: url(../img/pattern-white.png);
-      background-image: url(../img/pattern-white.svg);
     }
   }
 
@@ -1117,4 +1115,19 @@ textarea {
   p {
     margin: .5em 0;
   }
+}
+
+
+
+
+
+/*-------------------------------------*\
+  Patterned background
+\*-------------------------------------*/
+.pattern {
+  background: var(--page-bg);
+  background-size: 266px;
+  background-blend-mode: soft-light;
+  background-image: url(../img/pattern-white.png);
+  background-image: url(../img/pattern-white.svg);
 }
