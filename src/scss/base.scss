@@ -685,6 +685,15 @@ $header-border: 1px solid transparentize(black, 0.8);
   }
 }
 
+.archive {
+  padding: 0 10vw 2em;
+
+  &__title {
+    color: black;
+    text-decoration: none;
+  }
+}
+
 .activities--page {
   border-top: $header-border;
 
@@ -769,6 +778,59 @@ $header-border: 1px solid transparentize(black, 0.8);
       transform: translate(0, .7em);
     }
   }
+}
+
+.post-date {
+  font-style: italic;
+  text-align: center;
+}
+
+.index {
+  padding: 1em 10vw;
+
+  &__thumb {
+    max-width: 80vw;
+    height: auto;
+
+    @media (min-width: $brk--phone) {
+      margin-top: 2em;
+    }
+  }
+}
+
+hr {
+  max-width: 80vw;
+  margin: 2em auto;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+}
+
+.pagination {
+  text-align: center;
+
+  &__prev,
+  &__next {
+    display: inline-block;
+    padding: 1em;
+
+    a {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+
+  &__prev {
+    text-align: right;
+  }
+
+  &__next {
+    text-align: left;
+  }
+}
+
+.page-numbers {
+  display: inline-block;
+  padding: .3em;
 }
 
 

@@ -15,7 +15,7 @@
 
 
     <h2>
-      <a href="<?php the_permalink(); ?>">
+      <a href="<?php the_permalink(); ?>" class="archive__title">
         <?php the_title(); ?>
       </a>
     </h2>
@@ -27,8 +27,14 @@
       <a href="<?php the_permalink(); ?>">Lees verder</a>
     </p>
 
+    <hr>
 
-<?php endwhile; else: ?>
+
+<?php endwhile; ?>
+
+<?php the_posts_pagination(); ?>
+
+<?php else: ?>
 
     <p>Sorry, deze pagina lijkt niet te bestaan.</p>
 
