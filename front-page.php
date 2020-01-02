@@ -180,14 +180,16 @@
         </table>
 
         <div class="front-members__buttons">
-          <a class="button" href="<?php echo get_permalink(
-            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Aanmelden">
+          <?php $administration_link = get_permalink(
+            get_page_by_path( 'ledenadministratie' ) ); ?>
+          <a class="button"
+            href="<?php echo $administration_link ?>?Actie=Aanmelden">
             Word lid</a>
-          <a class="button button--light" href="<?php echo get_permalink(
-            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Wijzigen">
+          <a class="button button--light"
+            href="<?php echo $administration_link ?>?Actie=Wijzigen">
             Uitschrijven</a>
-          <a class="button button--light" href="<?php echo get_permalink(
-            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Afmelden">
+          <a class="button button--light"
+            href="<?php echo $administration_link ?>?Actie=Afmelden">
             Gegevens wijzigen</a>
         </div>
       </div>
