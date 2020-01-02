@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="theme-color" content="#f15a2c">
+    <meta name="theme-color" content="#82c14a">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <?php $theme_info = wp_get_theme(); ?>
