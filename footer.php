@@ -35,7 +35,7 @@
           <li>
             Ledenadministratie
             <?php $administration_link = get_permalink(
-              get_page_by_title( 'Ledenadministratie' ) ); ?>
+              get_page_by_path( 'ledenadministratie' ) ); ?>
             <ul>
               <li>
                 <a href="<?php echo $administration_link; ?>?Actie=Aanmelden">
