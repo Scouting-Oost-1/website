@@ -34,8 +34,18 @@ function onDocReady () {
   ibanField.focusout(requireSepa);
   administrationForm.submit(submitAdministration);
 
-  if (pickAction) {
-    chooseActionButton.click();
+  if (typeof pickAction !== 'undefined') {
+    if (pickAction) {
+      chooseActionButton.click();
+    }
+  }
+
+  if (typeof photoAlbum !== 'undefined') {
+    if (lastPartURL !== 'fotos') {
+      getPhotos(lastPartURL);
+    } else {
+      getCollections();
+    }
   }
 
 }

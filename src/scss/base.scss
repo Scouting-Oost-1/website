@@ -1218,6 +1218,52 @@ textarea {
 
 
 /*-------------------------------------*\
+  Photo album
+\*-------------------------------------*/
+.photos {
+  .loading { text-align: center; }
+}
+
+.collection {
+  margin: 1em;
+}
+
+.photoset {
+  @extend .referral;
+  @extend .referral--arrowed;
+  margin: 1em;
+}
+
+.album {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .button {
+    width: 150px;
+    margin: .5em;
+    box-sizing: border-box;
+  }
+}
+
+.photo {
+  margin: .5em;
+  width: 150px;
+}
+
+.back-to-albums {
+  @extend .button;
+  display: block;
+  font-weight: bold;
+  margin: 1em;
+}
+
+
+
+
+
+/*-------------------------------------*\
   Footer
 \*-------------------------------------*/
 .site-footer {
