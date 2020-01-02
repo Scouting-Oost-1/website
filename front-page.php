@@ -181,13 +181,13 @@
 
         <div class="front-members__buttons">
           <a class="button" href="<?php echo get_permalink(
-            get_page_by_title( 'Ledenadministratie' ) ); ?>?Actie=Aanmelden">
+            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Aanmelden">
             Word lid</a>
           <a class="button button--light" href="<?php echo get_permalink(
-            get_page_by_title( 'Ledenadministratie' ) ); ?>?Actie=Wijzigen">
+            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Wijzigen">
             Uitschrijven</a>
           <a class="button button--light" href="<?php echo get_permalink(
-            get_page_by_title( 'Ledenadministratie' ) ); ?>?Actie=Afmelden">
+            get_page_by_path( 'ledenadministratie' ) ); ?>?Actie=Afmelden">
             Gegevens wijzigen</a>
         </div>
       </div>
