@@ -181,11 +181,10 @@
       'number' => $_GET['number']
     );
     $url = sprintf("%s?%s", $url, http_build_query($data));
-    $postal_code_api_key = "b756b264-f8ba-4082-b76c-a29e832f9bdd";
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-      'token: ' . $postal_code_api_key
+      'token: ' . POSTAL_CODE_API_KEY
     ));
     $result = curl_exec($curl);
     curl_close($curl);
