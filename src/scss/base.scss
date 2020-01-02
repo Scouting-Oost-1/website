@@ -588,8 +588,8 @@ $header-border: 1px solid transparentize(black, 0.8);
     padding-bottom: 5vw;
 
     @media (min-width: $brk--tablet) {
-      background-image: var(--alt-img);
-      background-size: cover;
+      background-image: var(--alt-img) !important;
+      background-size: cover !important;
       background-repeat: no-repeat;
       background-position: center;
       padding-bottom: 10vw;
