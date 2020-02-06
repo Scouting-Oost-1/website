@@ -373,25 +373,31 @@ $header-border: 1px solid transparentize(black, 0.8);
 
   @media (min-width: $brk--phone) {
     position: absolute;
-    background: white;
-    min-width: 100%;
-    right: 0;
     max-height: 0;
     overflow: hidden;
     top: $header-h--tablet;
     transition: none;
-    left: 0;
-    padding-left: 216px;
+    font-weight: bold;
+
+    &:after {
+      content: "";
+      display: block;
+      background: transparentize(white, .1);
+      position: absolute;
+      width: 200vw;
+      height: 100vh;
+      top: 0;
+      left: -100vw;
+      z-index: -1;
+    }
   }
 
   @media (min-width: $brk--tablet) {
     top: $header-h--desktop;
-    padding-left: 223px;
   }
 
   @media (min-width: $brk--desktop) {
     top: $header-h--large-desktop;
-    padding-left: 265px;
   }
 }
 
@@ -404,9 +410,10 @@ $header-border: 1px solid transparentize(black, 0.8);
       max-height: 14em;
 
       @media (min-width: $brk--phone) {
-        height: 17.6em;
+        height: 100vh;
         max-height: none;
         border-bottom: $header-border;
+        overflow: visible;
       }
     }
   }
@@ -422,6 +429,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     }
 
     @media (min-width: $brk--phone) {
+      font-weight: bold;
       padding: .75em 1em;
       display: inline-block;
     }
