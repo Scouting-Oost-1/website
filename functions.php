@@ -19,6 +19,7 @@
   include( 'inc/photoalbum-custom-fields.php' );
   include( 'inc/page-custom-fields.php' );
   include( 'inc/administration-handling.php' );
+  if (file_exists('inc/local-vars.php')) include( 'inc/local-vars.php' );
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );

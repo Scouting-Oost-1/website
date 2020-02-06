@@ -18,3 +18,5 @@ package-lock.json
 
 # Static folder
 static/
+
+inc/local-vars.php
