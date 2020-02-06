@@ -926,6 +926,14 @@ hr {
     margin-bottom: 1em;
     box-shadow: 1em 1em 0 transparentize($accent, .5);
     display: inline-block;
+
+    @media (min-width: $brk--desktop) {
+      width: 320px;
+    }
+
+    @media (min-width: $brk--large-desktop) {
+      width: auto;
+    }
   }
 
   &__post-title {
