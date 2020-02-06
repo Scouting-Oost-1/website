@@ -16,7 +16,7 @@
   <p>
     <a class="referral referral--heavy referral--arrowed"
       href="https://www.flickr.com/photos/134051155@N05/albums">
-      Bekijk alle albums
+      Bekijk ook de oude albums op Flickr
     </a>
   </p>
 
