@@ -539,6 +539,39 @@ $header-border: 1px solid transparentize(black, 0.8);
 
 .page {
   padding: 0 10vw;
+
+  &--extra-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    margin: 1em 0;
+    padding-top: 1em;
+    border-top: 1px solid var(--page-bg, $accent);
+    width: 100%;
+
+    @media (min-width: $brk--tablet) {
+      margin-right: 2.5vw;
+      padding-right: 2.5vw;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      text-align: right;
+      order: 1;
+      width: 11em;
+      border-top: none;
+      padding-bottom: 1em;
+      padding-top: 0;
+    }
+
+    &-list {
+      margin: 0;
+      padding-left: 1em;
+
+      @media (min-width: $brk--tablet) {
+        list-style: none;
+      }
+    }
+  }
 }
 
 .activity {
