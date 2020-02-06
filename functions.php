@@ -15,6 +15,8 @@
   include( 'inc/activity-custom-fields.php' );
   include( 'inc/publication-post-type.php' );
   include( 'inc/publication-custom-fields.php' );
+  include( 'inc/photoalbum-post-type.php' );
+  include( 'inc/photoalbum-custom-fields.php' );
   include( 'inc/page-custom-fields.php' );
   include( 'inc/administration-handling.php' );
 

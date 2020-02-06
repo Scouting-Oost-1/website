@@ -1246,8 +1246,9 @@ textarea {
 .album {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1em;
 
   .button {
     width: 150px;
