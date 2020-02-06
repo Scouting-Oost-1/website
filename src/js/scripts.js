@@ -7,6 +7,7 @@ function onDocReady () {
 
   let $ = jQuery,
     menu = $('.site-menu'),
+    header = $('.site-header'),
     adminForm = $('.administration'),
     checkableInputs = $('input[type=radio], input[type=checkbox]'),
     textInputs = $('input, textarea, select'),
@@ -22,6 +23,7 @@ function onDocReady () {
   menuToggler(menu);
   menu.removeClass('opened');
 
+  scrollMenu(header);
   prepAdminForm(adminForm);
   checkableInputs.bind('change', updateCheckableFieldState);
   textInputs.focusout(updateTextFieldState);
@@ -40,7 +42,7 @@ function onDocReady () {
     }
   }
 
-  if ($('.album')) {
+  if ($('.album').length) {
     $('.fancybox').fancybox({
       beforeShow: function() {
         location.hash = this.element.attr('id');
@@ -73,6 +75,18 @@ function menuToggler (menu) {
     menuToggle.toggleClass('opened');
   });
 
+}
+
+function scrollMenu (header) {
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    console.log('scrolling');
+    if (scroll > 150) {
+      header.addClass("site-header--sticky");
+    } else {
+      header.removeClass("site-header--sticky");
+    }
+  });
 }
 
 

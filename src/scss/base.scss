@@ -277,6 +277,11 @@ $header-border: 1px solid transparentize(black, 0.8);
   top: 0;
   z-index: 2;
   border-bottom: $header-border;
+  transition: background ease-out 200ms;
+
+  &--sticky {
+    background: transparentize(white, .1);
+  }
 
   &:hover,
   &:focus-within {
