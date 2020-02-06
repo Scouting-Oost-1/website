@@ -79,14 +79,30 @@
 
 
 
-      <!-- <div class="past__part photos--front">
+      <?php
+        $recent_photos_query = array(
+          'post_type' => 'photoalbum',
+          'posts_per_page' => 1,
+          'category' => 'nieuws'
+        );
+        $recent_photos = new WP_Query($recent_photos_query);
+
+        if ($recent_photos->have_posts()): $recent_photos->the_post();
+      ?>
+
+      <div class="past__part photos--front">
         <h2>Foto’s</h2>
         <p>Bekijk het nieuwste fotoalbum</p>
 
         <article class="past__item">
-          [Fotoalbum]
+          <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('medium'); ?>
+            <h3 class="past__post-title"><?php the_title(); ?></h3>
+          </a>
         </article>
-      </div> -->
+      </div>
+
+      <?php endif; wp_reset_postdata();?>
 
 
 

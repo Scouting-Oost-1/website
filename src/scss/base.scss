@@ -1227,8 +1227,34 @@ textarea {
 /*-------------------------------------*\
   Photo album
 \*-------------------------------------*/
+.photoalbums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
 .photoalbum {
   padding: 1em 10vw;
+
+  &--link {
+    @extend .past__item;
+    margin-right: 2.5em;
+    margin-bottom: 2.5em;
+    width: 200px;
+    max-width: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  &__name {
+    @extend .past__post-title;
+  }
 
   &__button-cont { text-align: center; }
 }
