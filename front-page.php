@@ -73,6 +73,15 @@
           </a>
           <?php echo $recent_news->post_excerpt; ?>
         </article>
+
+        <?php
+          $news = get_term_by('slug', 'nieuws', 'category');
+          $news_link = get_term_link($news->term_id);
+        ?>
+        <a class="button past__all-button"
+          href="<?php echo $news_link; ?>">
+          Al het nieuws
+        </a>
       </div>
 
       <?php endif; ?>
@@ -100,6 +109,11 @@
             <h3 class="past__post-title"><?php the_title(); ?></h3>
           </a>
         </article>
+
+        <a class="button past__all-button"
+          href="<?php echo get_post_type_archive_link('photoalbum'); ?>">
+          Alle fotoalbums
+        </a>
       </div>
 
       <?php endif; wp_reset_postdata();?>
@@ -126,6 +140,15 @@
             <h3 class="past__post-title"><?php the_title(); ?></h3>
           </a>
         </article>
+
+        <?php
+          $lv = get_term_by('slug', 'lopendvuurtje', 'category');
+          $lv_link = get_term_link($lv->term_id);
+        ?>
+        <a class="button past__all-button"
+          href="<?php echo $lv_link; ?>">
+          Alle edities
+        </a>
       </div>
 
       <?php endif; wp_reset_postdata();?>
