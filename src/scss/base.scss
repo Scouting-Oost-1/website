@@ -913,7 +913,10 @@ hr {
     td,
     th {
       padding: .25em .75em;
-      text-align: left;
+    }
+
+    .both {
+      text-align: center;
     }
   }
 

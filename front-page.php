@@ -130,10 +130,10 @@
           <tbody>
             <tr>
               <td>4–7</td>
-              <td>
+              <td colspan="2" class="both">
                 <a href="<?php echo get_permalink(
                   get_page_by_title( 'Bevers' ) ); ?>">
-                  Bevers
+                  Gemengd: Bevers
                 </a>
               </td>
             </tr>
@@ -169,10 +169,10 @@
             </tr>
             <tr>
               <td>15–18</td>
-              <td>
+              <td colspan="2" class="both">
                 <a href="<?php echo get_permalink(
                   get_page_by_title( 'Explorers' ) ); ?>">
-                  Explorers
+                  Gemengd: Explorers
                 </a>
               </td>
             </tr>
