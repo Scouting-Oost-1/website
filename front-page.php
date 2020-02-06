@@ -65,12 +65,12 @@
         <p>Lees het laatste nieuwsbericht</p>
 
         <article class="past__item">
-          <?php echo get_the_post_thumbnail($recent_news_ID, 'medium'); ?>
-          <h3 class="past__post-title">
-            <a href="<?php the_permalink($recent_news_ID); ?>">
-              <?php echo $recent_news->post_title; ?>
-            </a>
-          </h3>
+          <a href="<?php the_permalink($recent_news_ID); ?>">
+            <?php echo get_the_post_thumbnail($recent_news_ID, 'medium'); ?>
+            <h3 class="past__post-title">
+                <?php echo $recent_news->post_title; ?>
+            </h3>
+          </a>
           <?php echo $recent_news->post_excerpt; ?>
         </article>
       </div>
