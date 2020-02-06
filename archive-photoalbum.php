@@ -13,6 +13,13 @@
 
 <?php if(have_posts()) : ?>
 
+  <p>
+    <a class="referral referral--heavy referral--arrowed"
+      href="https://www.flickr.com/photos/134051155@N05/albums">
+      Bekijk alle albums
+    </a>
+  </p>
+
   <section class="photoalbums">
 
   <?php while(have_posts()) : the_post(); ?>
