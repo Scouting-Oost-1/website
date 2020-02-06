@@ -40,12 +40,23 @@ function onDocReady () {
     }
   }
 
-  if (typeof photoAlbum !== 'undefined') {
-    if (lastPartURL !== 'fotos') {
-      getPhotos(lastPartURL);
-    } else {
-      getCollections();
+  if ($('.album')) {
+    $('.fancybox').fancybox({
+      beforeShow: function() {
+        location.hash = this.element.attr('id');
+      }
+    });
+
+    if (location.hash !== undefined && location.hash !== "") {
+      $(location.hash).trigger('click');
     }
+
+    $('#js-slideshow-button').click(function() {
+      $('.fancybox').first().click();
+      setTimeout(function() {
+        $.event.trigger({ type: 'keydown', which: 32 });
+      }, 100);
+    });
   }
 
 }

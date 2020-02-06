@@ -1227,8 +1227,10 @@ textarea {
 /*-------------------------------------*\
   Photo album
 \*-------------------------------------*/
-.photos {
-  .loading { text-align: center; }
+.photoalbum {
+  padding: 1em 10vw;
+
+  &__button-cont { text-align: center; }
 }
 
 .collection {
