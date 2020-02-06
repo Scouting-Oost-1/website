@@ -18,7 +18,6 @@
 
     <div class="activity__content">
       <?php the_content(); ?>
-      [album of fotoalbum-link]
     </div>
 
 
