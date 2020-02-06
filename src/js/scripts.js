@@ -80,7 +80,6 @@ function menuToggler (menu) {
 function scrollMenu (header) {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    console.log('scrolling');
     if (scroll > 150) {
       header.addClass("site-header--sticky");
     } else {
