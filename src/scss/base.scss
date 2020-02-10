@@ -897,8 +897,12 @@ hr {
 /*-------------------------------------*\
   Front page
 \*-------------------------------------*/
+.front-highlight {
+  margin: 2em 2em 0;
+}
+
 .past {
-  padding: 5vw;
+  padding: 1vw 5vw 5vw;
   display: flex;
   flex-flow: column;
   align-items: baseline;

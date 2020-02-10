@@ -46,6 +46,15 @@
 
 
 
+    <p class="front-highlight">
+      <a class="referral referral--heavy referral--arrowed"
+        href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
+        Scouting Oost 1 steunen? Plaats uw bestelling via <strong>Sponsorkliks.nl</strong>
+      </a>
+    </p>
+
+
+
     <section class="past">
       <h1 class="past__title">Blijf op de hoogte</h1>
 
