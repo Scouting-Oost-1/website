@@ -70,7 +70,7 @@
    * - blocking unauthorized access to the JSON API
    * - removing author archives
    */
-  add_filter( 'xmlrpc_enabled', '__return_false' );
+  // add_filter( 'xmlrpc_enabled', '__return_false' );
   add_filter( 'rest_authentication_errors', function( $result ) {
     if ( ! empty( $result ) ) {
         return $result;
