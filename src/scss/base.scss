@@ -1111,7 +1111,12 @@ legend {
   margin: 1em;
 }
 
-.text-label {
+.text-label,
+.grunion-field-name-wrap,
+.grunion-field-text-wrap,
+.grunion-field-date-wrap,
+.grunion-field-textarea-wrap,
+.grunion-field-telephone-wrap {
   @extend .form-element;
   font-weight: bold;
   color: var(--input-color);
