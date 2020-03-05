@@ -1122,8 +1122,8 @@ legend {
   .contact-form input[type=text],
   .contact-form input[type=url] {
     width:100% !important;
-    box-sizing: content-box;
-    margin-bottom: -.5em;
+    box-sizing: content-box !important;
+    margin-bottom: -.5em !important;
   }
 }
 
