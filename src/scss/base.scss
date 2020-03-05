@@ -1116,6 +1116,8 @@ legend {
   margin: 1rem;
 }
 
+@media only screen and (min-width:600px){.contact-form input[type=email],.contact-form input[type=tel],.contact-form input[type=text],.contact-form input[type=url]{width:100% !important;}
+
 .pushbutton-wide {
   @extend .button;
   margin: 1rem;
