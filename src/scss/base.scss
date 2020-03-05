@@ -1111,8 +1111,19 @@ legend {
   margin: 1em;
 }
 
+.grunion-field-radio-wrap {
+  @extend .form-element;
+  margin: 1rem;
+}
+
+.pushbutton-wide {
+  @extend .button;
+  margin: 1rem;
+}
+
 .text-label,
 .grunion-field-name-wrap,
+.grunion-field-email-wrap,
 .grunion-field-text-wrap,
 .grunion-field-date-wrap,
 .grunion-field-textarea-wrap,
