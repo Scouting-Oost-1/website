@@ -61,7 +61,7 @@
       <?php
         $recent_at_home = get_posts(array(
           'numberposts' => 1,
-          'category' => 'ikscoutthuis'
+          'category_name' => 'ikscoutthuis'
         ));
         $recent_at_home = $recent_at_home[0];
         $recent_at_home_ID = $recent_at_home->ID;
@@ -93,14 +93,14 @@
         </a>
       </div>
 
-      <?php endif; ?>
+      <?php endif; wp_reset_postdata(); ?>
 
 
 
       <?php
         $recent_news = get_posts(array(
           'numberposts' => 1,
-          'category' => 'nieuws'
+          'category_name' => 'nieuws'
         ));
         $recent_news = $recent_news[0];
         $recent_news_ID = $recent_news->ID;
@@ -132,7 +132,7 @@
         </a>
       </div>
 
-      <?php endif; ?>
+      <?php endif; wp_reset_postdata(); ?>
 
 
 
@@ -167,7 +167,7 @@
         </a>
       </div>
 
-      <?php endif; wp_reset_postdata();?>
+      <?php endif; wp_reset_postdata(); ?>
 
     </section>
 
