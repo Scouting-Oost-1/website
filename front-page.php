@@ -59,6 +59,45 @@
       <h1 class="past__title">Blijf op de hoogte</h1>
 
       <?php
+        $recent_at_home = get_posts(array(
+          'numberposts' => 1,
+          'category' => 'ikscoutthuis'
+        ));
+        $recent_at_home = $recent_at_home[0];
+        $recent_at_home_ID = $recent_at_home->ID;
+
+        if ($recent_at_home->post_type):
+      ?>
+
+      <div class="past__part">
+        <h2>Ik Scout Thuis!</h2>
+        <p>Bekijk de laatste inzending</p>
+
+        <article class="past__item">
+          <a href="<?php the_permalink($recent_at_home_ID); ?>">
+            <?php echo get_the_post_thumbnail($recent_at_home_ID, 'medium'); ?>
+            <h3 class="past__post-title">
+                <?php echo $recent_at_home->post_title; ?>
+            </h3>
+          </a>
+          <?php echo $recent_at_home->post_excerpt; ?>
+        </article>
+
+        <?php
+          $at_home = get_term_by('slug', 'ikscoutthuis', 'category');
+          $at_home_link = get_term_link($at_home->term_id);
+        ?>
+        <a class="button past__all-button"
+          href="<?php echo $at_home_link; ?>">
+          Alle inzendingen
+        </a>
+      </div>
+
+      <?php endif; ?>
+
+
+
+      <?php
         $recent_news = get_posts(array(
           'numberposts' => 1,
           'category' => 'nieuws'
@@ -94,38 +133,6 @@
       </div>
 
       <?php endif; ?>
-
-
-
-      <?php
-        $recent_photos_query = array(
-          'post_type' => 'photoalbum',
-          'posts_per_page' => 1,
-          'category' => 'nieuws'
-        );
-        $recent_photos = new WP_Query($recent_photos_query);
-
-        if ($recent_photos->have_posts()): $recent_photos->the_post();
-      ?>
-
-      <div class="past__part photos--front">
-        <h2>Foto’s</h2>
-        <p>Bekijk het nieuwste fotoalbum</p>
-
-        <article class="past__item">
-          <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('medium'); ?>
-            <h3 class="past__post-title"><?php the_title(); ?></h3>
-          </a>
-        </article>
-
-        <a class="button past__all-button"
-          href="<?php echo get_post_type_archive_link('photoalbum'); ?>">
-          Alle fotoalbums
-        </a>
-      </div>
-
-      <?php endif; wp_reset_postdata();?>
 
 
 
