@@ -899,6 +899,10 @@ hr {
 \*-------------------------------------*/
 .front-highlight {
   margin: 2em 2em 0;
+
+  @media (min-width: 570px) {
+    margin: 2em auto 0;
+  }
 }
 
 .past {
