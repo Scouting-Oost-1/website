@@ -1481,3 +1481,28 @@ textarea {
   background-image: url(../img/pattern-white.png);
   background-image: url(../img/pattern-white.svg);
 }
+
+
+
+
+
+/*-------------------------------------*\
+  Embeds
+\*-------------------------------------*/
+.wp-block-embed {
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.wp-block-embed__wrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
