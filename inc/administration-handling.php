@@ -66,7 +66,7 @@ function members() {
   $message .= "</table>";
 
   $main_email_success = send_mail(ADMINISTRATION_EMAIL, // receiver
-    "Ledenadministratie", // subject
+    "Ledenadministratie " . $_POST['Actie'] . " " . $_POST['Naam'], // subject
     $message, // message
     "Ledenadministratie <noreply@scoutingoost1.nl>"); // sender
 
