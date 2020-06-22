@@ -24,7 +24,7 @@ deploy:
   script: rsync -r -e 'ssh -p 4444' --quiet --exclude 'src' --exclude 'deploy_rsa.enc' --exclude 'README.md' --exclude 'package.json' --exclude 'gulpfile.js' --exclude '.gitignore' --exclude 'node_modules' --exclude 'package-lock.json' $TRAVIS_BUILD_DIR/
     floris@fmjansen.com:/var/www/scoutingoost1.nl/html/wp-content/themes/scoutingoost1-theme/
   on:
-    branch: master
+    branch: main
 
 addons:
   ssh_known_hosts: fmjansen.com:4444
