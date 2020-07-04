@@ -67,7 +67,7 @@
       <?php
         $recent_at_home = get_posts(array(
           'numberposts' => 1,
-          'category_name' => 'ikscoutthuis'
+          'category_name' => 'zomerkamp'
         ));
         $recent_at_home = $recent_at_home[0];
         $recent_at_home_ID = $recent_at_home->ID;
@@ -76,8 +76,8 @@
       ?>
 
       <div class="past__part">
-        <h2>Ik Scout Thuis!</h2>
-        <p>Bekijk de laatste inzending</p>
+        <h2>Zomerkamp</h2>
+        <p>Bekijk het laatste zomerkampnieuws</p>
 
         <article class="past__item">
           <a href="<?php the_permalink($recent_at_home_ID); ?>">
@@ -90,12 +90,12 @@
         </article>
 
         <?php
-          $at_home = get_term_by('slug', 'ikscoutthuis', 'category');
+          $at_home = get_term_by('slug', 'zomerkamp', 'category');
           $at_home_link = get_term_link($at_home->term_id);
         ?>
         <a class="button past__all-button"
           href="<?php echo $at_home_link; ?>">
-          Alle inzendingen
+          Al het nieuws
         </a>
       </div>
 
