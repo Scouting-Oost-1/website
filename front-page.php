@@ -47,7 +47,13 @@
 
 
     <p class="front-highlight">
-      <a class="referral referral--heavy referral--arrowed"
+      <a class="referral referral--heavy"
+        href="/photoalbum/">
+        <i class="fas fa-images referral__icon" aria-hidden="true"></i>
+        Bekijk hier de fotoalbums van zomerkamp
+      </a>
+
+      <a class="referral referral--arrowed"
         href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
         Scouting Oost 1 steunen? Plaats uw bestelling via <strong>Sponsorkliks.nl</strong>
       </a>
