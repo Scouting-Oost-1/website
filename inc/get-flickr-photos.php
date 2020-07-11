@@ -2,7 +2,8 @@
  * Get photos from photoalbum - needs $album_id
  */
 
-$transient_key = 'album_' . $album_id;
+$theme_info = wp_get_theme();
+$transient_key = 'album_' . $album_id . $theme_info->version;
 $cached_response = get_transient($transient_key);
 
 // Check if we have a cached response
@@ -11,7 +12,7 @@ if ($cached_response === false) {
   if (WP_DEBUG) {
   $lifespan = 30;
   } else {
-  $lifespan = HOUR_IN_SECONDS;
+  $lifespan = 10 * MINUTE_IN_SECONDS;
   }
 
   set_transient($transient_key, $rsp_obj, $lifespan);
