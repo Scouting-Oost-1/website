@@ -14,7 +14,8 @@ function send_mail($receiver, $subject, $message, $sender) {
   $message = $message_top . $message . $message_bottom;
   $message = wordwrap($message, 70);
 
-  $headers = 'From:'. $sender . "\r\n";
+  $headers = "From:noreply@scoutingoost1.nl\r\n";
+  $headers .= 'Reply-To:'. $sender . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
