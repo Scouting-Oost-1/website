@@ -1089,7 +1089,7 @@ hr {
 \*-------------------------------------*/
 fieldset {
   border-style: solid;
-  border-color: #{nth(nth($colors, 5),2)};
+  border-color: var(--page-bg, #{nth(nth($colors, 5),2)});
   border-radius: .5em;
   display: flex;
   flex-flow: row wrap;
