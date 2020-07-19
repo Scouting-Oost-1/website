@@ -15,8 +15,7 @@ function onDocReady () {
     speltakDefiners = $('[name=Geboortedatum], [name=Gender]'),
     addressDefiners = $('[name=Postcode], [name=Huisnummer]'),
     chooseActionButton = $('.js-choose-action'),
-    ibanField = $('[name=IBAN]'),
-    administrationForm = $('.administration');
+    ibanField = $('[name=IBAN]');
 
   ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
 
@@ -34,7 +33,7 @@ function onDocReady () {
   addressDefiners.focusout(updateAddress);
   chooseActionButton.click(chooseAction);
   ibanField.focusout(requireSepa);
-  administrationForm.submit(submitAdministration);
+  adminForm.submit(submitAdministration);
 
   if (typeof pickAction !== 'undefined') {
     if (pickAction) {
