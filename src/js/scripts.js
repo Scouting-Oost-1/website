@@ -212,7 +212,8 @@ function updateFormOverview() {
     overviewHtml = $('<table class="form-overview__table"></table>');
 
   formContents.forEach(function(e) {
-    if (e['name'] !== 'url' &&
+    if (e['name'] !== 'action' &&
+      e['name'] !== 'url' &&
       e['name'] !== 'form_action' &&
       e['name'] !== 'Opmerkingen') {
       if(e['name'] === 'tnv') {
