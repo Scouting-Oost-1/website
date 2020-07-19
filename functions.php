@@ -18,6 +18,7 @@
   include( 'inc/photoalbum-post-type.php' );
   include( 'inc/photoalbum-custom-fields.php' );
   include( 'inc/page-custom-fields.php' );
+  include( 'inc/send-mail.php' );
   include( 'inc/administration-handling.php' );
   if (file_exists('inc/local-vars.php')) include( 'inc/local-vars.php' );
 
