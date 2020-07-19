@@ -9,12 +9,14 @@ function onDocReady () {
     menu = $('.site-menu'),
     header = $('.site-header'),
     adminForm = $('.administration'),
+    rentalForm = $('.rental'),
     checkableInputs = $('input[type=radio], input[type=checkbox]'),
     textInputs = $('input, textarea, select'),
     nextButtons = $('.js-next'),
     speltakDefiners = $('[name=Geboortedatum], [name=Gender]'),
     addressDefiners = $('[name=Postcode], [name=Huisnummer]'),
     chooseActionButton = $('.js-choose-action'),
+    chooseRentalTypeButton = $('.js-choose-rental-type'),
     ibanField = $('[name=IBAN]');
 
   ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
@@ -24,6 +26,7 @@ function onDocReady () {
 
   scrollMenu(header);
   prepAdminForm(adminForm);
+  prepRentalForm(rentalForm);
   checkableInputs.bind('change', updateCheckableFieldState);
   textInputs.focusout(updateTextFieldState);
   textInputs.change(updateTextFieldState);
@@ -32,6 +35,7 @@ function onDocReady () {
   speltakDefiners.change(updateSpeltak);
   addressDefiners.focusout(updateAddress);
   chooseActionButton.click(chooseAction);
+  chooseRentalTypeButton.click(chooseRentalType);
   ibanField.focusout(requireSepa);
   adminForm.submit(submitAdministration);
 
@@ -93,6 +97,10 @@ function prepAdminForm(form) {
   form.children('fieldset:not(.start)').hide();
 }
 
+function prepRentalForm(form) {
+  form.children('fieldset:not(.start)').hide();
+}
+
 function updateCheckableFieldState() {
   if ($(this).prop('checked')) {
     $(this).parent().siblings('label').removeClass('checked');
@@ -134,6 +142,10 @@ function nextFormStep(backupEl = false) {
       nextStep = thisStep.nextAll('.act-delete').first();
     } else if (userAction === 'Wijzigen') {
       nextStep = thisStep.nextAll(':not(.non-changing)').first();
+    } else if (userAction === 'Evenement') {
+      nextStep = thisStep.nextAll('.one-day').first();
+    } else if (userAction === 'Overnachting') {
+      nextStep = thisStep.nextAll('.multi-day').first();
     } else {
       nextStep = thisStep.next();
     }
@@ -215,7 +227,8 @@ function updateFormOverview() {
     if (e['name'] !== 'action' &&
       e['name'] !== 'url' &&
       e['name'] !== 'form_action' &&
-      e['name'] !== 'Opmerkingen') {
+      e['name'] !== 'Opmerkingen' &&
+      e['name'] !== 's') {
       if(e['name'] === 'tnv') {
         e['name'] = "Ter name van";
       }
@@ -252,6 +265,30 @@ function chooseAction() {
   $('[name=submit]').text(userAction);
 
   prepAdminForm($('.administration'));
+  nextFormStep($(this).parent());
+}
+
+function chooseRentalType() {
+  userAction = $('[name="Soort verhuur"]:checked').val();
+
+  $('input:not([name=url]), select').prop('required', true);
+  let multiDayOnly = $('fieldset:not(.one-day)'),
+    oneDayOnly = $('fieldset:not(.multi-day)');
+  multiDayOnly.find('input, select').prop('disabled', false);
+  oneDayOnly.find('input, select').prop('disabled', false);
+
+  switch (userAction) {
+    case 'Overnachting':
+      oneDayOnly.find('input, select').prop('disabled', true);
+      oneDayOnly.hide();
+      break;
+    case 'Evenement':
+      multiDayOnly.find('input, select').prop('disabled', true);
+      multiDayOnly.hide();
+      break;
+  }
+
+  prepRentalForm($('.rental'));
   nextFormStep($(this).parent());
 }
 

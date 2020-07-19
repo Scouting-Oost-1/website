@@ -20,6 +20,8 @@
   include( 'inc/page-custom-fields.php' );
   include( 'inc/send-mail.php' );
   include( 'inc/administration-handling.php' );
+  include( 'inc/rental-handling.php' );
+  include( 'inc/rental-form.php' );
   if (file_exists('inc/local-vars.php')) include( 'inc/local-vars.php' );
 
   /* ADD ACTIONS */
