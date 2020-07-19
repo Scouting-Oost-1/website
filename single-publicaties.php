@@ -21,10 +21,10 @@
     <?php the_content(); ?>
 
     <p class="photoalbum__button-cont">
-      <button href="#" class="button" id="js-slideshow-button">
+      <a href="<?php the_field('pdf'); ?>" class="button">
         <i class="fas fa-download referral__icon"></i>
         Download
-      </button>
+      </a>
     </p>
 
   </main>
