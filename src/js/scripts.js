@@ -37,7 +37,8 @@ function onDocReady () {
   chooseActionButton.click(chooseAction);
   chooseRentalTypeButton.click(chooseRentalType);
   ibanField.focusout(requireSepa);
-  adminForm.submit(submitAdministration);
+  adminForm.submit(submitForm);
+  rentalForm.submit(submitForm);
 
   if (typeof pickAction !== 'undefined') {
     if (pickAction) {
@@ -304,12 +305,12 @@ function requireSepa() {
   }
 }
 
-function submitAdministration(e) {
+function submitForm(e) {
   e.preventDefault();
-  let adminForm = $('form'),
-    formContents = adminForm.serializeArray();
+  let submittedForm = $('form'),
+    formContents = submittedForm.serializeArray();
   $('.form-prob--floating').remove();
-  adminForm.addClass('loading');
+  submittedForm.addClass('loading');
   $.ajax({
     url: ajaxurl,
     data: formContents,
@@ -321,10 +322,10 @@ function submitAdministration(e) {
     } else {
       successMessage = "<strong>Het is gelukt!</strong>";
       successMessage += " In je mailbox vind je nog een bevestiging.";
-      adminForm.html('<p class="form-success">' + successMessage + '</p>')
+      submittedForm.html('<p class="form-success">' + successMessage + '</p>')
     }
   }).fail(formFailure).always(function() {
-    adminForm.removeClass('loading');
+    submittedForm.removeClass('loading');
   });
 }
 
