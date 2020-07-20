@@ -24,6 +24,12 @@ function rental() {
   $message = sprintf("<p>%s heeft zojuist het Verhuuraanvraag-formulier ingevuld:</p>", $_POST['Naam']);
   $message .= "<table>";
   foreach ($_POST as $key => $value) {
+    if ($key === 'Datum' ||
+        $key === 'Datum aankomst' ||
+        $key === 'Datum vertrek') {
+        $val_date_time = new DateTime($value);
+        $value = $val_date_time->format('d-m-Y');
+    }
     if ($key !== 'action' && $key !== 'url')
       $message .= sprintf("<tr><td>%s</td><td>%s</td></tr>", $key, $value);
   }
