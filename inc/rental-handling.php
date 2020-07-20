@@ -25,8 +25,8 @@ function rental() {
   $message .= "<table>";
   foreach ($_POST as $key => $value) {
     if ($key === 'Datum' ||
-        $key === 'Datum aankomst' ||
-        $key === 'Datum vertrek') {
+        $key === 'Datum_aankomst' ||
+        $key === 'Datum_vertrek') {
         $val_date_time = new DateTime($value);
         $value = $val_date_time->format('d-m-Y');
     }
