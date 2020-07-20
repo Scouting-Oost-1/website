@@ -21,6 +21,9 @@ function rental() {
     exit();
   }
 
+  $requesting_party = sprintf("%s <%s>", $_POST['Naam'], sanitize_email($_POST['Email']));
+  $rental = sprintf("Verhuur - Scouting Oost 1 <%s>", RENTAL_EMAIL);
+
   $message = sprintf("<p>%s heeft zojuist het Verhuuraanvraag-formulier ingevuld:</p>", $_POST['Naam']);
   $message .= "<table>";
   foreach ($_POST as $key => $value) {
@@ -38,11 +41,7 @@ function rental() {
   $main_email_success = send_mail(RENTAL_EMAIL, // receiver
     "Verhuuraanvraag " . $_POST['Soort verhuur'] . " " . $_POST['Naam'], // subject
     $message, // message
-    "Verhuurformulier <noreply@scoutingoost1.nl>"); // sender
-
-
-  $requesting_party = sprintf("%s <%s>", $_POST['Naam'], sanitize_email($_POST['Email']));
-  $rental = sprintf("Verhuur - Scouting Oost 1 <%s>", RENTAL_EMAIL);
+    $requesting_party); // sender
 
   $message = "<p>Hierbij de bevestiging van de verhuuraanvraag zoals die ook naar ons is gestuurd.</p>" . $message;
   send_mail($requesting_party, // receiver
