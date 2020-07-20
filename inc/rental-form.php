@@ -18,6 +18,10 @@ function rental_form_view() {
 
     <fieldset class="start one-day multi-day">
 
+      <label class="text-label">Gelegenheid
+        <input type="text" name="Gelegenheid" id="occasion" placeholder="Weekend Scouting Lutjebroek" required>
+      </label>
+
       <legend>Waar wilt u het gebouw voor huren?</legend>
 
       <div class="options">
