@@ -43,7 +43,7 @@ function rental() {
     $message, // message
     $requesting_party); // sender
 
-  $message = "<p>Hierbij de bevestiging van de verhuuraanvraag zoals die ook naar ons is gestuurd.</p>" . $message;
+  $message = "<p>Hierbij de bevestiging van de verhuuraanvraag zoals die ook naar ons is gestuurd. We streven ernaar u binnen vijf werkdagen een antwoord te sturen.</p>" . $message;
   send_mail($requesting_party, // receiver
     "Verhuuraanvraag Scouting Oost 1", // subject
     $message, // message
