@@ -40,15 +40,18 @@
               $children = get_children($post->ID); ?>
               <li>
                 <a href="<?php the_permalink(); ?>">
-                  <?php the_title(); ?>
+                  <strong><?php the_title(); ?></strong>
                 </a>
               </li>
             <?php
             endif;
             foreach ($children as $key => $child) { ?>
             <li>
+              <?php $active_link = ($child->ID === $post->ID); ?>
               <a href="<?php echo $child->guid; ?>">
+                <?php if ($active_link) echo "<strong>"; ?>
                 <?php echo $child->post_title; ?>
+                <?php if ($active_link) echo "</strong>"; ?>
               </a>
             </li>
           <?php } ?>
