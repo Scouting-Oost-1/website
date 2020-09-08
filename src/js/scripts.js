@@ -10,6 +10,7 @@ function onDocReady () {
     header = $('.site-header'),
     adminForm = $('.administration'),
     rentalForm = $('.rental'),
+    clothesForm = $('.clothes'),
     checkableInputs = $('input[type=radio], input[type=checkbox]'),
     textInputs = $('input, textarea, select'),
     nextButtons = $('.js-next'),
@@ -27,6 +28,7 @@ function onDocReady () {
   scrollMenu(header);
   prepAdminForm(adminForm);
   prepRentalForm(rentalForm);
+  prepClothesForm(clothesForm);
   checkableInputs.bind('change', updateCheckableFieldState);
   textInputs.focusout(updateTextFieldState);
   textInputs.change(updateTextFieldState);
@@ -39,6 +41,7 @@ function onDocReady () {
   ibanField.focusout(requireSepa);
   adminForm.submit(submitForm);
   rentalForm.submit(submitForm);
+  clothesForm.submit(submitForm);
 
   if (typeof pickAction !== 'undefined') {
     if (pickAction) {
@@ -99,6 +102,10 @@ function prepAdminForm(form) {
 }
 
 function prepRentalForm(form) {
+  form.children('fieldset:not(.start)').hide();
+}
+
+function prepClothesForm(form) {
   form.children('fieldset:not(.start)').hide();
 }
 

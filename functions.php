@@ -22,6 +22,8 @@
   include( 'inc/administration-handling.php' );
   include( 'inc/rental-handling.php' );
   include( 'inc/rental-form.php' );
+  include( 'inc/clothes-handling.php' );
+  include( 'inc/clothes-form.php' );
   if (file_exists('inc/local-vars.php')) include( 'inc/local-vars.php' );
 
   /* ADD ACTIONS */
