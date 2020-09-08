@@ -22,11 +22,11 @@ function clothes_form_view() {
 
       <div class="options options--inlined">
         <label class="options__opt options__opt--inline">
-          <input type="radio" name="Kledingstuk" value="Trui" required>
+          <input type="checkbox" name="Kledingstuk" value="Trui">
           Trui (€18)
         </label>
         <label class="options__opt options__opt--inline">
-          <input type="radio" name="Kledingstuk" value="T-shirt" required>
+          <input type="checkbox" name="Kledingstuk" value="T-shirt">
           T-shirt (€8)
         </label>
       </div>
