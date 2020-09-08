@@ -62,14 +62,13 @@ function clothes_form_view() {
         <label class="text-label">Speltak
           <select name="Speltak" required class="identifying">
             <option value="">Om welk speltak gaat het?</option>
-            <option value="Bevers">Bevers (4-7, m/v)</option>
-            <option value="Kabouters">Kabouters (7-11, v)</option>
-            <option value="Welpen Dinsdag">Welpen dinsdag (7-11, m)</option>
-            <option value="Welpen Zaterdag">Welpen zaterdag (7-11, m)</option>
-            <option value="Gidsen">Gidsen (11-15, v)</option>
-            <option value="Verkenners">Verkenners (11-15, m)</option>
-            <option value="Explos">Explo's (15-18, m/v)</option>
-            <option value="Stam">Stam (18+, m/v)</option>
+            <option value="Bevers">Bevers</option>
+            <option value="Kabouters">Kabouters</option>
+            <option value="Welpen Dinsdag">Welpen Dinsdag</option>
+            <option value="Welpen Zaterdag">Welpen Zaterdag</option>
+            <option value="Gidsen">Gidsen</option>
+            <option value="Verkenners">Verkenners</option>
+            <option value="Explos">Explo's</option>
           </select>
         </label>
 
