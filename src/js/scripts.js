@@ -111,7 +111,8 @@ function prepClothesForm(form) {
 
 function updateCheckableFieldState() {
   if ($(this).prop('checked')) {
-    $(this).parent().siblings('label').removeClass('checked');
+    if ($(this).prop('type') === 'radio')
+      $(this).parent().siblings('label').removeClass('checked');
     $(this).parent().addClass('checked');
   } else {
     $(this).parent().removeClass('checked');
