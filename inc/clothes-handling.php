@@ -27,6 +27,8 @@ function clothes() {
   $message = sprintf("<p>%s heeft zojuist het Kledingaanschaf-formulier ingevuld:</p>", $_POST['Ouder']);
   $message .= "<table>";
   foreach ($_POST as $key => $value) {
+    if ($key === 'Kledingstuk' || $key === 'Kledingstuk[]')
+      $value = implode(", ", $value);
     if ($key !== 'action' && $key !== 'url')
       $message .= sprintf("<tr><td>%s</td><td>%s</td></tr>", $key, $value);
   }
