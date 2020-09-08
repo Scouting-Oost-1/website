@@ -1,7 +1,7 @@
 <?php
 
 /*-------------------------------------*\
-  ADMINISTRATION HANDLING
+  RENTAL HANDLING
 \*-------------------------------------*/
 
 add_action('wp_ajax_nopriv_rental', 'rental');
