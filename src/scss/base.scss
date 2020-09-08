@@ -135,7 +135,8 @@ h1 {
   }
 }
 
-p {
+p,
+.wp-block-file {
   max-width: 32em;
   line-height: 1.4;
   margin-left: auto;
