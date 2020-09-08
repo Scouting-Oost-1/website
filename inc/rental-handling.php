@@ -49,15 +49,13 @@ function rental() {
     $message, // message
     $rental); // sender
 
-  if (!$main_email_success) {
-    $response = array(
-      'success' => false
-    );
-  }
-
   $response = array(
     'success' => true
   );
+
+  if (!$main_email_success) {
+    $response['success'] = false;
+  }
 
   wp_send_json($response);
 
