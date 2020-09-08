@@ -22,17 +22,17 @@ function clothes_form_view() {
 
       <div class="options options--inlined">
         <label class="options__opt options__opt--inline">
-          <input type="checkbox" name="Kledingstuk" value="Trui">
+          <input type="checkbox" name="Kledingstuk[]" value="Trui">
           Trui (€18)
         </label>
         <label class="options__opt options__opt--inline">
-          <input type="checkbox" name="Kledingstuk" value="T-shirt">
+          <input type="checkbox" name="Kledingstuk[]" value="T-shirt">
           T-shirt (€8)
         </label>
       </div>
 
       <label class="text-label">Maat
-        <select name="Speltak" required class="identifying">
+        <select name="Maat" required class="identifying">
           <option value="">Om welke maat gaat het?</option>
           <option value="116">116</option>
           <option value="128">128</option>
