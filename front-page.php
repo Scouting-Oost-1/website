@@ -47,6 +47,12 @@
 
 
     <p class="front-highlight">
+      <a href="https://lot.clubactie.nl/lot/scouting-oost-1-amsterdam/190114"
+        class="referral referral--heavy referral--arrowed">
+        <strong>Nieuw:</strong> Koop hier online uw Grote Clubactie-loten
+      </a>
+    </p>
+    <p class="front-highlight">
       <a class="referral referral--arrowed"
         href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
         Scouting Oost 1 steunen? Plaats uw bestelling via <strong>Sponsorkliks.nl</strong>
