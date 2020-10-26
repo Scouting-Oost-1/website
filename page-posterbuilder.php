@@ -19,6 +19,8 @@
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
 
+    <?php if(!post_password_required()): ?>
+
     <section class="builder">
       <aside class="controls">
         <div class="controls__actions">
@@ -102,6 +104,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"
       async></script>
     <script src="https://unpkg.com/dompurify@0.8.9/dist/purify.min.js"></script>
+
+    <?php endif; ?>
 
   </main>
 
