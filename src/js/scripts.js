@@ -5,20 +5,19 @@ var userAction,
 
 function onDocReady () {
 
-  let $ = jQuery,
-    menu = $('.site-menu'),
-    header = $('.site-header'),
-    adminForm = $('.administration'),
-    rentalForm = $('.rental'),
-    clothesForm = $('.clothes'),
-    checkableInputs = $('input[type=radio], input[type=checkbox]'),
-    textInputs = $('input, textarea, select'),
-    nextButtons = $('.js-next'),
-    speltakDefiners = $('[name=Geboortedatum], [name=Gender]'),
-    addressDefiners = $('[name=Postcode], [name=Huisnummer]'),
-    chooseActionButton = $('.js-choose-action'),
-    chooseRentalTypeButton = $('.js-choose-rental-type'),
-    ibanField = $('[name=IBAN]');
+  let menu = jQuery('.site-menu'),
+    header = jQuery('.site-header'),
+    adminForm = jQuery('.administration'),
+    rentalForm = jQuery('.rental'),
+    clothesForm = jQuery('.clothes'),
+    checkableInputs = jQuery('input[type=radio], input[type=checkbox]'),
+    textInputs = jQuery('input, textarea, select'),
+    nextButtons = jQuery('.js-next'),
+    speltakDefiners = jQuery('[name=Geboortedatum], [name=Gender]'),
+    addressDefiners = jQuery('[name=Postcode], [name=Huisnummer]'),
+    chooseActionButton = jQuery('.js-choose-action'),
+    chooseRentalTypeButton = jQuery('.js-choose-rental-type'),
+    ibanField = jQuery('[name=IBAN]');
 
   ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
 
@@ -49,27 +48,27 @@ function onDocReady () {
     }
   }
 
-  if ($('.album').length) {
-    $('.fancybox').fancybox({
+  if (jQuery('.album').length) {
+    jQuery('.fancybox').fancybox({
       beforeShow: function() {
         location.hash = this.element.attr('id');
       }
     });
 
     if (location.hash !== undefined && location.hash !== "") {
-      $(location.hash).trigger('click');
+      jQuery(location.hash).trigger('click');
     }
 
-    $('#js-slideshow-button').click(function() {
-      $('.fancybox').first().click();
+    jQuery('#js-slideshow-button').click(function() {
+      jQuery('.fancybox').first().click();
       setTimeout(function() {
-        $.event.trigger({ type: 'keydown', which: 32 });
+        jQuery.event.trigger({ type: 'keydown', which: 32 });
       }, 100);
     });
   }
 
-  if ($('.builder').length) {
-    builderInit();
+  if (jQuery('.builder').length) {
+    builderInit()
   }
 
 }
@@ -78,7 +77,7 @@ function onDocReady () {
 
 function menuToggler (menu) {
 
-  var menuToggle = $('.js-menu-toggle');
+  var menuToggle = jQuery('.js-menu-toggle');
 
   menuToggle.click(function (e) {
     e.preventDefault();
@@ -89,8 +88,8 @@ function menuToggler (menu) {
 }
 
 function scrollMenu (header) {
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+  jQuery(window).scroll(function() {
+    var scroll = jQuery(window).scrollTop();
     if (scroll > 150) {
       header.addClass("site-header--sticky");
     } else {
@@ -114,23 +113,23 @@ function prepClothesForm(form) {
 }
 
 function updateCheckableFieldState() {
-  if ($(this).prop('checked')) {
-    if ($(this).prop('type') === 'radio')
-      $(this).parent().siblings('label').removeClass('checked');
-    $(this).parent().addClass('checked');
+  if (jQuery(this).prop('checked')) {
+    if (jQuery(this).prop('type') === 'radio')
+      jQuery(this).parent().siblings('label').removeClass('checked');
+    jQuery(this).parent().addClass('checked');
   } else {
-    $(this).parent().removeClass('checked');
+    jQuery(this).parent().removeClass('checked');
   }
 }
 
 function updateTextFieldState() {
-  let targetLabel = $(this).parent();
+  let targetLabel = jQuery(this).parent();
 
-  if($(this).is('[type=radio]')) {
+  if(jQuery(this).is('[type=radio]')) {
     targetLabel = targetLabel.parent();
   }
 
-  if ($(this).is(':valid')) {
+  if (jQuery(this).is(':valid')) {
     targetLabel.removeClass('invalid');
     targetLabel.addClass('valid');
   } else {
@@ -138,14 +137,14 @@ function updateTextFieldState() {
     targetLabel.addClass('invalid');
   }
 
-  let step = $(targetLabel).parent();
+  let step = jQuery(targetLabel).parent();
   if (checkStep(step)) {
-    $('.form-prob').remove();
+    jQuery('.form-prob').remove();
   }
 }
 
 function nextFormStep(backupEl = false) {
-  let thisStep = $(this).parent();
+  let thisStep = jQuery(this).parent();
   if (backupEl && !backupEl.target) {
     thisStep = backupEl;
   }
@@ -174,7 +173,7 @@ function checkStep(step) {
   let fields = step.find('input, select'),
     fieldsOK = true;
   fields.each(function() {
-    if(!$(this)[0].checkValidity()) {
+    if(!jQuery(this)[0].checkValidity()) {
       fieldsOK = false;
     }
   });
@@ -182,8 +181,8 @@ function checkStep(step) {
 }
 
 function updateSpeltak() {
-  let dob = $('[name=Geboortedatum]').val(),
-    gender = $('[name=Gender]:checked').val();
+  let dob = jQuery('[name=Geboortedatum]').val(),
+    gender = jQuery('[name=Gender]:checked').val();
 
   if (dob && gender) {
 
@@ -210,31 +209,31 @@ function updateSpeltak() {
     } else {
       probSpeltak = 'Stam';
     }
-    $('[name=Speltak]').val(probSpeltak).change();
+    jQuery('[name=Speltak]').val(probSpeltak).change();
   }
 }
 
 function updateAddress() {
-  let postcode = $('[name=Postcode]').val(),
-    number = $('[name=Huisnummer]').val();
+  let postcode = jQuery('[name=Postcode]').val(),
+    number = jQuery('[name=Huisnummer]').val();
 
   if (postcode && number) {
-    $.ajax({
+    jQuery.ajax({
       url: ajaxurl,
       data: { postcode: postcode, number: number, action: 'address' },
       method: "GET",
       dataType: "json"
     }).done(function(data) {
-      $('[name=Straat]').val(data['street']);
-      $('[name=Stad]').val(data['city']);
+      jQuery('[name=Straat]').val(data['street']);
+      jQuery('[name=Stad]').val(data['city']);
     });
   }
 }
 
 function updateFormOverview() {
-  let overviewDiv = $('.form-overview'),
-    formContents = $('form').serializeArray(),
-    overviewHtml = $('<table class="form-overview__table"></table>');
+  let overviewDiv = jQuery('.form-overview'),
+    formContents = jQuery('form').serializeArray(),
+    overviewHtml = jQuery('<table class="form-overview__table"></table>');
 
   formContents.forEach(function(e) {
     if (e['name'] !== 'action' &&
@@ -256,17 +255,17 @@ function updateFormOverview() {
 }
 
 function chooseAction() {
-  userAction = $('[name=Actie]:checked').val();
+  userAction = jQuery('[name=Actie]:checked').val();
 
-  $('input:not([name=url]), select').prop('required', true);
-  let nonDelSteps = $('fieldset:not(.act-delete)'),
-    nonChangeSteps = $('.non-changing');
+  jQuery('input:not([name=url]), select').prop('required', true);
+  let nonDelSteps = jQuery('fieldset:not(.act-delete)'),
+    nonChangeSteps = jQuery('.non-changing');
   nonDelSteps.find('input, select').prop('disabled', false);
   nonChangeSteps.find('input, select').prop('disabled', false);
 
   switch (userAction) {
     case 'Wijzigen':
-      $('input:not(.identifying), select:not(.identifying)').prop('required', false);
+      jQuery('input:not(.identifying), select:not(.identifying)').prop('required', false);
       nonChangeSteps.find('input, select').prop('disabled', true);
       nonChangeSteps.hide();
       break;
@@ -275,18 +274,18 @@ function chooseAction() {
       nonDelSteps.hide();
       break;
   }
-  $('[name=submit]').text(userAction);
+  jQuery('[name=submit]').text(userAction);
 
-  prepAdminForm($('.administration'));
-  nextFormStep($(this).parent());
+  prepAdminForm(jQuery('.administration'));
+  nextFormStep(jQuery(this).parent());
 }
 
 function chooseRentalType() {
-  userAction = $('[name="Soort verhuur"]:checked').val();
+  userAction = jQuery('[name="Soort verhuur"]:checked').val();
 
-  $('input:not([name=url]), select').prop('required', true);
-  let multiDayOnly = $('fieldset:not(.one-day)'),
-    oneDayOnly = $('fieldset:not(.multi-day)');
+  jQuery('input:not([name=url]), select').prop('required', true);
+  let multiDayOnly = jQuery('fieldset:not(.one-day)'),
+    oneDayOnly = jQuery('fieldset:not(.multi-day)');
   multiDayOnly.find('input, select').prop('disabled', false);
   oneDayOnly.find('input, select').prop('disabled', false);
 
@@ -301,29 +300,29 @@ function chooseRentalType() {
       break;
   }
 
-  prepRentalForm($('.rental'));
-  nextFormStep($(this).parent());
+  prepRentalForm(jQuery('.rental'));
+  nextFormStep(jQuery(this).parent());
 }
 
 function requireSepa() {
   if(userAction == 'Wijzigen') {
-    if ($(this).val()) {
-      $('#sepa').prop('required', true);
-      $('[value=tnv]').prop('required', true);
+    if (jQuery(this).val()) {
+      jQuery('#sepa').prop('required', true);
+      jQuery('[value=tnv]').prop('required', true);
     } else {
-      $('#sepa').prop('required', false);
-      $('[value=tnv]').prop('required', false);
+      jQuery('#sepa').prop('required', false);
+      jQuery('[value=tnv]').prop('required', false);
     }
   }
 }
 
 function submitForm(e) {
   e.preventDefault();
-  let submittedForm = $('form'),
+  let submittedForm = jQuery('form'),
     formContents = submittedForm.serializeArray();
-  $('.form-prob--floating').remove();
+  jQuery('.form-prob--floating').remove();
   submittedForm.addClass('loading');
-  $.ajax({
+  jQuery.ajax({
     url: ajaxurl,
     data: formContents,
     method: "POST",
@@ -342,6 +341,6 @@ function submitForm(e) {
 }
 
 function formFailure() {
-  let errorEl = $('<p class="form-prob form-prob--floating">' + form_failure + '</p>')
-  $('body').append(errorEl);
+  let errorEl = jQuery('<p class="form-prob form-prob--floating">' + form_failure + '</p>')
+  jQuery('body').append(errorEl);
 }

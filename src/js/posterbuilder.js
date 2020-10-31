@@ -1,11 +1,11 @@
 function builderInit() {
-  let poster = $('.js-poster'),
-    posterHero = $('.js-poster-hero'),
-    posterStyling = $('.js-poster-styling'),
-    savePdf = $('.js-save-pdf'),
-    savePng = $('.js-save-png'),
-    imageInput = $('.js-change-image'),
-    colorControls = $('.js-change-color');
+  let poster = jQuery('.js-poster'),
+    posterHero = jQuery('.js-poster-hero'),
+    posterStyling = jQuery('.js-poster-styling'),
+    savePdf = jQuery('.js-save-pdf'),
+    savePng = jQuery('.js-save-png'),
+    imageInput = jQuery('.js-change-image'),
+    colorControls = jQuery('.js-change-color');
 
   savePdf.click(function() {
     let printContents = poster[0].innerHTML,
@@ -36,7 +36,7 @@ function builderInit() {
   });
 
   colorControls.click(function() {
-    let desiredColor = $(this).css('backgroundColor');
+    let desiredColor = jQuery(this).css('backgroundColor');
     posterStyling.html('body{--page-bg:' + desiredColor + '}');
   });
 }

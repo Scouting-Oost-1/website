@@ -28,25 +28,12 @@
 
   /* ADD ACTIONS */
   add_action( 'after_setup_theme', 'custom_theme_setup' );
-  add_action( 'wp_enqueue_scripts', 'modify_jquery' );
 
   /* Add theme support for a few things */
   function custom_theme_setup() {
     add_theme_support( 'post-thumbnails' ); // Allow posts to have thumbnails
     add_theme_support( 'html5' ); // Make the search form input type="search"
     add_theme_support( 'title-tag' ); // Fix the document title tag
-  }
-
-  /* Replace Wordpress’s version of jQuery with Google API version, since most
-   browsers will have it in their cache. */
-  function modify_jquery() {
-    if (!is_admin()) {
-      wp_deregister_script('jquery');
-      wp_register_script('jquery',
-        'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-        false, '3.4.1', true);
-      wp_enqueue_script('jquery');
-    }
   }
 
 
