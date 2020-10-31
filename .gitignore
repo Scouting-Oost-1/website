@@ -18,5 +18,6 @@ package-lock.json
 
 # Static folder
 static/
+src/fonts/
 
 inc/local-vars.php
