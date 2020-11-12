@@ -47,9 +47,9 @@
 
 
     <p class="front-highlight">
-      <a href="https://lot.clubactie.nl/lot/scouting-oost-1-amsterdam/190114"
+      <a href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/"
         class="referral referral--heavy referral--arrowed">
-        <strong>Nieuw:</strong> Koop hier online uw Grote Clubactie-loten
+        Scouting Oost 1 en COVID-19 - de maatregelen
       </a>
     </p>
     <p class="front-highlight">
