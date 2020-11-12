@@ -64,7 +64,7 @@
     <section class="past">
       <h1 class="past__title">Blijf op de hoogte</h1>
 
-      <?php
+      <?php /*
         $recent_at_home = get_posts(array(
           'numberposts' => 1,
           'category_name' => 'zomerkamp'
@@ -99,46 +99,7 @@
         </a>
       </div>
 
-      <?php endif; wp_reset_postdata(); ?>
-
-
-
-      <?php
-        $recent_news = get_posts(array(
-          'numberposts' => 1,
-          'category_name' => 'nieuws'
-        ));
-        $recent_news = $recent_news[0];
-        $recent_news_ID = $recent_news->ID;
-
-        if ($recent_news->post_type):
-      ?>
-
-      <div class="past__part">
-        <h2>Nieuws</h2>
-        <p>Lees het laatste nieuwsbericht</p>
-
-        <article class="past__item">
-          <a href="<?php the_permalink($recent_news_ID); ?>">
-            <?php echo get_the_post_thumbnail($recent_news_ID, 'medium'); ?>
-            <h3 class="past__post-title">
-                <?php echo $recent_news->post_title; ?>
-            </h3>
-          </a>
-          <?php echo $recent_news->post_excerpt; ?>
-        </article>
-
-        <?php
-          $news = get_term_by('slug', 'nieuws', 'category');
-          $news_link = get_term_link($news->term_id);
-        ?>
-        <a class="button past__all-button"
-          href="<?php echo $news_link; ?>">
-          Al het nieuws
-        </a>
-      </div>
-
-      <?php endif; wp_reset_postdata(); ?>
+      <?php endif; wp_reset_postdata(); */ ?>
 
 
 
