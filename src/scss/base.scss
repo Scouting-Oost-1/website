@@ -644,6 +644,11 @@ $header-border: 1px solid transparentize(black, 0.8);
     display: flex;
     flex-wrap: wrap;
     padding: 0 8vw;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   &--small {
