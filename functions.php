@@ -186,3 +186,28 @@
     echo $result;
     exit();
   }
+
+
+
+
+  function dutch_strtotime($date_string) {
+    return strtotime(
+      strtr(
+        strtolower($date_string),
+        array(
+          'januari' => 'jan',
+          'februari' => 'feb',
+          'maart' => 'march',
+          'april' => 'apr',
+          'mei' => 'may',
+          'juni' => 'jun',
+          'juli' => 'jul',
+          'augustus' => 'aug',
+          'september' => 'sep',
+          'oktober' => 'oct',
+          'november' => 'nov',
+          'december' => 'dec'
+        )
+      )
+    );
+  }

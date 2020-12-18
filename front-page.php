@@ -18,9 +18,9 @@
         <?php
           $activity_begin = get_field('date_upcoming', $activity_ID);
           $activity_end = get_field('date_upcoming_end', $activity_ID);
-          if (strtotime($activity_begin) > strtotime('today')) {
+          if (dutch_strtotime($activity_begin) > strtotime('today')) {
             echo "Op $activity_begin hebben we:";
-          } elseif (strtotime($activity_end) >= strtotime('today')) {
+          } elseif (dutch_strtotime($activity_end) >= strtotime('today')) {
             echo "Vandaag:";
           } else {
             echo "Op $activity_end hadden we:";
