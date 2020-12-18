@@ -58,6 +58,12 @@
         Scouting Oost 1 steunen? Plaats uw bestelling via <strong>Sponsorkliks.nl</strong>
       </a>
     </p>
+    <p class="front-highlight">
+      <a class="referral referral--arrowed"
+        href="https://scoutingoost1.nl/2020/12/loting-obligatielening-2020/">
+        Bekijk hier de trekking van de obligatielening-loting
+      </a>
+    </p>
 
 
 
