@@ -52,22 +52,22 @@
 
       <div class="past__part">
         <h2>Updates</h2>
-        <p class="front-highlight">
+        <p>
           <a href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/"
             class="referral referral--heavy referral--arrowed">
-            Scouting Oost 1 en COVID-19 - de maatregelen
+            Scouting Oost 1 en COVID-19 - de maatregelen&emsp;
           </a>
         </p>
-        <p class="front-highlight">
+        <p>
           <a class="referral referral--arrowed"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-            Scouting Oost 1 steunen? Bestel via <strong>Sponsorkliks.nl</strong>
+            Scouting Oost 1 steunen? Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
           </a>
         </p>
-        <p class="front-highlight">
+        <p>
           <a class="referral referral--arrowed"
             href="https://scoutingoost1.nl/2020/12/loting-obligatielening-2020/">
-            Bekijk hier de trekking van de obligatielening-loting
+            Bekijk hier de trekking van de obligatielening-loting&emsp;
           </a>
         </p>
       </div>
