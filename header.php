@@ -54,7 +54,7 @@
 
       <a href="#menu" class="js-menu-toggle menu-toggle">Menu</a>
 
-      <nav class="site-menu opened" id="menu">
+      <nav class="site-menu" id="menu">
         <?php wp_nav_menu( array(
           'theme_location' => 'primary',
           'container' => false,

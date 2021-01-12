@@ -22,7 +22,6 @@ function onDocReady () {
   ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
 
   menuToggler(menu);
-  menu.removeClass('opened');
 
   scrollMenu(header);
   prepAdminForm(adminForm);
