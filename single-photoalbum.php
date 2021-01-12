@@ -23,7 +23,6 @@
 
     <p class="photoalbum__button-cont">
       <button href="#" class="button" id="js-slideshow-button">
-        <i class="fas fa-play referral__icon"></i>
         Start slideshow
       </button>
     </p>

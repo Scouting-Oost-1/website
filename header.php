@@ -14,16 +14,6 @@
       get_template_directory_uri() . '/static/js/main.js',
       array('jquery'), $theme_info->version, true ); ?>
 
-    <?php wp_enqueue_style('fa',
-			get_template_directory_uri() . '/static/fonts/fontawesome/css/fontawesome.min.css',
-			[] ); ?>
-		<?php wp_enqueue_style('fa-brands',
-			get_template_directory_uri() . '/static/fonts/fontawesome/css/brands.min.css',
-			['fa'] ); ?>
-		<?php wp_enqueue_style('fa-solid',
-			get_template_directory_uri() . '/static/fonts/fontawesome/css/solid.min.css',
-			['fa'] ); ?>
-
     <?php wp_enqueue_style( 'main',
       get_template_directory_uri() . '/static/css/main.css',
       array(), $theme_info->version ); ?>

@@ -22,7 +22,6 @@
 
     <p class="photoalbum__button-cont">
       <a href="<?php the_field('pdf'); ?>" class="button">
-        <i class="fas fa-download referral__icon"></i>
         Download
       </a>
     </p>

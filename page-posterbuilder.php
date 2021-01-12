@@ -25,13 +25,11 @@
       <aside class="controls">
         <div class="controls__actions">
           <button class="button js-save-pdf">
-            <i class="fas fa-file-pdf"></i>
             &ensp;
             Opslaan als PDF
           </button>
           <a download="image.png">
             <button class="button js-save-png" download="image.png">
-              <i class="fas fa-file-image"></i>
               &ensp;
               Opslaan als PNG
             </button>
