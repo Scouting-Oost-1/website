@@ -30,6 +30,16 @@
 
     <meta name="ajaxurl" content="<?php echo admin_url( 'admin-ajax.php' ); ?>">
 
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-italic.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-italic.ttf" as="font" type="font/ttf" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-800.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/static/fonts/alegreya-sans-v13-latin-800.ttf" as="font" type="font/ttf" crossorigin>
+
     <?php wp_head(); ?>
 
   </head>
