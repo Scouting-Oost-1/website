@@ -29,11 +29,13 @@
       <div class="site-footer__col">
         <h2 class="site-footer__head">Direct naar...</h2>
         <ul class="site-footer__links">
+          <?php $privacy_link = get_permalink(
+            get_page_by_path( 'privacy' ) ); ?>
           <li>
-            <a href="https://www.scouting.nl/privacy">Privacyverklaring Scouting Nederland</a>
+            <a href="<?php echo $privacy_link; ?>">Onze privacyverklaring</a>
           </li>
           <li>
-            <a href="https://www.scouting.nl/downloads/huishoudelijk-reglement-scouting-nederland">Huishoudelijk reglement Scouting Nederland</a>
+            <a href="https://scoutingoost1.nl/wp-content/uploads/2021/02/Huishoudelijk-reglement.pdf">Huishoudelijk reglement</a> (PDF, 227KB)
           </li>
           <li>
             Ledenadministratie
