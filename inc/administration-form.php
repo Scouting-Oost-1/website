@@ -168,14 +168,15 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
     <legend>Privacy</legend>
 
+    <?php $privacy_link = get_permalink(
+      get_page_by_path( 'privacy' ) ); ?>
     <div class="terms">
-      <p>Als Scoutingorganisatie verwerken wij persoonsgegevens om onze vereniging te kunnen organiseren, activiteiten uit te kunnen voeren en contact te hebben met onze leden. De gegevens van leden worden opgenomen in ons ledenadministratiesysteem Scouts Online. Als lid heb je zelf altijd inzicht in je eigen gegevens en heb je de mogelijkheid deze te bewerken of gegevens af te schermen. Hoe we met je gegevens omgaan staat beschreven op <a href="https://www.scouting.nl/privacy">www.scouting.nl/privacy</a>.</p>
-      <p>Voor vragen kunt u zich richten tot de stafteams of een mail sturen naar: bestuur@scoutingoost1.nl</p>
-      <p>Scouting Oost 1 maakt gebruik van diverse (sociale) media. Foto’s worden geplaatst op Facebook en onze website om een beeld te geven van de activiteiten die Scouting Oost 1 doet. Indien u bezwaar heeft tegen het plaatsen van fotografische opnames dan kunt u dit aangeven bij de staf van de speltak van uw zoon/dochter.</p>
+      <p>Wij verwerken persoonsgegevens om onze vereniging te kunnen organiseren, activiteiten uit te kunnen voeren en contact te hebben met onze leden. We maken ook gebruik van diverse (sociale) media.</p>
+      <p>In ons <a href="<?php echo $privacy_link; ?>">privacybeleid</a> is te hoe we hierbij te werk gaan.</p>
     </div>
     <label class="term-check">
       <input type="checkbox" name="Privacy-voorwaarden" value="Akkoord" required>
-      Ik ga akkoord met de privacy-voorwaarden
+      Ik ga akkoord met het <a href="<?php echo $privacy_link; ?>">privacybeleid</a>
     </label>
 
     <button class="button js-next" type="button">Volgende</button>
