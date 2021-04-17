@@ -36,7 +36,7 @@ Voorzitter Vereniging Scouting Oost 1<br>
 bestuur@scoutingoost1.nl</p>";
 
 $message_leave = "<p>Beste ouders/verzorgers,</p>
-<p>Tot ziens bij Scouting Oost 1. De afmelding is per de 1e van de volgende maand van kracht.</p>
+<p>Tot ziens bij Scouting Oost 1. De afmelding is per de 1e van de volgende maand van kracht. Deze maand wordt er dus voor de laatste maand contributie geïnd.</p>
 <p>Heeft u vragen over de contributie of over andere praktische zaken, neem dan gerust contact met ons op!</p>
 <p>Met vriendelijke groet,</p>
 <p>%s<br>
