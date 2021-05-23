@@ -25,7 +25,7 @@ Mailen kan ook naar: bestuur@scoutingoost1.nl</p>
 
 <p>Contributie:<br>
 De contributie wordt eens per maand automatisch van uw rekening geïnd. Als de contributie niet kan worden afgeschreven worden er administratiekosten in rekening gebracht. Uitschrijven is alleen mogelijk via onze website. De uitschrijving gaat op de eerste van de daarop volgende maand van kracht.<br>
-Als er geen contributie wordt geïncasseerd heeft dit gevolgen voor het lidmaatschap en deelname aan het zomerkamp.</p>
+Als er geen contributie wordt geïncasseerd heeft dit gevolgen voor het lidmaatschap en deelname aan het zomerkamp. Lukt het niet met betalen? Dan kan je een aanvraag doen bij het <a href='https://scoutingoost1.nl/ledenadministratie/jeugdfonds/'>Jeugdfonds Sport Amsterdam</a>.</p>
 
 <p>Heeft u vragen over de contributie of over andere praktische zaken, neem dan gerust contact met ons op!</p>
 
