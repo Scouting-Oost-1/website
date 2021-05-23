@@ -75,14 +75,14 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     <label class="text-label">Speltak
       <select name="Speltak" required class="identifying">
         <option value="">Om welk speltak gaat het?</option>
-        <option value="Bevers">Bevers (4-7, m/v)</option>
-        <option value="Kabouters">Kabouters (7-11, v)</option>
-        <option value="Welpen Dinsdag">Welpen Dinsdag (7-11, m)</option>
-        <option value="Welpen Zaterdag">Welpen Zaterdag (7-11, m)</option>
-        <option value="Gidsen">Gidsen (11-15, v)</option>
-        <option value="Verkenners">Verkenners (11-15, m)</option>
-        <option value="Explos">Explo's (15-18, m/v)</option>
-        <option value="Stam">Stam (18+, m/v)</option>
+        <option value="Bevers">Bevers (4-7, m/v/x)</option>
+        <option value="Kabouters">Kabouters (7-11, v/x)</option>
+        <option value="Welpen Dinsdag">Welpen Dinsdag (7-11, m/x)</option>
+        <option value="Welpen Zaterdag">Welpen Zaterdag (7-11, m/x)</option>
+        <option value="Gidsen">Gidsen (11-15, v/x)</option>
+        <option value="Verkenners">Verkenners (11-15, m/x)</option>
+        <option value="Explos">Explo's (15-18, m/v/x)</option>
+        <option value="Stam">Stam (18+, m/v/x)</option>
       </select>
     </label>
 
