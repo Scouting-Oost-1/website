@@ -212,10 +212,10 @@
             href="<?php echo $administration_link ?>?Actie=Aanmelden">
             Word lid</a>
           <a class="button button--light"
-            href="<?php echo $administration_link ?>?Actie=Wijzigen">
+            href="<?php echo $administration_link ?>?Actie=Afmelden">
             Uitschrijven</a>
           <a class="button button--light"
-            href="<?php echo $administration_link ?>?Actie=Afmelden">
+            href="<?php echo $administration_link ?>?Actie=Wijzigen">
             Gegevens wijzigen</a>
         </div>
       </div>
