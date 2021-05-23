@@ -13,7 +13,7 @@ function onDocReady () {
     checkableInputs = jQuery('input[type=radio], input[type=checkbox]'),
     textInputs = jQuery('input, textarea, select'),
     nextButtons = jQuery('.js-next'),
-    speltakDefiners = jQuery('[name=Geboortedatum], [name=Gender]'),
+    speltakDefiners = jQuery('[name=Geboortedatum], [name=Geslacht]'),
     addressDefiners = jQuery('[name=Postcode], [name=Huisnummer]'),
     chooseActionButton = jQuery('.js-choose-action'),
     chooseRentalTypeButton = jQuery('.js-choose-rental-type'),
@@ -181,9 +181,9 @@ function checkStep(step) {
 
 function updateSpeltak() {
   let dob = jQuery('[name=Geboortedatum]').val(),
-    gender = jQuery('[name=Gender]:checked').val();
+    geslacht = jQuery('[name=Geslacht]:checked').val();
 
-  if (dob && gender) {
+  if (dob && geslacht) {
 
     let dobDate = new Date(dob),
       ageDifMs = Date.now() - dobDate.getTime(),
@@ -194,13 +194,13 @@ function updateSpeltak() {
     if (age < 7) {
         probSpeltak = 'Bevers';
     } else if (age < 11) {
-      if (gender === 'Meisje') {
+      if (geslacht === 'Meisje') {
         probSpeltak = 'Kabouters';
       }
     } else if (age < 15) {
-      if (gender === 'Meisje') {
+      if (geslacht === 'Meisje') {
         probSpeltak = 'Gidsen';
-      } else if (gender === 'Jongen') {
+      } else if (geslacht === 'Jongen') {
         probSpeltak = 'Verkenners';
       }
     } else if (age < 18) {

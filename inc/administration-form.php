@@ -59,15 +59,15 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
     <div class="options options--inlined">
       <label class="options__opt options__opt--inline">
-        <input type="radio" name="Gender" value="Jongen" required class="identifying">
+        <input type="radio" name="Geslacht" value="Jongen" required class="identifying">
         Jongen
       </label>
       <label class="options__opt options__opt--inline">
-        <input type="radio" name="Gender" value="Meisje" required class="identifying">
+        <input type="radio" name="Geslacht" value="Meisje" required class="identifying">
         Meisje
       </label>
       <label class="options__opt options__opt--inline">
-        <input type="radio" name="Gender" value="Anders" required class="identifying">
+        <input type="radio" name="Geslacht" value="Anders" required class="identifying">
         Anders
       </label>
     </div>
