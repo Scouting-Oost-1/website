@@ -55,13 +55,13 @@
         <p>
           <a href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/"
             class="referral referral--heavy referral--arrowed">
-            Scouting Oost 1 en COVID-19 - de maatregelen&emsp;
+            COVID-19 maatregelen&emsp;
           </a>
         </p>
         <p>
           <a class="referral referral--arrowed"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-            Scouting Oost 1 steunen? Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
+            Steun Scouting Oost 1, Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
           </a>
         </p>
       </div>
