@@ -53,6 +53,12 @@
       <div class="past__part">
         <h2>Updates</h2>
         <p>
+          <a href="https://scoutingoost1.nl/photoalbum/"
+            class="referral referral--heavy referral--arrowed">
+            Foto’s
+          </a>
+        </p>
+        <p>
           <a href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/"
             class="referral referral--heavy referral--arrowed">
             COVID-19 maatregelen&emsp;
