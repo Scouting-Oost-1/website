@@ -59,9 +59,9 @@
           </a>
         </p>
         <p>
-          <a href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/"
-            class="referral referral--heavy referral--arrowed">
-            COVID-19 maatregelen&emsp;
+          <a href="https://youtube.com/channel/UCBC4YwGYeikn7DfQ4xZV1kg"
+            class="referral referral--heavy referral--arrowed" target="_blank">
+            Video’s op YouTube
           </a>
         </p>
         <p>
