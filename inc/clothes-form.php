@@ -68,8 +68,7 @@ function clothes_form_view() {
             <option value="">Om welk speltak gaat het?</option>
             <option value="Bevers">Bevers</option>
             <option value="Kabouters">Kabouters</option>
-            <option value="Welpen Dinsdag">Welpen Dinsdag</option>
-            <option value="Welpen Zaterdag">Welpen Zaterdag</option>
+            <option value="Welpen">Welpen</option>
             <option value="Gidsen">Gidsen</option>
             <option value="Verkenners">Verkenners</option>
             <option value="Explos">Explo's</option>
