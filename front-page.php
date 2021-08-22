@@ -53,15 +53,9 @@
       <div class="past__part">
         <h2>Updates</h2>
         <p>
-          <a href="https://scoutingoost1.nl/photoalbum/"
+          <a href="https://scoutingoost1.nl/2021/08/lopend-vuurtje-nieuwsbrief-augustus-2021/"
             class="referral referral--heavy referral--arrowed">
-            Foto’s
-          </a>
-        </p>
-        <p>
-          <a href="https://youtube.com/channel/UCBC4YwGYeikn7DfQ4xZV1kg"
-            class="referral referral--heavy referral--arrowed" target="_blank">
-            Video’s op YouTube
+            Lopend Vuurtje 7.1 - digitaal
           </a>
         </p>
         <p>
@@ -125,7 +119,7 @@
       ?>
 
       <div class="past__part lvs--front">
-        <h2>Lopend Vuurtje</h2>
+        <h2>Kampkrant</h2>
         <p>Lees de laatste editie van ons clubblad</p>
         <article class="past__item">
           <a href="<?php the_field('pdf'); ?>" target="_blank">
