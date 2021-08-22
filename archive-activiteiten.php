@@ -10,10 +10,6 @@
 
   <main class="activities--page" id="site-content">
 
-    <a class="referral referral--arrowed activities--page__referral" href="<?php echo get_term_link('nieuws', 'category'); ?>">
-      Wil je op de hoogte blijven van deze activiteiten? <strong>Ga naar nieuws!</strong>
-    </a>
-
     <?php while(have_posts()) : the_post(); ?>
       <article class="activity--small">
         <?php the_post_thumbnail('medium',
