@@ -17,7 +17,7 @@
           <strong>Scouting Oost 1</strong><br>
           Kruislaan 224-226b<br>
           1098 SL Amsterdam<br>
-          Verhuur: <a href="mailto:verhuur@scoutingoost.nl">verhuur@scoutingoost.nl</a><br>
+          Verhuur: <a href="mailto:verhuur@scoutingoost1.nl">verhuur@scoutingoost1.nl</a><br>
           Vragen (nieuwe) leden: <a href="mailto:bestuur@scoutingoost1.nl">bestuur@scoutingoost1.nl</a><br>
           Overig: <a href="mailto:info@scoutingoost1.nl">info@scoutingoost1.nl</a><br>
           <a href="https://www.facebook.com/scoutingoost1/">facebook.com/scoutingoost1</a><br>
