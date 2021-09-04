@@ -12,7 +12,7 @@ add_action('wp_ajax_members', 'members');
 
 
 $message_welcome = "<p>Beste ouders/verzorgers,</p>
-<p>Welkom bij Scouting Oost 1! De inschrijving is per de 1e van de volgende maand van kracht. In deze mail vindt u praktische informatie die handig kan zijn.</p>
+<p>Welkom bij Scouting Oost 1! Uw kind is meteen welkom bij de eerstvolgende draaiavonden. De contributie wordt vanaf de volgende maand geïnd. In deze mail vindt u praktische informatie die handig kan zijn.</p>
 <p>Bij noodgevallen, contact met het bestuur of andere dringende zaken kunt u bellen met:<br>
 %s
 Mailen kan ook naar: bestuur@scoutingoost1.nl</p>
