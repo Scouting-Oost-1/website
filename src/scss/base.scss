@@ -82,7 +82,7 @@ $colors:
   (cyan, #38bfbf);
 
 // Breakpoints
-$brk--phone: 768px;
+$brk--phone: 888px;
 $brk--tablet: 992px;
 $brk--desktop: 1200px;
 $brk--large-desktop: 1920px;
@@ -221,7 +221,8 @@ a {
 /*-------------------------------------*\
   Buttons
 \*-------------------------------------*/
-.button {
+.button,
+.has-button a {
   background: var(--page-bg, $accent);
   border: none;
   border-radius: .3em;
