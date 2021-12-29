@@ -57,6 +57,10 @@
             <a href="<?php echo get_permalink( get_page_by_path( 'steunen' ) ); ?>">
               Steun Scouting Oost 1</a>
           </li>
+          <li>
+            <a href="<?php echo get_permalink( get_page_by_path( 'staf' ) ); ?>">
+              Staf</a>
+          </li>
         </ul>
       </div>
     </footer>
