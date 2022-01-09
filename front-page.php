@@ -53,12 +53,6 @@
       <div class="past__part">
         <h2>Updates</h2>
         <p>
-          <a href="https://scoutingoost1.nl/2021/08/lopend-vuurtje-nieuwsbrief-augustus-2021/"
-            class="referral referral--heavy referral--arrowed">
-            Lopend Vuurtje 7.1 - digitaal
-          </a>
-        </p>
-        <p>
           <a class="referral referral--arrowed"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
             Steun Scouting Oost 1, Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
