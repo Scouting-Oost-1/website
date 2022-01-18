@@ -58,6 +58,12 @@
             Steun Scouting Oost 1, Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
           </a>
         </p>
+        <p>
+          <a class="referral referral--arrowed"
+            href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
+            Scouting Oost 1 en <strong>COVID-19</strong>
+          </a>
+        </p>
       </div>
 
 
