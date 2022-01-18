@@ -113,7 +113,7 @@
       ?>
 
       <div class="past__part lvs--front">
-        <h2>Kampkrant</h2>
+        <h2>Lopend Vuurtje</h2>
         <p>Lees de laatste editie van ons clubblad</p>
         <article class="past__item">
           <a href="<?php the_field('pdf'); ?>" target="_blank">
