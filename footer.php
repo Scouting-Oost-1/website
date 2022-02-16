@@ -34,8 +34,10 @@
           <li>
             <a href="<?php echo $privacy_link; ?>">Onze privacyverklaring</a>
           </li>
+          <?php $regulations_link = get_permalink(
+            get_page_by_path( 'reglement' ) ); ?>
           <li>
-            <a href="https://scoutingoost1.nl/wp-content/uploads/2021/02/Huishoudelijk-reglement.pdf">Huishoudelijk reglement</a> (PDF, 227KB)
+            <a href="<?php echo $regulations_link; ?>">Huishoudelijk reglement</a>
           </li>
           <li>
             Ledenadministratie
