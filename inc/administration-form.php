@@ -148,9 +148,9 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     </label>
 
     <div class="terms">
-      <p>U geeft toestemming aan ST Scouting Oost 1 om doorlopende incasso-opdrachten te sturen naar uw bank om een bedrag van uw rekening af te schrijven en aan uw bank om doorlopend een bedrag van uw rekening af te schrijven overeenkomstig de opdracht van ST Scouting Oost 1.</p>
+      <p>U geeft toestemming aan Scouting Oost 1 om doorlopende incasso-opdrachten te sturen naar uw bank om een bedrag van uw rekening af te schrijven en aan uw bank om doorlopend een bedrag van uw rekening af te schrijven overeenkomstig de opdracht van Scouting Oost 1.</p>
       <p>Als u het niet eens bent met deze afschrijving kunt u deze laten terugboeken. Neem hiervoor binnen 8 weken na afschrijving contact op met uw bank. Vraag uw bank naar de voorwaarden.</p>
-      <p>Het bedrag voor de sweater, t-shirt of beide dient vooraf contant betaald te worden bij de leiding. Daarna zullen de kledingstukken geleverd worden.</p>
+      <p>Het bedrag voor de sweater, t-shirt of beide dient vooraf betaald te worden bij de leiding. Daarna zullen de kledingstukken geleverd worden.</p>
     </div>
     <label class="term-check">
       <input type="checkbox" name="SEPA Doorlopende machtiging" value="Akkoord" id="sepa" required>
@@ -165,18 +165,23 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
   <fieldset class="non-changing">
 
-    <legend>Privacy</legend>
+    <legend>Privacy & reglement</legend>
 
     <?php $privacy_link = get_permalink(
       get_page_by_path( 'privacy' ) ); ?>
     <div class="terms">
-      <p>Wij verwerken persoonsgegevens om onze vereniging te kunnen organiseren, activiteiten uit te kunnen voeren en contact te hebben met onze leden. We maken ook gebruik van diverse (sociale) media.</p>
-      <p>In ons <a href="<?php echo $privacy_link; ?>">privacybeleid</a> is te hoe we hierbij te werk gaan.</p>
+      <p>Wij verwerken persoonsgegevens om onze vereniging te kunnen organiseren, activiteiten uit te kunnen voeren en contact te hebben met onze leden. We maken ook gebruik van diverse (sociale) media. In ons <a href="<?php echo $privacy_link; ?>">privacybeleid</a> is te hoe we hierbij te werk gaan.</p>
     </div>
     <label class="term-check">
       <input type="checkbox" name="Privacy-voorwaarden" value="Akkoord" required>
       Ik ga akkoord met het <a href="<?php echo $privacy_link; ?>">privacybeleid</a>
     </label>
+
+    <?php $regulations_link = get_permalink(
+      get_page_by_path( 'reglement' ) ); ?>
+    <div class="terms">
+      <p>Ieder scoutinglid houdt zich aan de rechten en plichten die staan beschreven in de Huishoudelijk Regelementen van <a href="<?php echo $regulations_link; ?>">Scouting Oost 1</a> en <a href="https://www.scouting.nl/ondersteuning/juridische-zaken/huishoudelijk-reglement">Scouting Nederland</a>.</p>
+    </div>
 
     <button class="button js-next" type="button">Volgende</button>
 
