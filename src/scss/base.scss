@@ -1472,6 +1472,47 @@ textarea {
 
 
 /*-------------------------------------*\
+  Events
+\*-------------------------------------*/
+.event {
+  border-top: 1px solid #ddd;
+  margin-top: 1.5em;
+  padding: 2em 0 0;
+
+  &:last-of-type {
+    padding-bottom: 2em;
+  }
+
+  p {
+    max-width: unset;
+  }
+
+  details > summary {
+    list-style: none;
+
+    &::marker {
+      display: none;
+    }
+  }
+
+  &__moment {
+    margin-bottom: .5em;
+  }
+
+  &__summary {
+    margin: 0;
+  }
+
+  &__location {
+    margin-top: .5em;
+  }
+}
+
+
+
+
+
+/*-------------------------------------*\
   Footer
 \*-------------------------------------*/
 .site-footer {
