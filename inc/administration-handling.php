@@ -17,7 +17,7 @@ $message_welcome = "<p>Beste ouders/verzorgers,</p>
 %s
 Mailen kan ook naar: bestuur@scoutingoost1.nl</p>
 
-<p>Altijd op de hoogte van het laatste nieuws? Like onze pagina op Facebook (www.facebook.com/scoutingoost1). Natuurlijk komen alle berichten ook op onze website www.scoutingoost1.nl.</p>
+<p>Altijd op de hoogte van het laatste nieuws? Like onze pagina op Facebook (www.facebook.com/scoutingoost1) of volg ons op Instagram (www.instagram.com/scoutingoost1). Natuurlijk staat de belangrijkste informatie ook op onze website www.scoutingoost1.nl.</p>
 
 <p>Drie tot vier keer per jaar verschijnt ons clubblad ‘Het Lopend Vuurtje’ Dit blad brengt u leuke nieuwtjes en weetjes van onze club. Wilt u adverteerder worden om dit blad mogelijk te blijven houden? Stuur dan een mail naar het bestuur.</p>
 
