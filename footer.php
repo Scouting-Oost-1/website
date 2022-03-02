@@ -47,12 +47,15 @@
               <li>
                 <a href="<?php echo $administration_link; ?>?Actie=Aanmelden">
                   Word lid</a>
+              </li>
               <li>
                 <a href="<?php echo $administration_link; ?>?Actie=Wijzigen">
                   Uitschrijven</a>
+              </li>
               <li>
                 <a href="<?php echo $administration_link; ?>?Actie=Afmelden">
                   Gegevens wijzigen</a>
+              </li>
             </ul>
           </li>
           <li>
