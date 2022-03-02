@@ -58,6 +58,7 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     </label>
 
     <div class="options options--inlined">
+      <p class="options__label">Geslacht</p>
       <label class="options__opt options__opt--inline">
         <input type="radio" name="Geslacht" value="Jongen" required class="identifying">
         Jongen

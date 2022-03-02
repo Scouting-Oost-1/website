@@ -1153,7 +1153,7 @@ legend {
 }
 
 .form-element {
-  --input-color: #aaa;
+  --input-color: #595959;
   border: 2px solid var(--input-color);
   border-radius: .5em;
   display: block;
@@ -1232,7 +1232,7 @@ textarea {
 }
 
 .options {
-  --input-color: #aaa;
+  --input-color: #595959;
   box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
@@ -1247,6 +1247,16 @@ textarea {
     }
   }
 
+  &__label {
+    align-self: top;
+    color: var(--input-color);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: .25em;
+    max-width: unset;
+    width: 100%;
+  }
+
   &__opt {
     @extend .form-element;
     --input-color: inherit;
@@ -1257,7 +1267,7 @@ textarea {
     margin: 0;
     padding: .9em .9em .9em .5em;
 
-    &:first-child {
+    &:first-of-type {
       border-radius: .5em .5em 0 0;
     }
 
@@ -1271,7 +1281,7 @@ textarea {
         border-bottom-width: 2px;
         border-right-width: 0;
 
-        &:first-child {
+        &:first-of-type {
           border-radius: .5em 0 0 .5em;
         }
 
@@ -1303,7 +1313,7 @@ textarea {
 }
 
 .readonly {
-  --input-color: #ccc;
+  --input-color: #757575;
   background: #f0f0f0;
 }
 
