@@ -138,11 +138,7 @@ function getEvents() {
             $events
         );
     
-        if (WP_DEBUG) {
-            $lifespan = 30;
-        } else {
-            $lifespan = HOUR_IN_SECONDS * 24;
-        }
+        $lifespan = 30;
     
         set_transient($transient_key, $response, $lifespan);
     } else {
