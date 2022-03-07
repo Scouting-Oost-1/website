@@ -692,54 +692,6 @@ $header-border: 1px solid transparentize(black, 0.8);
     }
   }
 
-  &--front {
-    padding-bottom: 5vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    text-align: left;
-
-    @media (min-width: $brk--tablet) {
-      background-image: var(--alt-img) !important;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover !important;
-      padding-bottom: 10vw;
-    }
-
-    &__date {
-      font-weight: bold;
-      margin-bottom: 0;
-      margin-top: 5vw;
-      text-align: center;
-    }
-
-    &__title {
-      margin: 0;
-    }
-
-    &__excerpt {
-      background: white;
-      margin: -1em auto 0;
-      padding: 1.75em 1.5em 1em;
-    }
-
-    &__button {
-      display: block;
-      margin: 1em auto -2.5em;
-      position: relative;
-      z-index: 1;
-    }
-
-    &__img {
-      height: auto;
-      max-width: 100%;
-
-      @media (min-width: $brk--tablet) {
-        display: none;
-      }
-    }
-  }
-
   &__thumb {
     box-shadow: -1em -1em 0 $accent;
     height: auto;
@@ -951,6 +903,49 @@ hr {
 /*-------------------------------------*\
   Front page
 \*-------------------------------------*/
+.intro {
+  padding-bottom: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: left;
+
+  @media (min-width: $brk--tablet) {
+    background-image: var(--alt-img) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    padding-bottom: 10vw;
+  }
+
+  &__title {
+    margin: 5vw 0 0;
+  }
+
+  &__excerpt {
+    background: white;
+    margin: -1em auto 0;
+    padding: 1.75em 1.5em 1em;
+  }
+
+  &__button {
+    display: block;
+    margin: 1em auto -2.5em;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__img {
+    height: auto;
+    max-width: 100%;
+
+    @media (min-width: $brk--tablet) {
+      display: none;
+    }
+  }
+}
+
+
+
 .past {
   align-items: baseline;
   display: flex;

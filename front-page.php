@@ -8,40 +8,23 @@
 
 
 
-    <?php
-      $activity = get_field('activity');
-      $activity_ID = $activity->ID;
-    ?>
-    <section class="activity--front page-thumb page-thumb--green"
-      style="--alt-img: url(<?php echo get_the_post_thumbnail_url($activity_ID); ?>);">
-      <p class="activity--front__date">
-        <?php
-          $activity_begin = get_field('date_upcoming', $activity_ID);
-          $activity_end = get_field('date_upcoming_end', $activity_ID);
-          if (dutch_strtotime($activity_begin) > strtotime('today')) {
-            echo "Op $activity_begin hebben we:";
-          } elseif (dutch_strtotime($activity_end) >= strtotime('today')) {
-            echo "Vandaag:";
-          } else {
-            echo "Op $activity_end hadden we:";
-          }
-        ?>
-      </p>
-      <h1 class="activity--front__title">
-        <?php echo $activity->post_title; ?>
+    <section class="intro page-thumb page-thumb--green"
+      style="--alt-img: url(<?php echo get_the_post_thumbnail_url($post->ID); ?>);">
+      <h1 class="intro__title">
+        Scouting Oost 1
       </h1>
-      <p class="activity--front__excerpt">
-        <?php echo $activity->post_excerpt; ?>
-        <a href="<?php the_permalink($activity_ID); ?>"
-          class="button activity--front__button">
-          Meer over <?php echo $activity->post_title; ?>
+      <p class="intro__excerpt">
+        <?php echo get_the_excerpt(); ?>
+        <?php $administration_link = get_permalink(get_page_by_path( 'ledenadministratie' ) ); ?>
+        <a href="<?php echo $administration_link; ?>?Actie=Aanmelden"
+          class="button intro__button">
+          Word lid
         </a>
       </p>
       <?php
-        echo get_the_post_thumbnail(
-          $activity_ID,
+        the_post_thumbnail(
           'post-thumbnail',
-          array( 'class' => 'activity--front__img')); ?>
+          array( 'class' => 'intro__img')); ?>
     </section>
 
 
