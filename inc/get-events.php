@@ -126,7 +126,7 @@ function upcomingEvents($events) {
 
 function getEvents() {
     $theme_info = wp_get_theme();
-    $transient_key = 'cale_feed_' . $theme_info->version;
+    $transient_key = 'calendar_feed_' . $theme_info->version;
     
     $cached_response = get_transient($transient_key);
     
@@ -134,6 +134,9 @@ function getEvents() {
     if ($cached_response === false) {
         // if not, excecute all functions, put it in response and store it
         $events = createEventArray();
+        $sorted_events = usort($events, function ($a, $b) {
+            return $a['start'] > $b['start'];
+        });
         $response = upcomingEvents(
             $events
         );
