@@ -21,11 +21,17 @@
 
     <?php
       $add_calendar_url = sprintf("https://calendar.google.com/calendar/u/0/r?cid=%s", CALENDAR_ID);
+      $ics_calendar_url = sprintf("https://calendar.google.com/calendar/ical/%s/public/basic.ics", urlencode(CALENDAR_ID));
     ?>
 
-    <a class="referral referral--heavy referral--arrowed" href="<?php echo $add_calendar_url; ?>"
-      target="_blank">
-      Voeg deze agenda toe aan je <strong>Google Calendar</strong></a>
+    <aside class="calendar-links">
+      <a class="referral referral--heavy referral--arrowed" href="<?php echo $add_calendar_url; ?>"
+        target="_blank">
+        Voeg deze agenda toe aan je <strong>Google Calendar</strong></a>
+      <label class="text-label text-label--no-margin" for="ics-url">Of gebruik deze ICS-url:
+        <input type="text" value="<?php echo $ics_calendar_url; ?>" disabled>
+      </label>
+    </aside>
 
     <?php 
         include('inc/get-events.php');

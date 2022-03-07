@@ -1200,6 +1200,11 @@ legend {
     width: 32em;
   }
 
+  &--no-margin {
+    margin: 0;
+    width: auto;
+  }
+
   input,
   select,
   textarea {
@@ -1505,6 +1510,17 @@ textarea {
 
   &__location {
     margin-top: .5em;
+  }
+}
+
+.calendar-links {
+  display: grid;
+  row-gap: 1em;
+
+  @media (min-width: $brk--tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 0;
   }
 }
 
