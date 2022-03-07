@@ -34,13 +34,20 @@
 
 
       <div class="past__part">
-        <h2>Updates</h2>
+        <h2>Snel naar...</h2>
         <p>
-          <a class="referral referral--arrowed"
+          <a class="referral referral--arrowed referral--heavy"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
             Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;
           </a>
         </p>
+        <p>
+          <a class="referral referral--arrowed"
+            href="https://scoutingoost1.nl/verhuur/">
+            Informatie over <strong>verhuur</strong>
+          </a>
+        </p>
+      </div>
         <p>
           <a class="referral referral--arrowed"
             href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
