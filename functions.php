@@ -12,7 +12,6 @@
 
 /* INCLUDES */
 include( 'inc/activity-post-type.php' );
-include( 'inc/activity-custom-fields.php' );
 include( 'inc/publication-post-type.php' );
 include( 'inc/publication-custom-fields.php' );
 include( 'inc/photoalbum-post-type.php' );

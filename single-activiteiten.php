@@ -20,62 +20,6 @@
       <?php the_content(); ?>
     </div>
 
-
-
-    <?php if(get_field('show_date')): ?>
-    <aside class="activity__date-time-place">
-      <?php
-        $date_upcoming = get_field('date_upcoming');
-        $date_upcoming_end = get_field('date_upcoming_end');
-        $time_upcoming = get_field('time_upcoming');
-        $time_upcoming_end = get_field('time_upcoming_end');
-        $location_upcoming = get_field('location_upcoming');
-
-        $upcoming = false;
-        if($date_upcoming) $upcoming = "<strong>$date_upcoming</strong><br>";
-        if($time_upcoming) $upcoming .= "🕰 " . $time_upcoming;
-        if($date_upcoming_end || $time_upcoming_end) $upcoming .= " – ";
-        if($date_upcoming_end) $upcoming .= $date_upcoming_end;
-        if($date_upcoming_end && $time_upcoming_end) $upcoming .= ", ";
-        if($time_upcoming_end) $upcoming .= $time_upcoming_end;
-        if(!$upcoming && $location_upcoming) {
-          echo "<p class=\"meta-content\">📍 $location_upcoming</p>";
-        } elseif($location_upcoming) {
-          $upcoming .= "<br>📍 " . $location_upcoming;
-        }
-
-        if($upcoming):
-      ?>
-      <h3 class="meta-head">
-        De eerstvolgende keer:
-      </h3>
-      <p class="meta-content">
-        <?php echo $upcoming; ?>
-      </p>
-      <?php endif; ?>
-
-      <?php
-        $date_last = get_field('date_last');
-        $date_last_end = get_field('date_last_end');
-        $location_last = get_field('location_last');
-
-        $last = false;
-        if($date_last) $last = "<strong>$date_last</strong>";
-        if($date_last_end) $last .= " – " . $date_last_end;
-        if($location_last) $last .= "<br>📍 " . $location_last;
-
-        if($last):
-      ?>
-      <h3 class="meta-head">
-        De vorige keer:
-      </h3>
-      <p class="meta-content">
-        <?php echo $last; ?>
-      </p>
-      <?php endif; ?>
-    </aside>
-    <?php endif; ?>
-
   </main>
 
 <?php endwhile; else: ?>
