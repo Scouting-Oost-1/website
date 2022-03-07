@@ -105,6 +105,11 @@
             $event['summary']); ?>
           </p>
         <?php } ?>
+        <?php $calendar_link = get_permalink(get_page_by_path( 'agenda' ) ); ?>
+        <a class="button past__all-button"
+          href="<?php echo $calendar_link; ?>">
+          Volledige agenda
+        </a>
       </div>
 
 
