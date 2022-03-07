@@ -47,7 +47,6 @@
             Informatie over <strong>verhuur</strong>
           </a>
         </p>
-      </div>
         <p>
           <a class="referral referral--arrowed"
             href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
