@@ -107,6 +107,25 @@
 
 
 
+      <div class="past__part">
+        <h2>Binnenkort</h2>
+        <?php
+          include('inc/get-events.php');
+          $response = getEvents();
+          $date_format = get_option( 'date_format' );
+          $n = 0;
+          foreach ($response['events'] as $key => $event) {
+            $n++; if ($n > 5) break; ?>
+          <p>
+            <?php echo sprintf("📅&emsp;%s&emsp;<strong>%s</strong>",
+            wp_date($date_format, $event['start']->format('U')),
+            $event['summary']); ?>
+          </p>
+        <?php } ?>
+      </div>
+
+
+
       <?php
         $recent_lv_query = array(
           'post_type' => 'publicaties',
