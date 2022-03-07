@@ -38,7 +38,7 @@
         <p>
           <a class="referral referral--arrowed"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-            Steun Scouting Oost 1, Bestel via <strong>Sponsorkliks.nl</strong>&emsp;
+            Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;
           </a>
         </p>
         <p>
