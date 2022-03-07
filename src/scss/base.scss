@@ -1503,7 +1503,6 @@ textarea {
     grid-area: location;
     justify-self: start;
     margin: .5em 0;
-    text-align: right;
     width: 100%;
   }
 
@@ -1523,6 +1522,10 @@ textarea {
 
     &__moment {
       margin: 0;
+      text-align: right;
+    }
+
+    &__location {
       text-align: right;
     }
   }
