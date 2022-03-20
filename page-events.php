@@ -50,9 +50,10 @@
               $format = sprintf("%s", $date_format);
             }
             if (getNightsBetween($compare_start, $compare_end) > 0) {
+              $end_fix = $event['end']->sub(new DateInterval('P1D'));
               echo sprintf("🗓️&emsp;<strong>%s</strong> – %s",
               wp_date($format, $event['start']->format('U')),
-              wp_date($format, $event['end']->format('U')));
+              wp_date($format, $end_fix->format('U')));
             } else {
               echo sprintf("📅&emsp;<strong>%s</strong> – %s",
               wp_date($format, $event['start']->format('U')),
