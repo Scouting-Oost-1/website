@@ -2,6 +2,7 @@
  * Single photoalbum
  */ ?>
 
+<?php $theme_info = wp_get_theme(); ?>
 <?php wp_enqueue_script( 'fancybox',
   get_template_directory_uri() . '/vendor/fancybox.js',
   array('jquery'), $theme_info->version, true ); ?>
