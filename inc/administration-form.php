@@ -121,11 +121,11 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     <label class="text-label">Huisnummer
       <input type="text" name="Huisnummer" placeholder="123" required>
     </label>
-    <label class="text-label readonly">Straatnaam
-      <input type="text" name="Straat" required readonly>
+    <label class="text-label">Straatnaam
+      <input type="text" name="Straat" required>
     </label>
-    <label class="text-label readonly">Stad
-      <input type="text" name="Stad" required readonly>
+    <label class="text-label">Stad
+      <input type="text" name="Stad" required>
     </label>
 
     <button class="button js-next" type="button">Volgende</button>
