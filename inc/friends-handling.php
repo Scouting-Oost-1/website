@@ -11,7 +11,7 @@ add_action('wp_ajax_friends', 'friends');
 
 
 
-$message_welcome = "<p>Beste %s,</p>
+$message_friend_welcome = "<p>Beste %s,</p>
 <p>Bedankt dat u ons wil steunen!</p>
 
 <p>De donatie van %s wordt eens per jaar automatisch van uw rekening geïnd. Uitschrijven is mogelijk middels een mail aan %s.</p>
@@ -61,10 +61,10 @@ function friends() {
   $friend = sprintf("%s <%s>", $_POST['Naam'], sanitize_email($_POST['Email']));
   $bestuur = "Scouting Oost 1 <bestuur@scoutingoost1.nl>";
 
-  global $message_welcome;
+  global $message_friend_welcome;
   send_mail($friend, // receiver
     "Welkom, vriend, bij Scouting Oost 1", // subject
-    sprintf($message_welcome, $_POST['Naam'], $_POST['Bedrag'], ADMINISTRATION_EMAIL, CHAIR), // message
+    sprintf($message_friend_welcome, $_POST['Naam'], $_POST['Bedrag'], ADMINISTRATION_EMAIL, CHAIR), // message
     $bestuur); // sender
 
   $response = array(
