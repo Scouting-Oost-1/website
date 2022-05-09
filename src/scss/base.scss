@@ -990,7 +990,7 @@ hr {
     }
 
     &:hover,
-    &:focus {
+    &:focus-within {
       box-shadow: 1em 1em 0 transparentize($accent, .8);
     }
   }
