@@ -988,6 +988,11 @@ hr {
     @media (min-width: $brk--large-desktop) {
       width: auto;
     }
+
+    &:hover,
+    &:focus {
+      box-shadow: 1em 1em 0 transparentize($accent, .8);
+    }
   }
 
   &__post-title {
