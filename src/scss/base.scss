@@ -1489,6 +1489,12 @@ textarea {
   max-width: 50em;
   padding: 2em 0 0;
 
+  img {
+    height: auto;
+    grid-area: location-end;
+    max-width: 100%;
+  }
+
   &:last-of-type {
     padding-bottom: 2em;
   }
@@ -1528,6 +1534,10 @@ textarea {
     grid-template-columns: 12em 1fr;
     grid-template-areas: "side summary"
       "location description";
+
+    img {
+      margin-top: 1em;
+    }
 
     &__moment {
       margin: 0;

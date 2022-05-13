@@ -40,6 +40,12 @@
         $date_format = get_option( 'date_format' );
         foreach ($response['events'] as $key => $event) { ?>
       <article class="event">
+        <?php
+          if ( strpos( $event['summary'], 'Zomerkamp') !== false ) {
+            $zomerkamp_post = get_page_by_path('zomerkamp', OBJECT, 'activiteiten');
+            print_r(get_the_post_thumbnail($zomerkamp_post));
+          }
+        ?>
         <p class="event__moment">
           <?php
             $compare_start = clone $event['start'];
