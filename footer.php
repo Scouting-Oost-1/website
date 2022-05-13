@@ -1,16 +1,9 @@
     <footer class="site-footer">
       <div class="site-footer__col">
         <a href="<?php echo get_site_url(); ?>">
-          <picture>
-            <source type="image/svg+xml"
-              srcset="<?php echo image_url('full-logo-black.svg'); ?>">
-            <img alt="<?php bloginfo( 'name' ); ?>"
-              title="<?php bloginfo( 'name' ); ?>"
-              class="logo"
-              srcset="<?php echo image_url('full-logo-black.png'); ?> 1x,
-                <?php echo image_url('full-logo-black@2x.png'); ?> 2x"
-              src="<?php echo image_url('full-logo-black.png'); ?>">
-          </picture>
+          <img alt="<?php bloginfo( 'name' ); ?>"
+            class="logo"
+            src="<?php echo image_url('full-logo-black.svg'); ?>">
         </a>
 
         <address class="site-footer__address">
