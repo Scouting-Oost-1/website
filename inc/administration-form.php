@@ -93,11 +93,11 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
     <legend>Wat zijn jouw contactgegevens?</legend>
 
-    <label class="text-label">Naam ouder
+    <label class="text-label">Naam ouder/verzorger
       <input type="text" name="Ouder" placeholder="Puk Janssen" required class="identifying">
     </label>
     <label class="text-label">Emailadres
-      <input type="email" name="Email" placeholder="sam@scoutingoost1.nl" required class="identifying">
+      <input type="email" name="Email" placeholder="puk@scoutingoost1.nl" required class="identifying">
     </label>
 
     <button class="button js-next" type="button">Volgende</button>
@@ -131,6 +131,25 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     <button class="button js-next" type="button">Volgende</button>
 
   </fieldset>
+
+
+
+<fieldset>
+
+  <legend>Nog een tweede ouder/verzorger?</legend>
+
+  <p class="field-info">We kunnen een tweede persoon in onze adminsitratie zetten die dan ook informatiemails krijgt.</p>
+
+  <label class="text-label">Naam tweede ouder/verzorger (optioneel)
+    <input type="text" name="Tweede ouder" placeholder="Jip Janssen">
+  </label>
+  <label class="text-label">Emailadres (optioneel)
+    <input type="email" name="Email tweede ouder" placeholder="jip@scoutingoost1.nl">
+  </label>
+
+  <button class="button js-next" type="button">Volgende</button>
+
+</fieldset>
 
 
 
