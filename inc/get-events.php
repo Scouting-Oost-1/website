@@ -77,7 +77,7 @@ function createEventArray() {
             $has_time = false;
         }
 
-        if ($start > $now) {
+        if ($end > $now) {
             $result[] = [
                 'summary' => $event['summary'],
                 'description' => (array_key_exists('description', $event)) ? $event['description'] : "",
