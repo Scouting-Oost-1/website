@@ -1451,11 +1451,14 @@ textarea {
 }
 
 .album {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 1em;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 1em;
+  max-width: none;
+  padding: 0;
 
   .button {
     box-sizing: border-box;
@@ -1464,16 +1467,21 @@ textarea {
   }
 }
 
+.photo-cont {
+  margin: 0;
+}
+
 .photo {
-  margin: .5em;
+  display: flex;
   width: 150px;
 }
 
 .back-to-albums {
   @extend .button;
   display: block;
+  max-width: 32em;
   font-weight: bold;
-  margin: 1em;
+  margin: 1em auto;
 }
 
 
