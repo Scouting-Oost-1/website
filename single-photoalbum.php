@@ -22,15 +22,15 @@
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
 
-    <p class="photoalbum__button-cont">
-      <button href="#" class="button" id="js-slideshow-button">
-        Start slideshow
-      </button>
-    </p>
-
     <?php 
       $images = get_field('album');
       if ( $images ): ?>
+        <p class="photoalbum__button-cont">
+          <button href="#" class="button" id="js-slideshow-button">
+            Start slideshow
+          </button>
+        </p>
+
         <ul class="album">
           <?php foreach( $images as $image ): ?>
             <li class="photo-cont">
