@@ -28,12 +28,23 @@
       </button>
     </p>
 
-    <div class="album">
-      <?php $album_id = get_field('flickr_album_id') ?>
-      <?php include('inc/get-flickr-photos.php'); ?>
-    </div>
+    <?php 
+      $images = get_field('album');
+      if ( $images ): ?>
+        <ul class="album">
+          <?php foreach( $images as $image ): ?>
+            <li class="photo-cont">
+              <a href="<?php echo esc_url($image['sizes']['large']); ?>" class="photo fancybox" rel="group">
+                <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>">
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+      <p class="referral">Er staan nog geen foto’s in dit album.</p>
+    <?php endif; ?>
 
-    <a class="referral"
+    <a class="back-to-albums"
       href="<?php echo get_post_type_archive_link('photoalbum'); ?>">
       ← Terug naar alle albums</a>
 
