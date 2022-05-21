@@ -1708,8 +1708,8 @@ textarea {
   $print-poster-width: 210cm;
 
   box-shadow: 0 .5em 1em transparentize(#000, .8);
-  font-size: ($poster-width / 47.619047619);
-  height: $poster-width / 210 * 297;
+  font-size: calc($poster-width / 47.619047619);
+  height: calc($poster-width / 210 * 297);
   position: relative;
   width: $poster-width;
 
@@ -1717,13 +1717,13 @@ textarea {
     background-color: var(--page-bg);
     background-image: url(../img/pattern-poster.png);
     background-size: 100%;
-    height: (2 / 3) * $poster-width;
+    height: calc(calc(2 / 3) * $poster-width);
     overflow: hidden;
   }
 
   @media print {
     font-size: 10cm;
-    height: $print-poster-width / 210 * 297;
+    height: calc($print-poster-width / 210 * 297);
     width: $print-poster-width;
 
     &__hero {
