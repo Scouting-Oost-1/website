@@ -111,8 +111,7 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     <legend>Verdere contactgegevens</legend>
 
     <label class="text-label">Telefoonnummer
-      <input type="tel" name="Telefoonnummer" placeholder="020 1234567" required
-        pattern="^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$">
+      <input type="tel" name="Telefoonnummer" placeholder="020 1234567" required>
     </label>
     <label class="text-label">Postcode
       <input type="text" name="Postcode" placeholder="1234AA" required
@@ -145,6 +144,9 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
   </label>
   <label class="text-label">Emailadres (optioneel)
     <input type="email" name="Email tweede ouder" placeholder="jip@scoutingoost1.nl">
+  </label>
+  <label class="text-label">Telefoonnummer (optioneel)
+    <input type="tel" name="Telefoonnummer tweede ouder" placeholder="06 12345678">
   </label>
 
   <button class="button js-next" type="button">Volgende</button>
