@@ -106,7 +106,7 @@
           foreach ($response['events'] as $key => $event) {
             $n++; if ($n > 5) break; ?>
           <p>
-            <?php echo sprintf("📅&emsp;%s&emsp;<strong>%s</strong>",
+            <?php echo sprintf("%s&emsp;<strong>%s</strong>",
             wp_date($date_format, $event['start']->format('U')),
             $event['summary']); ?>
           </p>
