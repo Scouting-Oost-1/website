@@ -49,9 +49,11 @@
             'grote clubactie',
             'klussendag'
           ];
+          $event_link = false;
           foreach ($default_events as $slug) {
             if ( strpos( strtolower( $event['summary'] ), $slug) === 0 ) {
               $event_post = get_page_by_path($slug, OBJECT, 'activiteiten');
+              $event_link = get_post_permalink($event_post);
               print_r(get_the_post_thumbnail($event_post));
             }
           }
@@ -89,6 +91,13 @@
         <?php if (!empty($event['description'])) { ?>
         <p class="event__description">
           <?php echo $event['description']; ?>
+        </p>
+        <?php } ?>
+        <?php if ($event_link) { ?>
+        <p class="event__link">
+          <a href="<?php echo $event_link; ?>">
+            Algemene pagina over <?php echo $event['summary']; ?>
+          </a>
         </p>
         <?php } ?>
       </article>
