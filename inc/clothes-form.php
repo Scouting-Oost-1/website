@@ -31,7 +31,11 @@ function clothes_form_view() {
         </label>
         <label class="options__opt options__opt--inline">
           <input type="checkbox" name="Kledingstuk[]" value="Trui met capuchon">
-          Trui met capuchon (€25)
+          Trui met capuchon (€25, leiding)
+        </label>
+        <label class="options__opt options__opt--inline">
+          <input type="checkbox" name="Kledingstuk[]" value="Polo">
+          Polo (€15, leiding)
         </label>
       </div>
 
