@@ -41,7 +41,7 @@
 
       <a href="<?php echo get_site_url(); ?>">
         <img alt="<?php bloginfo( 'name' ); ?>"
-          class="logo"
+          class="logo" width="195" height="68"
           src="<?php echo image_url('full-logo-black.svg'); ?>">
       </a>
 
