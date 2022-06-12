@@ -20,20 +20,20 @@ function clothes_form_view() {
 
       <legend>Welk kledingstuk wil je aanschaffen?</legend>
 
-      <div class="options options--inlined">
-        <label class="options__opt options__opt--inline">
+      <div class="options">
+        <label class="options__opt">
           <input type="checkbox" name="Kledingstuk[]" value="Trui">
           Trui (€18)
         </label>
-        <label class="options__opt options__opt--inline">
+        <label class="options__opt">
           <input type="checkbox" name="Kledingstuk[]" value="T-shirt">
           T-shirt (€8)
         </label>
-        <label class="options__opt options__opt--inline">
+        <label class="options__opt">
           <input type="checkbox" name="Kledingstuk[]" value="Trui met capuchon">
           Trui met capuchon (€25, leiding)
         </label>
-        <label class="options__opt options__opt--inline">
+        <label class="options__opt">
           <input type="checkbox" name="Kledingstuk[]" value="Polo">
           Polo (€15, leiding)
         </label>
