@@ -77,7 +77,8 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
         <option value="Kabouters">Kabouters (7-11, v/x)</option>
         <option value="Welpen">Welpen (7-11, m/x)</option>
         <option value="Gidsen">Gidsen (11-15, v/x)</option>
-        <option value="Verkenners">Verkenners (11-15, m/x)</option>
+        <option value="Scouts">Scouts (11-13, m/x)</option>
+        <option value="Verkenners">Verkenners (13-15, m/x)</option>
         <option value="Explos">Explo's (15-18, m/v/x)</option>
         <option value="Stam">Stam (18+, m/v/x)</option>
       </select>

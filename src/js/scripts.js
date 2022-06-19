@@ -199,6 +199,12 @@ function updateSpeltak() {
       } else if (geslacht === 'Jongen') {
         probSpeltak = 'Welpen';
       }
+    } else if (age < 13) {
+      if (geslacht === 'Meisje') {
+        probSpeltak = 'Gidsen';
+      } else if (geslacht === 'Jongen') {
+        probSpeltak = 'Scouts';
+      }
     } else if (age < 15) {
       if (geslacht === 'Meisje') {
         probSpeltak = 'Gidsen';
