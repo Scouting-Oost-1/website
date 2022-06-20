@@ -79,6 +79,7 @@ function clothes_form_view() {
             <option value="Scouts">Scouts</option>
             <option value="Verkenners">Verkenners</option>
             <option value="Explos">Explo's</option>
+            <option value="Leiding en bestuur">Leiding of bestuur</option>
           </select>
         </label>
 

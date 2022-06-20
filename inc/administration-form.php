@@ -81,6 +81,7 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
         <option value="Verkenners">Verkenners (13-15, m/x)</option>
         <option value="Explos">Explo's (15-18, m/v/x)</option>
         <option value="Stam">Stam (18+, m/v/x)</option>
+        <option value="Leiding en bestuur">Leiding of bestuur</option>
       </select>
     </label>
 
