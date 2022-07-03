@@ -164,6 +164,7 @@ function nextFormStep(backupEl = false) {
     nextStep.find('input, textarea').first().focus();
     updateFormOverview();
   } else {
+    thisStep.children('.form-prob').remove();
     thisStep.append("<p class='form-prob'>Nog niet alle velden zijn goed ingevuld. Gaat er iets mis? Mail helpdesk@scoutingoost1.nl.</p>");
   }
 }
