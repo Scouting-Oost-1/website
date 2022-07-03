@@ -198,6 +198,19 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
       Ik ga akkoord met het <a href="<?php echo $privacy_link; ?>">privacybeleid</a>
     </label>
 
+    <div class="options options--inlined">
+      <p class="options__label">Foto’s en video’s van het lid mogen op de online media van Scouting Oost 1 worden gebruikt</p>
+      <label class="options__opt options__opt--inline">
+        <input type="radio" name="Online media" value="Mag wel" required>
+        Ja, dat mag
+      </label>
+      <label class="options__opt options__opt--inline">
+        <input type="radio" name="Online media" value="Mag niet" required>
+        Nee, dat mag niet
+      </label>
+      <p class="field-info">De online media zijn onder andere de website, Instagram en Facebook.</p>
+    </div>
+
     <?php $regulations_link = get_permalink(
       get_page_by_path( 'reglement' ) ); ?>
     <div class="terms">
