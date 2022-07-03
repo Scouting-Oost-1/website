@@ -284,6 +284,8 @@ function chooseAction() {
   }
   jQuery('[name=submit]').text(userAction);
 
+  jQuery('input:not(.optional)').prop('required', false);
+
   prepAdminForm(jQuery('.administration'));
   nextFormStep(jQuery(this).parent());
 }

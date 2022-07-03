@@ -135,7 +135,7 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
 
 
-<fieldset>
+<fieldset class="optional">
 
   <legend>Nog een tweede ouder/verzorger?</legend>
 
