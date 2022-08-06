@@ -24,25 +24,36 @@ function clothes() {
   $requesting_party = sprintf("%s <%s>", $_POST['Ouder'], sanitize_email($_POST['Email']));
   $clothes = sprintf("Kleding - Scouting Oost 1 <%s>", CLOTHES_EMAIL);
 
-  $message = sprintf("<p>%s heeft zojuist het Kledingaanschaf-formulier ingevuld:</p>", $_POST['Ouder']);
-  $message .= "<table>";
+  $human_table = "<table>";
   foreach ($_POST as $key => $value) {
-    if ($key === 'Kledingstuk' || $key === 'Kledingstuk[]')
-      $value = implode(", ", $value);
     if ($key !== 'action' && $key !== 'url')
-      $message .= sprintf("<tr><td>%s</td><td>%s</td></tr>", $key, $value);
+      $human_table .= sprintf("<tr><td>%s</td><td>%s</td></tr>", $key, $value);
   }
-  $message .= "</table>";
+  $human_table .= "</table>";
+
+  $sheets_table .= "<table><tr>";
+  foreach ($_POST as $key => $value) {
+    if ($key !== 'action' && $key !== 'url')
+      $human_table .= sprintf("<td>%s</td>", $value);
+  }
+  $human_table .= "</tr></table>";
+
+  $main_intro = "<p>Hey topper,</p>";
+  $requesting_intro = "<p>Hierbij de bevestiging van de kledingaanschaf-aanvraag zoals die ook naar ons is gestuurd. We streven ernaar u binnen vijf werkdagen een reactie te sturen.</p>" . $message;
+  $requesting_footer .= "<p>Bij het ophalen van de kleding kunt u betalen met pin.</p>";
+
+  $base_message = "%s<p>%s heeft zojuist het Kledingaanschaf-formulier ingevuld:</p>%s%s";
+  $main_message = sprintf($base_message, $main_intro, $_POST['Ouder'], $human_table, $sheets_table);
+  $requesting_message = sprintf($base_message, $requesting_intro, $_POST['Ouder'], $human_table, $requesting_footer);
 
   $main_email_success = send_mail(CLOTHES_EMAIL, // receiver
     "Kleding voor " . $_POST['Naam'], // subject
-    $message, // message
+    $main_message, // message
     $requesting_party); // sender
 
-  $message = "<p>Hierbij de bevestiging van de kledingaanschaf-aanvraag zoals die ook naar ons is gestuurd. We streven ernaar u binnen vijf werkdagen een reactie te sturen.</p>" . $message;
   send_mail($requesting_party, // receiver
     "Kledingaanschaf Scouting Oost 1", // subject
-    $message, // message
+    $requesting_message, // message
     $clothes); // sender
 
   $response = array(

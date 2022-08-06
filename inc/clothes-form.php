@@ -38,19 +38,19 @@ function clothes_form_view() {
 
       <div class="options">
         <label class="options__opt">
-          <input type="number" name="Trui" max="5" min="0" step="1" placeholder="0">
+          <input type="number" name="Trui" max="5" min="0" step="1" placeholder="-" value="0">
           Trui (€18)
         </label>
         <label class="options__opt">
-          <input type="number" name="T-shirt" max="5" min="0" step="1" placeholder="0">
+          <input type="number" name="Capuchon-trui" max="5" min="0" step="1" placeholder="-" value="0">
+          Capuchon-trui (€25)
+        </label>
+        <label class="options__opt">
+          <input type="number" name="T-shirt" max="5" min="0" step="1" placeholder="-" value="0">
           T-shirt (€8)
         </label>
         <label class="options__opt">
-          <input type="number" name="Trui met capuchon" max="5" min="0" step="1" placeholder="0">
-          Trui met capuchon (€25)
-        </label>
-        <label class="options__opt">
-          <input type="number" name="Polo" max="5" min="0" step="1" placeholder="0">
+          <input type="number" name="Polo" max="5" min="0" step="1" placeholder="-" value="0">
           Polo (€15, leiding)
         </label>
       </div>
