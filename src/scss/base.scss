@@ -1245,6 +1245,11 @@ textarea {
   font-size: 1em;
 }
 
+input[type=number] {
+  margin-right: .5em;
+  width: 2em;
+}
+
 .options {
   --input-color: #595959;
   box-sizing: border-box;

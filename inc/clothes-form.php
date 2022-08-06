@@ -20,25 +20,6 @@ function clothes_form_view() {
 
       <legend>Welk kledingstuk wil je aanschaffen?</legend>
 
-      <div class="options">
-        <label class="options__opt">
-          <input type="checkbox" name="Kledingstuk[]" value="Trui">
-          Trui (€18)
-        </label>
-        <label class="options__opt">
-          <input type="checkbox" name="Kledingstuk[]" value="T-shirt">
-          T-shirt (€8)
-        </label>
-        <label class="options__opt">
-          <input type="checkbox" name="Kledingstuk[]" value="Trui met capuchon">
-          Trui met capuchon (€25)
-        </label>
-        <label class="options__opt">
-          <input type="checkbox" name="Kledingstuk[]" value="Polo">
-          Polo (€15, leiding)
-        </label>
-      </div>
-
       <label class="text-label">Maat
         <select name="Maat" required class="identifying">
           <option value="">Om welke maat gaat het?</option>
@@ -55,41 +36,56 @@ function clothes_form_view() {
         </select>
       </label>
 
-      <button class="button js-next" type="button">Volgende</button>
+      <div class="options">
+        <label class="options__opt">
+          <input type="number" name="Trui" max="5" min="0" step="1" placeholder="0">
+          Trui (€18)
+        </label>
+        <label class="options__opt">
+          <input type="number" name="T-shirt" max="5" min="0" step="1" placeholder="0">
+          T-shirt (€8)
+        </label>
+        <label class="options__opt">
+          <input type="number" name="Trui met capuchon" max="5" min="0" step="1" placeholder="0">
+          Trui met capuchon (€25)
+        </label>
+        <label class="options__opt">
+          <input type="number" name="Polo" max="5" min="0" step="1" placeholder="0">
+          Polo (€15, leiding)
+        </label>
+      </div>
 
     </fieldset>
 
 
 
-    <fieldset>
+    <fieldset class="start">
 
-        <legend>Voor wie is het?</legend>
+      <legend>Voor wie is het?</legend>
 
-        <label class="text-label">Naam lid
-          <input type="text" name="Naam" id="name" placeholder="Sam Janssen" required class="identifying">
-        </label>
+      <label class="text-label">Naam lid
+        <input type="text" name="Naam" id="name" placeholder="Sam Janssen" required class="identifying">
+      </label>
 
-        <label class="text-label">Speltak
-          <select name="Speltak" required class="identifying">
-            <option value="">Om welk speltak gaat het?</option>
-            <option value="Bevers">Bevers</option>
-            <option value="Kabouters">Kabouters</option>
-            <option value="Welpen">Welpen</option>
-            <option value="Gidsen">Gidsen</option>
-            <option value="Scouts">Scouts</option>
-            <option value="Verkenners">Verkenners</option>
-            <option value="Explos">Explo's</option>
-            <option value="Leiding en bestuur">Leiding of bestuur</option>
-          </select>
-        </label>
-
-        <button class="button js-next" type="button">Volgende</button>
+      <label class="text-label">Speltak
+        <select name="Speltak" required class="identifying">
+          <option value="">Om welk speltak gaat het?</option>
+          <option value="Bevers">Bevers</option>
+          <option value="Kabouters">Kabouters</option>
+          <option value="Welpen">Welpen</option>
+          <option value="Gidsen">Gidsen</option>
+          <option value="Scouts">Scouts</option>
+          <option value="Verkenners">Verkenners</option>
+          <option value="Explos">Explo's</option>
+          <option value="Leiding en bestuur">Leiding of bestuur</option>
+        </select>
+      </label>
 
     </fieldset>
 
 
 
-    <fieldset>
+    <fieldset class="start">
 
       <legend>Wat zijn uw contactgegevens?</legend>
 
