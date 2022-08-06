@@ -549,7 +549,7 @@ $header-border: 1px solid transparentize(black, 0.8);
 }
 
 @each $palette_name, $color in $colors {
-  .#{$palette_name} {
+  .#{"" + $palette_name} {
     --page-bg: #{$color};
   }
 }
@@ -568,7 +568,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   }
 
   @each $palette_name, $color in $colors {
-    &--#{$palette_name} {
+    &--#{"" + $palette_name} {
       @extend .pattern;
       --page-bg: #{$color};
     }
@@ -950,12 +950,17 @@ hr {
   flex-flow: column;
   padding: 1vw 5vw 5vw;
 
+  &__part {
+    width: 100%;
+  }
+
   @media (min-width: $brk--phone) {
     flex-flow: row wrap;
     justify-content: space-around;
 
     &__part {
       margin: 1em;
+      width: auto;
     }
   }
 
@@ -1002,9 +1007,15 @@ hr {
   }
 
   &__all-button {
+    box-sizing: border-box;
     display: block;
-    margin: 1em 0 0;
+    margin: 1em auto 0;
+    max-width: 32em;
   }
+}
+
+.lvs--front {
+  text-align: center;
 }
 
 .front-members {
@@ -1695,7 +1706,7 @@ textarea {
 
   &__color {
     @each $palette_name, $color in $colors {
-      &--#{$palette_name} {
+      &--#{"" + $palette_name} {
         background: #{$color};
       }
     }
