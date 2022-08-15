@@ -34,9 +34,9 @@ function clothes() {
   $sheets_table .= "<table><tr>";
   foreach ($_POST as $key => $value) {
     if ($key !== 'action' && $key !== 'url')
-      $human_table .= sprintf("<td>%s</td>", $value);
+      $sheets_table .= sprintf("<td>%s</td>", $value);
   }
-  $human_table .= "</tr></table>";
+  $sheets_table .= "</tr></table>";
 
   $main_intro = "<p>Hey topper,</p>";
   $requesting_intro = "<p>Hierbij de bevestiging van de kledingaanschaf-aanvraag zoals die ook naar ons is gestuurd. We streven ernaar u binnen vijf werkdagen een reactie te sturen.</p>" . $message;
