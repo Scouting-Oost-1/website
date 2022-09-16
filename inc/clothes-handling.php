@@ -39,10 +39,10 @@ function clothes() {
   $sheets_table .= "</tr></table>";
 
   $main_intro = "<p>Hey topper,</p>";
-  $requesting_intro = "<p>Hierbij de bevestiging van de kledingaanschaf-aanvraag zoals die ook naar ons is gestuurd. We streven ernaar u binnen vijf werkdagen een reactie te sturen.</p>" . $message;
+  $requesting_intro = "<p>Hierbij de kopie van de kleding-bestelling. We proberen binnen vijf werkdagen te reageren.</p>" . $message;
   $requesting_footer .= "<p>Bij het ophalen van de kleding kunt u betalen met pin.</p>";
 
-  $base_message = "%s<p>%s heeft zojuist het Kledingaanschaf-formulier ingevuld:</p>%s%s";
+  $base_message = "%s<p>%s heeft zojuist het kleding-bestel-formulier ingevuld:</p>%s%s";
   $main_message = sprintf($base_message, $main_intro, $_POST['Ouder'], $human_table, $sheets_table);
   $requesting_message = sprintf($base_message, $requesting_intro, $_POST['Ouder'], $human_table, $requesting_footer);
 
