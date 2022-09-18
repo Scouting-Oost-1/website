@@ -16,9 +16,9 @@
       <p class="intro__excerpt">
         <?php echo get_the_excerpt(); ?>
         <?php $administration_link = get_permalink(get_page_by_path( 'ledenadministratie' ) ); ?>
-        <a href="<?php echo $administration_link; ?>"
+        <a href="https://lot.clubactie.nl/lot/scouting-ooost-1-amsterdam/190114"
           class="button intro__button">
-          Inschrijven
+          Naar de Grote Clubactie
         </a>
       </p>
       <?php
