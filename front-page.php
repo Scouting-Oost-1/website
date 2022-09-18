@@ -16,9 +16,9 @@
       <p class="intro__excerpt">
         <?php echo get_the_excerpt(); ?>
         <?php $administration_link = get_permalink(get_page_by_path( 'ledenadministratie' ) ); ?>
-        <a href="https://scoutingoost1.nl/photoalbum/"
+        <a href="<?php echo $administration_link; ?>"
           class="button intro__button">
-          Foto’s zomerkamp
+          Inschrijven
         </a>
       </p>
       <?php
@@ -37,12 +37,6 @@
         <h2>Snel naar...</h2>
         <p>
           <a class="referral referral--arrowed referral--heavy"
-            href="https://scoutingoost1.nl/activiteiten/zomerkamp/">
-            Informatie over zomerkamp
-          </a>
-        </p>
-        <p>
-          <a class="referral referral--arrowed"
             href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
             Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;
           </a>
