@@ -42,11 +42,11 @@
                   Word lid</a>
               </li>
               <li>
-                <a href="<?php echo $administration_link; ?>?Actie=Wijzigen">
+                <a href="<?php echo $administration_link; ?>?Actie=Afmelden">
                   Uitschrijven</a>
               </li>
               <li>
-                <a href="<?php echo $administration_link; ?>?Actie=Afmelden">
+                <a href="<?php echo $administration_link; ?>?Actie=Wijzigen">
                   Gegevens wijzigen</a>
               </li>
             </ul>
