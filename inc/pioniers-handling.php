@@ -4,8 +4,8 @@
   ADMINISTRATION HANDLING
 \*-------------------------------------*/
 
-add_action('wp_ajax_nopriv_friends', 'friends');
-add_action('wp_ajax_friends', 'friends');
+add_action('wp_ajax_nopriv_pioniers', 'pioniers');
+add_action('wp_ajax_pioniers', 'pioniers');
 
 
 
@@ -34,7 +34,7 @@ bestuur@scoutingoost1.nl</p>";
 
 
 
-function friends() {
+function pioniers() {
 
   if (!empty($_POST['url'])) {
     $response = array(
@@ -44,7 +44,7 @@ function friends() {
     exit();
   }
 
-  $message = sprintf("<p>%s heeft zojuist het Vriend-worden-formulier ingevuld:</p>", $_POST['Naam']);
+  $message = sprintf("<p>%s heeft zojuist het Pionier-worden-formulier ingevuld:</p>", $_POST['Naam']);
   $message .= "<table>";
   foreach ($_POST as $key => $value) {
     if ($key !== 'action' && $key !== 'url')
@@ -53,9 +53,9 @@ function friends() {
   $message .= "</table>";
 
   $main_email_success = send_mail(ADMINISTRATION_EMAIL, // receiver
-    "Vriendenadministratie " . $_POST['Actie'] . " " . $_POST['Naam'], // subject
+    "Pioniersadministratie " . $_POST['Actie'] . " " . $_POST['Naam'], // subject
     $message, // message
-    "Vriendenadministratie <noreply@scoutingoost1.nl>"); // sender
+    "Pioniersadministratie <noreply@scoutingoost1.nl>"); // sender
 
 
   $friend = sprintf("%s <%s>", $_POST['Naam'], sanitize_email($_POST['Email']));
@@ -63,7 +63,7 @@ function friends() {
 
   global $message_friend_welcome;
   send_mail($friend, // receiver
-    "Welkom, vriend, bij Scouting Oost 1", // subject
+    "Welkom, pionier, bij Scouting Oost 1", // subject
     sprintf($message_friend_welcome, $_POST['Naam'], $_POST['Bedrag'], ADMINISTRATION_EMAIL, CHAIR), // message
     $bestuur); // sender
 

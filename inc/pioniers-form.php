@@ -1,10 +1,10 @@
 <?php
 
 /*-------------------------------------*\
-  FRIENDS FORM
+  PIONIERS FORM
 \*-------------------------------------*/
 
-$action_url = get_template_directory_uri() . 'inc/friends-handling.php';
+$action_url = get_template_directory_uri() . 'inc/pioniers-handling.php';
 
 ?>
 
@@ -61,10 +61,10 @@ $action_url = get_template_directory_uri() . 'inc/friends-handling.php';
       <input type="text" name="Huisnummer" placeholder="123" required>
     </label>
     <label class="text-label readonly">Straatnaam
-      <input type="text" name="Straat" readonly>
+      <input type="text" name="Straat">
     </label>
     <label class="text-label readonly">Stad
-      <input type="text" name="Stad" readonly>
+      <input type="text" name="Stad">
     </label>
 
     <button class="button js-next" type="button">Volgende</button>
@@ -77,19 +77,23 @@ $action_url = get_template_directory_uri() . 'inc/friends-handling.php';
 
     <legend>Contributie: SEPA machtigingsformulier standaard Europese incasso – Doorlopende machtiging</legend>
 
-    <div class="options options--inlined">
+    <div class="options">
       <p class="options__label">Bedrag jaarlijkse donatie</p>
-      <label class="options__opt options__opt--inline">
-        <input type="radio" name="Bedrag" value="€10" required class="identifying">
-        €10
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Platte knoop: €10" required class="identifying">
+        Platte knoop: €10
       </label>
-      <label class="options__opt options__opt--inline">
-        <input type="radio" name="Bedrag" value="€20" required class="identifying">
-        €20
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Mastworp: €20" required class="identifying">
+        Mastworp: €20
       </label>
-      <label class="options__opt options__opt--inline">
-        <input type="radio" name="Bedrag" value="€50" required class="identifying">
-        €50
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Timmersteek: €50" required class="identifying">
+        Timmersteek: €50
+      </label>
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Paalsteek: €100" required class="identifying">
+        Paalsteek: €100
       </label>
     </div>
 
@@ -122,7 +126,7 @@ $action_url = get_template_directory_uri() . 'inc/friends-handling.php';
     <?php $privacy_link = get_permalink(
       get_page_by_path( 'privacy' ) ); ?>
     <div class="terms">
-      <p>Wij verwerken persoonsgegevens om de donatie te innen en contact te hebben met onze donateurs. In ons <a href="<?php echo $privacy_link; ?>">privacybeleid</a> is te hoe we hierbij te werk gaan.</p>
+      <p>Wij verwerken persoonsgegevens om de donatie te innen en contact te hebben met onze Pioniers. In ons <a href="<?php echo $privacy_link; ?>">privacybeleid</a> is te hoe we hierbij te werk gaan.</p>
     </div>
     <label class="term-check">
       <input type="checkbox" name="Privacy-voorwaarden" value="Akkoord" required>

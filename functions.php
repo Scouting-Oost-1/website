@@ -23,7 +23,7 @@ include( 'inc/rental-handling.php' );
 include( 'inc/rental-form.php' );
 include( 'inc/clothes-handling.php' );
 include( 'inc/clothes-form.php' );
-include( 'inc/friends-handling.php' );
+include( 'inc/pioniers-handling.php' );
 if (file_exists('inc/local-vars.php')) include( 'inc/local-vars.php' );
 
 /* ADD ACTIONS */
@@ -32,7 +32,7 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
 /* Add theme support for a few things */
 function custom_theme_setup() {
   add_theme_support( 'post-thumbnails' ); // Allow posts to have thumbnails
-  add_theme_support( 'html5' ); // Make the search form input type="search"
+  add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) ); // Make the search form input type="search"
   add_theme_support( 'title-tag' ); // Fix the document title tag
 }
 

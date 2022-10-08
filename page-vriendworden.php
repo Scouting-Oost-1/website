@@ -1,5 +1,5 @@
 <?php /**
- * Template Name: Vriendenadministratie
+ * Template Name: Pioniersadministratie
  */ ?>
 <?php get_header(); ?>
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -20,8 +20,8 @@
     <?php the_content(); ?>
 
     <?php
-      $ad_form = 'friends';
-      include('inc/friends-form.php');
+      $ad_form = 'pioniers';
+      include('inc/pioniers-form.php');
     ?>
 
   </main>
