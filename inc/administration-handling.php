@@ -21,7 +21,7 @@ Mailen kan ook naar: bestuur@scoutingoost1.nl</p>
 
 <p>Drie tot vier keer per jaar verschijnt ons clubblad ‘Het Lopend Vuurtje’ Dit blad brengt u leuke nieuwtjes en weetjes van onze club. Wilt u adverteerder worden om dit blad mogelijk te blijven houden? Stuur dan een mail naar het bestuur.</p>
 
-<p>Via <a href='https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl'>Sponsorkliks.nl</a> kunt u gratis onze club sponsoren. Dit doet u door alle online aankopen via onze site te doen; alle grote webwinkels doen mee! Als u op een andere manier Scouting Oost 1 wilt steunen of sponsoren, dan horen wij dat natuurlijk graag.</p>
+<p>Via <a href='https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl'>Sponsorkliks.nl</a> kunt u gratis onze club sponsoren. Dit doet u door alle online aankopen via onze site te doen; alle grote webwinkels doen mee! Daarnaast kunt u ook <a href='https://scoutingoost1.nl/pionier-worden/'>Pionier worden</a> en jaarlijks een bedrag doneren. Als u op een andere manier Scouting Oost 1 wilt steunen of sponsoren, dan horen wij dat natuurlijk graag.</p>
 
 <p>Contributie:<br>
 De contributie wordt eens per maand automatisch van uw rekening geïnd. Als de contributie niet kan worden afgeschreven worden er administratiekosten in rekening gebracht. Uitschrijven is alleen mogelijk via onze website. De uitschrijving gaat op de eerste van de daarop volgende maand van kracht.<br>
