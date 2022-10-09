@@ -33,11 +33,6 @@
               href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
               Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;</a>
           </li>
-          <li>
-            <a class="referral--secondary referral--arrowed"
-              href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
-              Scouting Oost 1 en <strong>COVID-19</strong></a>
-          </li>
         </ul>
       </div>
       <?php
