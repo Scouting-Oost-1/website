@@ -268,13 +268,31 @@ a {
   color: black;
   display: block;
   padding: .8em;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    ::before {
+      background: var(--page-bg, $accent);
+      border-radius: .3em;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: .15;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 
   &--heavy {
     background: var(--page-bg, $accent);
     border-style: solid;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -912,17 +930,24 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover !important;
-    padding-bottom: 10vw;
+    padding-bottom: 5vw;
   }
 
   &__title {
     margin: 5vw 0 0;
   }
 
-  &__excerpt {
+  &__content {
     background: white;
     margin: -1em auto 0;
+    max-width: 32em;
     padding: 1.75em 1.5em 1em;
+  }
+
+  &__links {
+    list-style-type: none;
+    margin: 1em 0 0;
+    padding: 0;
   }
 
   &__button {

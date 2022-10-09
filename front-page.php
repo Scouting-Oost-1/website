@@ -13,14 +13,33 @@
       <h1 class="intro__title">
         Scouting Oost 1
       </h1>
-      <p class="intro__excerpt">
-        <?php echo get_the_excerpt(); ?>
-        <?php $administration_link = get_permalink(get_page_by_path( 'ledenadministratie' ) ); ?>
-        <a href="https://lot.clubactie.nl/lot/scouting-ooost-1-amsterdam/190114"
-          class="button intro__button">
-          Naar de Grote Clubactie
-        </a>
-      </p>
+      <div class="intro__content">
+        <p class="intro__excerpt">
+          <?php echo get_the_excerpt(); ?>
+        </p>
+        <ul class="intro__links">
+          <li>
+            <a class="referral referral--arrowed referral--heavy"
+              href="https://scoutingoost1.nl/ledenadministratie/?Actie=Aanmelden">
+              Word <strong>lid</strong></a>
+          </li>
+          <li>
+            <a class="referral referral--arrowed"
+              href="https://lot.clubactie.nl/lot/scouting-ooost-1-amsterdam/190114">
+              Naar de <strong>Grote Clubactie</strong></a>
+          </li>
+          <li>
+            <a class="referral referral--arrowed"
+              href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
+              Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;</a>
+          </li>
+          <li>
+            <a class="referral--secondary referral--arrowed"
+              href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
+              Scouting Oost 1 en <strong>COVID-19</strong></a>
+          </li>
+        </ul>
+      </div>
       <?php
         the_post_thumbnail(
           'post-thumbnail',
@@ -31,23 +50,6 @@
 
     <section class="past">
 
-
-
-      <div class="past__part">
-        <h2>Snel naar...</h2>
-        <p>
-          <a class="referral referral--arrowed referral--heavy"
-            href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-            Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;
-          </a>
-        </p>
-        <p>
-          <a class="referral referral--arrowed"
-            href="https://scoutingoost1.nl/scouting-oost-1-en-covid-19/">
-            Scouting Oost 1 en <strong>COVID-19</strong>
-          </a>
-        </p>
-      </div>
 
 
 
