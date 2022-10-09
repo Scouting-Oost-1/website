@@ -20,7 +20,7 @@ $message_friend_welcome = "<p>Beste %s,</p>
 
 <p>Drie tot vier keer per jaar verschijnt ons clubblad ‘Het Lopend Vuurtje’ Dit blad brengt u leuke nieuwtjes en weetjes van onze club, die krijgt u per mail toegestuurd. Wilt u adverteerder worden om dit blad mogelijk te blijven houden? Stuur dan een mail naar het bestuur.</p>
 
-<p>Wilt u nog meer bijdragen? Via Sponsorkliks.nl kunt u gratis onze club sponsoren. Dit doet u door alle online aankopen via onze site te doen; alle grote webwinkels doen mee! Kijk op onze website hoe het werkt. Als u op een andere manier Scouting Oost 1 wilt steunen of sponsoren, dan horen wij dat natuurlijk graag.</p>
+<p>Wilt u nog meer bijdragen? Via Sponsorkliks.nl kunt u gratis onze club sponsoren. Dit doet u door alle online aankopen via onze site te doen; alle grote webwinkels doen mee! <a href='https://scoutingoost1.nl/steunen/'>Kijk op onze website hoe het werkt</a>. Als u op een andere manier Scouting Oost 1 wilt steunen of sponsoren, dan horen wij dat natuurlijk graag.</p>
 
 <p>Heeft u vragen, neem dan gerust contact met ons op!</p>
 
