@@ -31,7 +31,7 @@
           <li>
             <a class="referral referral--arrowed"
               href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-              Steun ons, bestel via <strong>sponsorkliks.nl</strong>&emsp;</a>
+              Steun ons, bestel via <strong>sponsorkliks.nl</strong></a>
           </li>
         </ul>
       </div>
