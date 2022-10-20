@@ -16,6 +16,53 @@ $action_url = get_template_directory_uri() . 'inc/pioniers-handling.php';
 
   <fieldset class="start">
 
+    <legend>Wat wil je doneren?</legend>
+
+    <div class="options">
+      <p class="options__label">Bedrag jaarlijkse donatie</p>
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Platte knoop: €10" required class="identifying">
+        Platte knoop: €10 per jaar
+      </label>
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Mastworp: €25" required class="identifying">
+        Mastworp: €25 per jaar
+      </label>
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Timmersteek: €50" required class="identifying">
+        Timmersteek: €50 per jaar
+      </label>
+      <label class="options__opt">
+        <input type="radio" name="Bedrag" value="Paalsteek: €100" required class="identifying">
+        Paalsteek: €100 per jaar
+      </label>
+    </div>
+
+    <label class="text-label">IBAN
+      <input type="text" name="IBAN" placeholder="NL98 ABCD 1234567890" required>
+    </label>
+    <label class="text-label">Ter name van
+      <input type="text" name="tnv" placeholder="P. M. Janssen" required>
+    </label>
+
+    <div class="terms">
+      <p><strong>SEPA machtigingsformulier standaard Europese incasso – Doorlopende machtiging</strong></p>
+      <p>U geeft toestemming aan Scouting Oost 1 om doorlopende incasso-opdrachten te sturen naar uw bank om een bedrag van uw rekening af te schrijven en aan uw bank om doorlopend een bedrag van uw rekening af te schrijven overeenkomstig de opdracht van Scouting Oost 1.</p>
+      <p>Als u het niet eens bent met deze afschrijving kunt u deze laten terugboeken. Neem hiervoor binnen 8 weken na afschrijving contact op met uw bank. Vraag uw bank naar de voorwaarden.</p>
+    </div>
+    <label class="term-check">
+      <input type="checkbox" name="SEPA Doorlopende machtiging" value="Akkoord" id="sepa" required>
+      Ik ga akkoord met deze machtiging
+    </label>
+
+    <button class="button js-next" type="button">Volgende</button>
+
+  </fieldset>
+
+
+
+  <fieldset>
+
     <legend>Wie ben je?</legend>
 
     <label class="text-label">Naam
@@ -45,7 +92,7 @@ $action_url = get_template_directory_uri() . 'inc/pioniers-handling.php';
 
     <button class="button js-next" type="button">Volgende</button>
 
-</fieldset>
+  </fieldset>
 
 
 
@@ -65,52 +112,6 @@ $action_url = get_template_directory_uri() . 'inc/pioniers-handling.php';
     </label>
     <label class="text-label readonly">Stad
       <input type="text" name="Stad">
-    </label>
-
-    <button class="button js-next" type="button">Volgende</button>
-
-  </fieldset>
-
-
-
-  <fieldset>
-
-    <legend>Contributie: SEPA machtigingsformulier standaard Europese incasso – Doorlopende machtiging</legend>
-
-    <div class="options">
-      <p class="options__label">Bedrag jaarlijkse donatie</p>
-      <label class="options__opt">
-        <input type="radio" name="Bedrag" value="Platte knoop: €10" required class="identifying">
-        Platte knoop: €10
-      </label>
-      <label class="options__opt">
-        <input type="radio" name="Bedrag" value="Mastworp: €20" required class="identifying">
-        Mastworp: €20
-      </label>
-      <label class="options__opt">
-        <input type="radio" name="Bedrag" value="Timmersteek: €50" required class="identifying">
-        Timmersteek: €50
-      </label>
-      <label class="options__opt">
-        <input type="radio" name="Bedrag" value="Paalsteek: €100" required class="identifying">
-        Paalsteek: €100
-      </label>
-    </div>
-
-    <label class="text-label">IBAN
-      <input type="text" name="IBAN" placeholder="NL98 ABCD 1234567890" required>
-    </label>
-    <label class="text-label">Ter name van
-      <input type="text" name="tnv" placeholder="P. M. Janssen" required>
-    </label>
-
-    <div class="terms">
-      <p>U geeft toestemming aan Scouting Oost 1 om doorlopende incasso-opdrachten te sturen naar uw bank om een bedrag van uw rekening af te schrijven en aan uw bank om doorlopend een bedrag van uw rekening af te schrijven overeenkomstig de opdracht van Scouting Oost 1.</p>
-      <p>Als u het niet eens bent met deze afschrijving kunt u deze laten terugboeken. Neem hiervoor binnen 8 weken na afschrijving contact op met uw bank. Vraag uw bank naar de voorwaarden.</p>
-    </div>
-    <label class="term-check">
-      <input type="checkbox" name="SEPA Doorlopende machtiging" value="Akkoord" id="sepa" required>
-      Ik ga akkoord met deze machtiging
     </label>
 
     <button class="button js-next" type="button">Volgende</button>
