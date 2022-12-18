@@ -53,6 +53,14 @@ register_nav_menus( array(
     'sitemap' => 'Footer Sitemap'
 ) );
 
+function menu_item_buttons( $output, $item, $depth, $args ) {
+  if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+		$output = '<button type="button" class="menu-item-toggle" aria-expanded="false" aria-controls="sub-menu-' . $item->ID . '">' . $item->title . '</button>';
+	}
+	return $output;
+}
+add_filter( 'walker_nav_menu_start_el', 'menu_item_buttons', 10, 4 );
+
 
 
 

@@ -377,8 +377,11 @@ $header-border: 1px solid transparentize(black, 0.8);
 }
 
 .menu-toggle {
+  background: inherit;
+  border: none;
   color: inherit;
   display: inline-block;
+  font: inherit;
   font-weight: bold;
   padding: 1.5em;
   text-decoration: none;
@@ -477,30 +480,34 @@ $header-border: 1px solid transparentize(black, 0.8);
 
 .menu-item {
   font-weight: normal;
+  align-items: center;
+  display: flex;
 
-  &:hover,
-  &:focus-within {
-    .sub-menu {
-      max-height: 14em;
+  .sub-menu {
+    max-height: 14em;
 
-      @media (min-width: $brk--phone) {
-        border-bottom: $header-border;
-        height: 100vh;
-        max-height: none;
-        overflow: visible;
-      }
+    @media (min-width: $brk--phone) {
+      border-bottom: $header-border;
+      height: 100vh;
+      max-height: none;
+      overflow: visible;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
     }
   }
 
-  a {
+  a,
+  button {
     color: inherit;
     display: block;
     padding: .5em 1em;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
 
     @media (min-width: $brk--phone) {
       display: inline-block;
@@ -509,14 +516,23 @@ $header-border: 1px solid transparentize(black, 0.8);
     }
   }
 
+  button {
+    text-decoration: none;
+  }
+
   &-has-children {
     font-weight: bold;
     margin-bottom: .5em;
     position: relative;
+    
+    button {
+      background: inherit;
+      border: none;
+      display: block;
+      font: inherit;
+    }  
 
     @media (min-width: $brk--phone) {
-      align-items: center;
-      display: flex;
       margin-bottom: 0;
       position: static;
 
@@ -528,17 +544,7 @@ $header-border: 1px solid transparentize(black, 0.8);
 
     & > a {
       display: block;
-
-      &:hover {
-        text-decoration: none;
-      }
     }
-  }
-
-  &.staff {
-    @extend .menu-item-has-children;
-    font-weight: 400;
-    margin-left: auto;
   }
 }
 

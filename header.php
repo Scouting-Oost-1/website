@@ -40,12 +40,12 @@
     <header class="site-header">
 
       <a href="<?php echo get_site_url(); ?>">
-        <img alt="<?php bloginfo( 'name' ); ?>"
+        <img alt="<?php bloginfo( 'name' ); ?> - Home"
           class="logo" width="195" height="68"
           src="<?php echo image_url('full-logo-black.svg'); ?>">
       </a>
 
-      <a href="#menu" class="js-menu-toggle menu-toggle">Menu</a>
+      <button class="js-menu-toggle menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
 
       <nav class="site-menu" id="menu">
         <?php wp_nav_menu( array(

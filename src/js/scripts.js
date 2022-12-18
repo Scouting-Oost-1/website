@@ -21,8 +21,6 @@ function onDocReady () {
 
   ajaxurl = document.head.querySelector("[name=ajaxurl]").content;
 
-  menuToggler(menu);
-
   scrollMenu(header);
   prepAdminForm(adminForm);
   prepRentalForm(rentalForm);
@@ -74,17 +72,13 @@ function onDocReady () {
 
 
 
-function menuToggler (menu) {
-
-  var menuToggle = jQuery('.js-menu-toggle');
-
-  menuToggle.click(function (e) {
-    e.preventDefault();
-    menu.toggleClass('opened');
-    menuToggle.toggleClass('opened');
-  });
-
-}
+var menuToggle = document.querySelector('.js-menu-toggle');
+var menu = document.querySelector('#menu');
+menuToggle.addEventListener('click', function() {
+  let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+  this.setAttribute('aria-expanded', !expanded);
+  menu.classList.toggle('opened');
+});
 
 function scrollMenu (header) {
   jQuery(window).scroll(function() {
@@ -96,6 +90,34 @@ function scrollMenu (header) {
     }
   });
 }
+
+var subMenus = document.querySelectorAll('.sub-menu');
+subMenus.forEach(e => e.hidden = true);
+
+var navButton = document.querySelectorAll('nav button');
+navButton.forEach(e => e.addEventListener('click', function() {
+  let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+  this.setAttribute('aria-expanded', !expanded);
+  let menu = this.nextElementSibling;
+  subMenus.forEach(e => {
+    if (e != menu) e.hidden = true;
+  });
+  menu.hidden = !menu.hidden;
+}));
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  var isEscape = false;
+  if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc");
+  } else {
+      isEscape = (evt.keyCode === 27);
+  }
+  if (isEscape) {
+    subMenus.forEach(e => e.hidden = true);
+  }
+};
+
 
 
 
