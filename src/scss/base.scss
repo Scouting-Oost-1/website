@@ -480,8 +480,11 @@ $header-border: 1px solid transparentize(black, 0.8);
 
 .menu-item {
   font-weight: normal;
-  align-items: center;
-  display: flex;
+
+  @media (min-width: $brk--phone) {
+    align-items: center;
+    display: flex;
+  }
 
   .sub-menu {
     max-height: 14em;
