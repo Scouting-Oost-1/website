@@ -88,8 +88,8 @@ $brk--desktop: 1200px;
 $brk--large-desktop: 1920px;
 
 $header-h--phone: 101px;
-$header-h--tablet: 5.55em;
-$header-h--desktop: 5.2em;
+$header-h--tablet: 6.3em;
+$header-h--desktop: 6.0em;
 $header-h--large-desktop: 5.6em;
 
 
@@ -355,7 +355,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     background: white;
   }
 
-  @media (min-width: $brk--phone) {
+  @media (min-width: $brk--desktop) {
     align-items: stretch;
     justify-content: flex-start;
     overflow-y: visible;
@@ -366,10 +366,6 @@ $header-border: 1px solid transparentize(black, 0.8);
   display: block;
   margin: 1em;
   width: 195px;
-
-  @media (min-width: $brk--phone) {
-    width: 160px;
-  }
 
   @media (min-width: $brk--desktop) {
     width: 195px;
@@ -386,7 +382,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   padding: 1.5em;
   text-decoration: none;
 
-  @media (min-width: $brk--phone) {
+  @media (min-width: $brk--desktop) {
     display: none;
   }
 }
@@ -399,7 +395,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   font-size: 1.2em;
   width: 100%;
 
-  @media (max-width: ($brk--phone - 1)) {
+  @media (max-width: ($brk--desktop - 1)) {
     display: none;
 
     &.opened {
@@ -407,7 +403,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     }
   }
 
-  @media (min-width: $brk--phone) {
+  @media (min-width: $brk--desktop) {
     border: none;
     flex-shrink: 1;
     font-size: 1em;
@@ -421,7 +417,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     max-width: none;
     padding: 0;
 
-    @media (min-width: $brk--phone) {
+    @media (min-width: $brk--desktop) {
       align-items: stretch;
       display: flex;
       flex-flow: row;
@@ -439,20 +435,20 @@ $header-border: 1px solid transparentize(black, 0.8);
   transition: max-height 250ms ease-out,
     width 100ms ease-out;
 
-  @media (max-width: ($brk--phone - 1)) {
+  @media (max-width: ($brk--desktop - 1)) {
     overflow: hidden;
 
     &.opened {
-      max-height: 14em;
+      max-height: 30em;
     }
   }
 
-  @media (min-width: $brk--phone) {
+  @media (min-width: $brk--desktop) {
     font-weight: bold;
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    top: $header-h--tablet;
+    top: $header-h--desktop;
     transition: none;
 
     &:after {
@@ -469,10 +465,6 @@ $header-border: 1px solid transparentize(black, 0.8);
     }
   }
 
-  @media (min-width: $brk--tablet) {
-    top: $header-h--desktop;
-  }
-
   @media (min-width: $brk--desktop) {
     top: $header-h--large-desktop;
   }
@@ -481,7 +473,7 @@ $header-border: 1px solid transparentize(black, 0.8);
 .menu-item {
   font-weight: normal;
 
-  @media (min-width: $brk--phone) {
+  @media (min-width: $brk--desktop) {
     align-items: center;
     display: flex;
   }
@@ -489,7 +481,7 @@ $header-border: 1px solid transparentize(black, 0.8);
   .sub-menu {
     max-height: 30em;
 
-    @media (min-width: $brk--phone) {
+    @media (min-width: $brk--desktop) {
       border-bottom: $header-border;
       height: 100vh;
       max-height: none;
@@ -513,7 +505,7 @@ $header-border: 1px solid transparentize(black, 0.8);
     display: block;
     padding: .5em 1em;
 
-    @media (min-width: $brk--phone) {
+    @media (min-width: $brk--desktop) {
       display: inline-block;
       font-weight: bold;
       padding: .75em .8em;
@@ -547,6 +539,7 @@ $header-border: 1px solid transparentize(black, 0.8);
       font: inherit;
     }  
 
+    @media (min-width: $brk--desktop) {
       align-items: stretch;
       margin-bottom: 0;
       position: static;
