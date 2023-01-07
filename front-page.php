@@ -17,18 +17,25 @@
         <p class="intro__excerpt">
           <?php echo get_the_excerpt(); ?>
         </p>
-        <ul class="intro__links">
-          <li>
-            <a class="referral referral--arrowed referral--heavy"
-              href="https://scoutingoost1.nl/ledenadministratie/?Actie=Aanmelden">
-              Word <strong>lid</strong></a>
-          </li>
-          <li>
-            <a class="referral referral--arrowed"
-              href="https://www.sponsorkliks.com/products/shops.php?club=5886&nbta=20160701&cn=NL&ln=nl">
-              Steun ons, bestel via <strong>sponsorkliks.nl</strong></a>
-          </li>
-        </ul>
+        <?php // Check rows existexists.
+          if ( have_rows('links') ): ?>
+            <ul class="intro__links">
+
+            <?php // Loop through rows.
+            while ( have_rows('links') ):
+              the_row();
+              $text = get_sub_field('link-text');
+              $url = get_sub_field('url');
+              $highlight = (get_sub_field('highlight')) ? "referral--heavy" : "";
+              echo "<li>
+                <a class='referral referral--arrowed {$highlight}'
+                  href='{$url}'>
+                  {$text}</a>
+              </li>";
+              // End loop.
+            endwhile; ?>
+            </ul>
+        <?php endif; ?>
       </div>
       <?php
         the_post_thumbnail(
