@@ -151,7 +151,7 @@
 
 
     <section class="front-members">
-      <h1>Jeugdleden</h1>
+      <h1 id="jeugdleden">Jeugdleden</h1>
       <div class="front-members__cont">
         <table class="front-members__speltakken">
           <thead>
