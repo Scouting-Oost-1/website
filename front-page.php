@@ -250,8 +250,8 @@
           <?php the_content(); ?>
         </div>
 
-        <nav class="continue">
-          <h2>Ga verder...</h2>
+        <nav class="continue" aria-labelledby="continue">
+          <h2 id="continue">Ga verder...</h2>
           <a class="button button--light" href="<?php echo get_permalink(
             get_page_by_path( 'verhuur' ) ); ?>">
             Huur onze gebouwen</a>
