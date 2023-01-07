@@ -515,12 +515,23 @@ $header-border: 1px solid transparentize(black, 0.8);
     @media (min-width: $brk--phone) {
       display: inline-block;
       font-weight: bold;
-      padding: .75em 1em;
+      padding: .75em .8em;
     }
   }
 
   button {
     text-decoration: none;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    margin-left: .2em;
+    margin-bottom: -.2em;
+  }
+
+  [aria-expanded="true"] svg {
+    transform: scaleY(-1);
   }
 
   &-has-children {
@@ -549,6 +560,11 @@ $header-border: 1px solid transparentize(black, 0.8);
       display: block;
     }
   }
+}
+
+svg[hidden] {
+	display: none;
+	position: absolute;
 }
 
 

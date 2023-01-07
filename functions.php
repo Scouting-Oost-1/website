@@ -55,7 +55,13 @@ register_nav_menus( array(
 
 function menu_item_buttons( $output, $item, $depth, $args ) {
   if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
-		$output = '<button type="button" class="menu-item-toggle" aria-expanded="false" aria-controls="sub-menu-' . $item->ID . '">' . $item->title . '</button>';
+		$output = "<button type='button' class='menu-item-toggle' aria-expanded='false' 
+      aria-controls='sub-menu-{$item->ID}'>
+        {$item->title}
+        <svg aria-hidden='true' width='16' height='16'>
+            <use xlink:href='#arrow' />
+				</svg>
+      </button>";
 	}
 	return $output;
 }

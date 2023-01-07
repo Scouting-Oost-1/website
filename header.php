@@ -47,6 +47,12 @@
 
       <button class="js-menu-toggle menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
 
+      <svg xmlns="http://www.w3.org/2000/svg" hidden>
+        <symbol id="arrow" viewbox="0 0 16 16" >
+          <polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
+        </symbol>
+      </svg>
+
       <nav class="site-menu" id="menu">
         <?php wp_nav_menu( array(
           'theme_location' => 'primary',
