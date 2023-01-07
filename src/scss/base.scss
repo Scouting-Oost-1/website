@@ -561,6 +561,14 @@ svg[hidden] {
 	position: absolute;
 }
 
+.current-menu-parent,
+.current-menu-item {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: .15em;
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+}
+
 
 
 
