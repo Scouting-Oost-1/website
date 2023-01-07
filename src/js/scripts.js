@@ -39,12 +39,6 @@ function onDocReady () {
   rentalForm.submit(submitForm);
   clothesForm.submit(submitForm);
 
-  if (typeof pickAction !== 'undefined') {
-    if (pickAction) {
-      chooseActionButton.click();
-    }
-  }
-
   if (jQuery('.album').length) {
     jQuery('.fancybox').fancybox({
       beforeShow: function() {

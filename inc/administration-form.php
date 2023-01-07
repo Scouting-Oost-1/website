@@ -7,9 +7,6 @@
 $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
 
 ?>
-<script type="text/javascript">
-  var pickAction = <?php echo ($_GET['Actie']) ? 'true' : 'false'; ?>;
-</script>
 
 <form class="administration" method="post"
   name="<?php echo $ad_form; ?>-administration"
