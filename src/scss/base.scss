@@ -1470,80 +1470,58 @@ input[type=number] {
 /*-------------------------------------*\
   Photo album
 \*-------------------------------------*/
-.photoalbums {
-  align-items: flex-end;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.folders,
+.photos {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  max-width: none;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 1em;
 
-  &__title {
-    text-align: center;
-    text-transform: capitalize;
+  li {
+    margin: 0;
+  }
+}
+
+.folder {
+  a {
+    border: 1px solid var(--page-bg);
+    border-radius: .3em;
+    box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    transition: box-shadow ease-out 125ms;
+    width: 150px;
+
+    &:hover {
+      box-shadow: 0 .15em .3em rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
 .photoalbum {
-  padding: 1em 5vw;
-
-  &--link {
-    @extend .past__item;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin-bottom: 2.5em;
-    margin-right: 2.5em;
-    max-width: 300px;
-    width: 200px;
-  }
-
-  &__name {
-    @extend .past__post-title;
-  }
-
   &__button-cont { text-align: center; }
 }
 
-.collection {
-  margin: 1em;
-}
-
-.photoset {
-  @extend .referral;
-  @extend .referral--arrowed;
-  margin: 1em;
-}
-
-.album {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
-  grid-gap: 1em;
-  justify-content: center;
-  list-style: none;
-  margin: 0 0 1em;
-  max-width: none;
-  padding: 0;
-
-  .button {
-    box-sizing: border-box;
-    margin: .5em;
-    width: 150px;
-  }
-}
-
 .photo-cont {
-  margin: 0;
+  height: 150px;
 }
 
 .photo {
+  border-radius: .3em;
+  box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.1);
   display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition: box-shadow ease-out 125ms;
   width: 150px;
-}
 
-.back-to-albums {
-  @extend .button;
-  display: block;
-  max-width: 32em;
-  font-weight: bold;
-  margin: 1em auto;
+  &:hover {
+    box-shadow: 0 .2em .3em rgba(0, 0, 0, 0.15);
+  }
 }
 
 

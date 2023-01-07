@@ -39,7 +39,7 @@ function onDocReady () {
   rentalForm.submit(submitForm);
   clothesForm.submit(submitForm);
 
-  if (jQuery('.album').length) {
+  if (jQuery('.photos').length) {
     jQuery('.fancybox').fancybox({
       beforeShow: function() {
         location.hash = this.element.attr('id');
