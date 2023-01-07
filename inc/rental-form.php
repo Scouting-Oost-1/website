@@ -52,19 +52,19 @@ function rental_form_view() {
       <div class="options">
         <label class="options__opt">
           <input type="radio" name="Tijdslot" value="13:00 - 01:00" required>
-          Hele dag (13:00 - 01:00, €250,-)
+          Hele dag (13:00 - 01:00)
         </label>
         <label class="options__opt">
           <input type="radio" name="Tijdslot" value="13:00 - 18:00" required>
-          Alleen overdag (13:00 - 18:00, €175,-)
+          Alleen overdag (13:00 - 18:00)
         </label>
         <label class="options__opt">
           <input type="radio" name="Tijdslot" value="17:00 - 01:00" required>
-          Alleen avond (17:00 - 01:00, €200,-)
+          Alleen avond (17:00 - 01:00)
         </label>
         <label class="options__opt">
           <input type="radio" name="Tijdslot" value="20:00 - 01:00" required>
-          Late avond (20:00 - 01:00, €175,-)
+          Late avond (20:00 - 01:00)
         </label>
       </div>
 
