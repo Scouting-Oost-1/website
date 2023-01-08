@@ -31,8 +31,11 @@
     <?php
         include('inc/get-photos.php');
         
-        $folder_id = $_GET['id'];
-        if (empty($_GET['id'])) $folder_id = "1f9X5XMH2YAn2HynZw3_c3WzL2KcxdWI9";
+        if (!isset($_GET['id'])) {
+            $folder_id = "1f9X5XMH2YAn2HynZw3_c3WzL2KcxdWI9";
+        } else {
+            $folder_id = $_GET['id'];
+        }
         
         $response = getFolder($folder_id);
 
@@ -40,9 +43,9 @@
         $folders = array_key_exists('folders', $response['items']) ? $response['items']['folders'] : false;
         $photos = array_key_exists('photos', $response['items']) ? $response['items']['photos'] : false;
 
-        if (!$folders && !$photos) {
-            echo "<p>Er is hier helaas niks, ga terug naar <a href='./'>de hoofdmap</a> of <a href='/contact'>laat het ons weten</a>.</p>";
-        } else { ?>
+        if (!$folders && !$photos) { ?>
+            <p>Er is hier helaas niks, ga terug naar <a href='./'>de hoofdmap</a> of <a href='/contact'>laat het ons weten</a>.</p>
+        <?php } else { ?>
 
             <p class="photoalbum__button-cont">
                 <button href="#" class="button" id="js-slideshow-button">
