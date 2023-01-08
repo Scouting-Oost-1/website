@@ -15,8 +15,6 @@ include( 'inc/activity-post-type.php' );
 include( 'inc/frontpage-custom-fields.php' );
 include( 'inc/publication-post-type.php' );
 include( 'inc/publication-custom-fields.php' );
-include( 'inc/photoalbum-post-type.php' );
-include( 'inc/photoalbum-custom-fields.php' );
 include( 'inc/page-custom-fields.php' );
 include( 'inc/send-mail.php' );
 include( 'inc/administration-handling.php' );
