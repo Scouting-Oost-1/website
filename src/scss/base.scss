@@ -1518,6 +1518,7 @@ input[type=number] {
   overflow: hidden;
   transition: box-shadow ease-out 125ms;
   width: 150px;
+  height: 150px;
 
   &:hover {
     box-shadow: 0 .2em .3em rgba(0, 0, 0, 0.15);
