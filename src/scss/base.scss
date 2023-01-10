@@ -1250,7 +1250,8 @@ legend {
 .grunion-field-text-wrap,
 .grunion-field-date-wrap,
 .grunion-field-textarea-wrap,
-.grunion-field-telephone-wrap {
+.grunion-field-telephone-wrap,
+.post-password-form label {
   @extend .form-element;
   color: var(--input-color);
   flex-grow: 1;
@@ -1461,6 +1462,21 @@ input[type=number] {
 .loading {
   opacity: .5;
   pointer-events: none;
+}
+
+.post-password-form {
+  p:nth-child(2) {
+    display: flex;
+  }
+
+  label {
+    margin: 0 1em 0 0;
+  }
+
+  input[type=submit] {
+    @extend .button;
+    margin: 0;
+  }
 }
 
 
