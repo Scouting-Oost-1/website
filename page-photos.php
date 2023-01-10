@@ -29,6 +29,7 @@
     <?php the_content(); ?>
 
     <?php
+        if ( ! post_password_required() ):
         include('inc/get-photos.php');
         
         if (!isset($_GET['id'])) {
@@ -77,7 +78,8 @@
                 </ul>
             <?php } ?>
 
-        <?php } ?>
+        <?php } 
+        endif; ?>
 
 
   </main>
