@@ -150,7 +150,7 @@ $action_url = get_template_directory_uri() . 'inc/pioniers-handling.php';
       <textarea name="Opmerkingen" cols="40" rows="10"></textarea>
     </label>
 
-    <p class="no-display">Vul hier niks in <input type="text" name="url"></p>
+    <p class="no-display">Vul hier niks in <input type="text" name="url" aria-label="Laat leeg"></p>
 
     <button type="submit" name="submit" class="button">Versturen</button>
 
