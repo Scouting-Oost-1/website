@@ -69,7 +69,7 @@ function rental_form_view() {
       </div>
 
       <label class="text-label">Aantal personen
-        <input type="number" name="Aantal personen" id="participants" placeholder="30"
+        <input type="number" name="Aantal personen" id="participants-one-day" placeholder="30"
           min="1" required>
       </label>
 
@@ -100,7 +100,7 @@ function rental_form_view() {
       </label>
 
       <label class="text-label">Aantal personen
-        <input type="number" name="Aantal personen" id="participants" placeholder="30"
+        <input type="number" name="Aantal personen" id="participants-multi-day" placeholder="30"
           min="1" required>
       </label>
 
