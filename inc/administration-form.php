@@ -70,7 +70,7 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
     <label class="text-label">Speltak
       <select name="Speltak" required class="identifying">
         <option value="">Om welk speltak gaat het?</option>
-        <option value="Bevers">Bevers (4-7, m/v/x)</option>
+        <option value="Bevers">Tijdelijk opgeheven: Bevers (4-7, m/v/x)</option>
         <option value="Kabouters">Kabouters (7-11, v/x)</option>
         <option value="Welpen">Welpen (7-11, m/x)</option>
         <option value="Gidsen">Gidsen (11-15, v/x)</option>
