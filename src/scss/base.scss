@@ -185,6 +185,19 @@ details {
   max-width: 32em;
 }
 
+details {
+  margin-bottom: 1em;
+
+  &[open] {
+    margin-bottom: 2em;
+  }
+
+  p {
+    border-left: 1px solid var(--page-bg);
+    padding-left: 1em;
+  }
+}
+
 blockquote {
   margin-left: 2em;
   max-width: 30em;
