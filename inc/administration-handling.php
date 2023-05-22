@@ -39,7 +39,8 @@ bestuur@scoutingoost1.nl</p>";
 
 $message_leave = "<p>Beste ouders/verzorgers,</p>
 <p>Tot ziens bij Scouting Oost 1. De afmelding is per de 1e van de volgende maand van kracht. Deze maand wordt er dus voor de laatste maand contributie geïnd.</p>
-<p>Heeft u vragen over de contributie of over andere praktische zaken, neem dan gerust contact met ons op!</p>
+<p>Heeft u vragen over de contributie of over andere praktische zaken, of wilt u ons nog iets meegeven? Neem dan gerust contact met ons op!</p>
+<p>Ten slotte: willen jullie nog een beetje verbonden blijven met Scouting? Jullie kunnen ons altijd blijven <a href='https://scoutingoost1.nl/steunen/'>steunen</a>, bijvoorbeeld door pionier te worden vanaf 10 euro per maand. Zo maak je scouting ook mogelijk voor de volgende generatie!</p>
 <p>Met vriendelijke groet,</p>
 <p>%s<br>
 Voorzitter Vereniging Scouting Oost 1<br>
