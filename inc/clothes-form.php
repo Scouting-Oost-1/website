@@ -53,6 +53,10 @@ function clothes_form_view() {
           <input type="number" name="Polo" max="5" min="0" step="1" placeholder="-" value="0">
           Polo (€15, leiding)
         </label>
+        <label class="options__opt">
+          <input type="number" name="Vest" max="5" min="0" step="1" placeholder="-" value="0">
+          Vest (€25, leiding)
+        </label>
       </div>
 
     </fieldset>
