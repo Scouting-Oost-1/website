@@ -12,7 +12,9 @@ add_action('wp_ajax_members', 'members');
 
 
 $message_welcome = "<p>Beste ouders/verzorgers,</p>
-<p>Welkom bij Scouting Oost 1! Komt uw kind bij de Explo’s? Dan zijn ze meteen welkom bij de eerstvolgende opkomsten. Bij de Kabouters, Welpen, Gidsen, Scouts en Verkenners hebben we een wachtrij. De contributie wordt vanaf de volgende maand geïnd. In deze mail vindt u praktische informatie die handig kan zijn.</p>
+<p>Welkom bij Scouting Oost 1! Komt uw kind bij de Explo’s? Dan zijn ze meteen welkom bij de eerstvolgende opkomsten. De contributie wordt vanaf de volgende maand geïnd.</p>
+<p>Bij de Kabouters, Welpen, Gidsen, Scouts en Verkenners hebben we een wachtlijst. Heeft u uw kind opgegeven voor één van deze groepen? Dan zal er contact met u opgenomen worden over het plaatsen van uw gegevens op de wachtlijst. Het kind wordt dan nog niet ingeschreven en er wordt nog geen contributie geïnd. Onderstaande informatie is dan nog niet voor jullie van toepassing.</p>
+<p>Voor de nieuwe leden: in deze mail vindt u praktische informatie die handig kan zijn.</p>
 <p>Bij noodgevallen, contact met het bestuur of andere dringende zaken kunt u bellen met:<br>
 %s
 Mailen kan ook naar: bestuur@scoutingoost1.nl</p>
