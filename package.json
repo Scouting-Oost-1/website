@@ -2,6 +2,8 @@
   "name": "src-to-static",
   "version": "0.0.1",
   "description": "generates static files from src",
+  "main": "gulpfile.js",
+  "type": "module",
   "private": true,
   "dependencies": {
     "ansi-colors": "*",

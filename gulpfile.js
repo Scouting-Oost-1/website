@@ -1,24 +1,27 @@
 // Include gulp
-var gulp = require('gulp');
+import gulp from 'gulp';
 
 // Include plugins
-var log = require('fancy-log');
-var colors = require('ansi-colors');
+import log from 'fancy-log';
+import colors from 'ansi-colors';
 
-var concat = require('gulp-concat');
-var terser = require('gulp-terser');
+import concat from 'gulp-concat';
+import terser from 'gulp-terser';
 
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass')(require('sass'));
-var sourcemaps = require('gulp-sourcemaps');
-var prefix = require('gulp-autoprefixer');
-var rename = require('gulp-rename');
+import plumber from 'gulp-plumber';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
+import sourcemaps from 'gulp-sourcemaps';
+import prefix from 'gulp-autoprefixer';
+import rename from 'gulp-rename';
 
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
+import imagemin from 'gulp-imagemin';
+import cache from 'gulp-cache';
 
 // Include browsersync
-var browserSync = require('browser-sync').create();
+import browserSyncImport from 'browser-sync'
+var browserSync = browserSyncImport.create();
 
 
 // Paths
