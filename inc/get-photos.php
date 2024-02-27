@@ -56,7 +56,7 @@ function createFolderArray($folder_id) {
             ];
         } else {
             $result['photos'][] = [
-                'url' => substr($item['webContentLink'], 0, -15),
+                'url' => str_replace("&export=download", "", $item['webContentLink']),
                 'thumbnail' => $item['thumbnailLink']
             ];
         }
