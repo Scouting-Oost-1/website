@@ -29,8 +29,15 @@ function request($url) {
  * @return  array $result	List of items
  */
 function createFolderArray($folder_id) {
+    // get these fields, reference:
+    // https://developers.google.com/drive/api/reference/rest/v3/files,
+    // https://developers.google.com/drive/api/guides/fields-parameter
     $fields = "files(webContentLink,thumbnailLink,name,id,capabilities(canListChildren))";
+    // ensure shared drive content is loaded, reference:
+    // https://developers.google.com/drive/api/guides/enable-shareddrives#search_for_content_on_a_shared_drive
     $additional_parameters = "includeItemsFromAllDrives=true&supportsAllDrives=true";
+    // query examples reference:
+    // https://developers.google.com/drive/api/guides/search-files#examples
     $calendar_url = sprintf("https://content.googleapis.com/drive/v3/files?q='%s'+in+parents&fields=%s&key=%s&%s", 
         $folder_id,
         $fields,
