@@ -32,7 +32,7 @@ function createFolderArray($folder_id) {
     // get these fields, reference:
     // https://developers.google.com/drive/api/reference/rest/v3/files,
     // https://developers.google.com/drive/api/guides/fields-parameter
-    $fields = "files(webContentLink,thumbnailLink,name,id,capabilities(canListChildren))";
+    $fields = "files(thumbnailLink,name,id,capabilities(canListChildren))";
     // ensure shared drive content is loaded, reference:
     // https://developers.google.com/drive/api/guides/enable-shareddrives#search_for_content_on_a_shared_drive
     $additional_parameters = "includeItemsFromAllDrives=true&supportsAllDrives=true";
@@ -62,9 +62,13 @@ function createFolderArray($folder_id) {
                 'id' => $item['id']
             ];
         } else {
+            $thumbnailLink = $item['thumbnailLink'];
+            $viewLink = sprintf("%sd/%s",
+                    substr($thumbnailLink, 0, strpos($thumbnailLink, 'drive-storage/')),
+                    $item['id']);
             $result['photos'][] = [
-                'url' => str_replace("&export=download", "", $item['webContentLink']),
-                'thumbnail' => $item['thumbnailLink']
+                'url' => $viewLink,
+                'thumbnail' => $thumbnailLink
             ];
         }
     }
