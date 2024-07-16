@@ -9,9 +9,9 @@ import concat from 'gulp-concat';
 import terser from 'gulp-terser';
 
 import plumber from 'gulp-plumber';
-import dartSass from 'sass';
+import * as sass from 'sass';
 import gulpSass from 'gulp-sass';
-const sass = gulpSass(dartSass);
+const usingSass = gulpSass(sass);
 import sourcemaps from 'gulp-sourcemaps';
 import prefix from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
@@ -58,7 +58,7 @@ gulp.task('sass', function() {
 					log(colors.red(error.message));
 					this.emit('end');
 			}))
-			.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+			.pipe(usingSass({outputStyle: 'compressed'}).on('error', usingSass.logError))
 			.pipe(prefix())
 			.pipe(rename('main.css'))
 			.pipe(gulp.dest(dest + 'css'));
@@ -71,7 +71,7 @@ gulp.task('sassDev', function() {
 					this.emit('end');
 			}))
 			.pipe(sourcemaps.init())
-			.pipe(sass().on('error', sass.logError))
+			.pipe(usingSass().on('error', usingSass.logError))
 			.pipe(sourcemaps.write())
 			.pipe(rename('main.css'))
 			.pipe(gulp.dest(dest + 'css'))
