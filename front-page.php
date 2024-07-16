@@ -185,22 +185,7 @@
               </td>
             </tr>
             <tr>
-              <td>11–13</td>
-              <td>
-                <a href="<?php echo get_permalink(
-                  get_page_by_title( 'Gidsen' ) ); ?>">
-                  Gidsen
-                </a>
-              </td>
-              <td>
-                <a href="<?php echo get_permalink(
-                  get_page_by_title( 'Scouts' ) ); ?>">
-                  Scouts
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>13–15</td>
+              <td>11–15</td>
               <td>
                 <a href="<?php echo get_permalink(
                   get_page_by_title( 'Gidsen' ) ); ?>">
