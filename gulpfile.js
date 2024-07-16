@@ -120,7 +120,7 @@ gulp.task('default',
 );
 
 // Build task: everything minified only
-gulp.task('build', gulp.parallel('scripts', 'sass', 'images', 'copy-fonts'));
+gulp.task('build', gulp.parallel('scripts', 'sass', 'images'));
 
 gulp.task('clear', function() {
 	// Still pass the files to clear cache for
