@@ -64,7 +64,14 @@ $action_url = get_template_directory_uri() . 'inc/administration-handling.php';
         <input type="radio" name="Geslacht" value="Meisje" required class="identifying">
         Meisje
       </label>
-      <p class="field-info">Helaas moet in de administratie van Scouting Nederland gekozen worden uit deze twee opties voor het geslacht.</p>
+      <label class="options__opt options__opt--inline">
+        <input type="radio" name="Geslacht" value="Non-binair" required class="identifying">
+        Non-binair
+      </label>
+      <label class="options__opt options__opt--inline">
+        <input type="radio" name="Geslacht" value="Wil ik niet zeggen" required class="identifying">
+        Wil ik niet zeggen
+      </label>
     </div>
 
     <label class="text-label">Speltak
