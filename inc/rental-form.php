@@ -121,8 +121,7 @@ function rental_form_view() {
         <input type="email" name="Email" placeholder="sam@scoutingoost1.nl" required>
       </label>
       <label class="text-label">Telefoonnummer
-        <input type="tel" name="Telefoonnummer" placeholder="020 1234567" required
-          pattern="^((\+|00(\s|\s?-\s?)?)31(\s|\s?-\s?)?(\(0\)[\-\s]?)?|0)[1-9]((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])((\s|\s?-\s?)?[0-9])\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]\s?[0-9]$">
+        <input type="tel" name="Telefoonnummer" placeholder="020 1234567" required>
       </label>
 
       <button class="button js-next" type="button">Volgende</button>
